@@ -26,3 +26,4 @@
 - [Project Manager](./project_manager.md)
 - [Appendix A. Multiple Object Naming](./appendix_a.md)
 - [Appendix B. Connector Matching](./appendix_b.md)
+- [Outside Plant](./ospman/README.md)
