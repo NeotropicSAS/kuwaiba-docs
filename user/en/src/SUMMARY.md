@@ -2,6 +2,21 @@
 
 - [Document History](./document_history.md)
 - [Introduction](./README.md)
+
+# Administration
+# Navigation
+# Physical
+
+- [Outside Plant](./physical/ospman/README.md)
+
+# Logical
+# Services
+# Planning
+# Other
+# Settings
+
+-----------
+
 - [Data Model Manager](./data_model_manager.md)
 - [Containment Manager](./containment_manager.md)
 - [Navigation](./navigation.md)
@@ -26,4 +41,3 @@
 - [Project Manager](./project_manager.md)
 - [Appendix A. Multiple Object Naming](./appendix_a.md)
 - [Appendix B. Connector Matching](./appendix_b.md)
-- [Outside Plant](./ospman/README.md)

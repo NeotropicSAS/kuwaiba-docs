@@ -12,7 +12,7 @@ Having said that, you will find four types of resources in a typical data model:
 
 The Kuwaiba web client is a set of views (trees, topologies, editors) that allows to put together these elements based on business rules and user-defined models. Kuwaiba extends the concept of **CMDB** (Configuration Management Database, a place where you store objects that can hold configuration information or be subject to configuration themselves - so called Configuration Items- and their relationships) and enables you to perform network design tasks, support capacity management and provisioning workflows and assist field and customer service teams to improve response times.
 
-Kuwaiba helps you model your network according to your needs, no matter if you’re an ISP, a carrier or just a guy with a large (or small!) IT infrastructure to manage. It’s open source, under active development and new models are added every release. You can contribute to the project by providing technical insight on a particular technology, testing, translating or just sending your feedback through forums[^note1] and mailing lists[^note2].
+Kuwaiba helps you model your network according to your needs, no matter if you’re an ISP, a carrier or just a guy with a large (or small!) IT infrastructure to manage. It’s open source, under active development and new models are added every release. You can contribute to the project by providing technical insight on a particular technology, testing, translating or just sending your feedback through forums[^1] and mailing lists[^2].
 
-[^note1]: Forums https://sourceforge.net/p/kuwaiba/discussion/
-[^note2]: mailing lists https://sourceforge.net/p/kuwaiba/mailman/
+[^1]: Forums https://sourceforge.net/p/kuwaiba/discussion/
+[^2]: mailing lists https://sourceforge.net/p/kuwaiba/mailman/
