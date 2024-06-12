@@ -1,7 +1,7 @@
 # Summary
 
 - [Document History](./document_history.md)
-- [Introduction](./introduction.md)
+- [Introduction](./README.md)
 - [Data Model Manager](./data_model_manager.md)
 - [Containment Manager](./containment_manager.md)
 - [Navigation](./navigation.md)
