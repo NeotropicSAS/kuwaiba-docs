@@ -15,6 +15,12 @@
 # Other
 # Settings
 
+- [Configuration Variables](./settings/configuration/variables/README.md)
+
+# Dashboards
+
+- [Object Dashboard](./dashboards/object/README.md)
+
 -----------
 
 - [Data Model Manager](./data_model_manager.md)
