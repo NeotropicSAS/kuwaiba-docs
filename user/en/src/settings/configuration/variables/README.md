@@ -4,7 +4,7 @@ The configuration variables module belongs to the `Settings` category and manage
 
 | ![Configuration Variables Module](images/toolbar-settings-configuration-variables.png) |
 |:--:|
-| *Configuration variables module* |
+| ***Figure 1.** Configuration variables module* |
 
 ## Configuration Variable Pool
 
@@ -16,25 +16,25 @@ The steps to create a pool are as follows:
 
 | ![Manage Pools](images/manage-pools.png) |
 |:--:|
-| *Manage pools button* |
+| ***Figure 2.** Manage pools button* |
 
 * In the manage pools window click on the new pool button.
 
 | ![Manage Pools](images/manage-pools-window.png) |
 |:--:|
-| *Manage pools window* |
+| ***Figure 3.** Manage pools window* |
 
 * Enter a name and description for the new pool and click the OK button.
 
 | ![Manage Pools](images/new-pool-window.png) |
 |:--:|
-| *New pool window* |
+| ***Figure 4.** New pool window* |
 
-* The pool was created and can be edited or deleted from the pool manage window.
+* The pool was created and can be edited or deleted from the pool manages window.
 
 | ![Manage Pool](images/manage-pool.png) |
 |:--:|
-| *Manage Pool Window* |
+| ***Figure 5.** Manage Pool Window* |
 
 ## Configuration Variable
 
