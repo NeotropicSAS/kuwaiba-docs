@@ -38,15 +38,15 @@ By accessing any physical object in the inventory, you can view information spec
 | :--: |
 | ***Figure 6**. Inventory Object Navigation.* |
 
-En la Figura 6, la sección señalada en el recuadro rojo corresponde al Object Dashboard, explicado de forma detallada en la sección [Object Dashboard](../dashboards/object/README.md).
+In Figure 6, the section marked in red corresponds to the Object Dashboard, explained in detail in the section [Object Dashboard](../dashboards/object/README.md).
 
-En la parte superior de la Figura 6 (detallado en la Figura 7) se muestra la ruta o jerarquía de contención del objeto seleccionado. Esto significa que el objeto New Zealand contiene al objeto Wellington, que a su vez contiene al objeto WEL-FAC-02, el cual contiene el objeto de interés: el Rack seleccionado (WEL-RCK-03).
+In the upper part of Figure 6 (detailed in Figure 7) the path or containment hierarchy of the selected object is shown. This means that the New Zealand object contains the Wellington object, which in turn contains the WEL-FAC-02 object, which contains the object of interest: the selected Rack (WEL-RCK-03).
 
 | ![Hierarchy](images/content_path.png) |
 | :--: |
 | ***Figure 7**. Object Containment Hierarchy.* |
 
-En la parte derecha de la Figura 6, mostrada con más detalle en la Figura 8, se observa una barra de filtros en la parte superior. Esta barra se utiliza si el Rack tiene filtros asociados; para más información, consulte la sección "Filters". Debajo del campo del filtro, se muestra la jerarquía descendente de nuestra clase de interés, es decir, los objetos del inventario contenidos en el Rack seleccionado. Si selecciona alguno de los objetos en la Figura 8, la interfaz mostrará nuevamente un contenido similar al de la Figura 6, pero con la información del nuevo objeto seleccionado.
+On the right side of Figure 6, shown in more detail in Figure 8, there is a filter bar at the top. This bar is used if the Rack has associated filters; for more information, see the "Filters" section. Below the filter field, the top-down hierarchy of our class of interest is displayed, i.e. the inventory objects contained in the selected Rack. If you select any of the objects in Figure 8, the interface will again display similar content to Figure 6, but with the information of the newly selected object.
 
 | ![Containment Object](images/containment_object.png) |
 | :--: |
