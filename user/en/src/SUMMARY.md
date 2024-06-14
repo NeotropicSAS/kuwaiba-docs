@@ -7,7 +7,7 @@
 # Navigation
 # Physical
 
-- [Outside Plant](./physical/ospman/README.md)
+- [Outside Plant Management](./physical/ospman/README.md)
 
 # Logical
 # Services
