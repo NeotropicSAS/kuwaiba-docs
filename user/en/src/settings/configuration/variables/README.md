@@ -1,12 +1,12 @@
 # Configuration Variables
 
-The configuration variables module in Figure 1 belongs to the `Settings` category and manages [configuration variables pools](./#configuration-variable-pool) and [configuration variables](./#configuration-variable).
+The configuration variables module in Figure 1 belongs to the `Settings` category and manages configuration variables pools and configuration variables.
 
 | ![Configuration Variables Module](images/toolbar-settings-configuration-variables.png) |
 |:--:|
 | ***Figure 1.** Configuration variables module* |
 
-## Configuration Variable Pool {#configuration-variable-pool}
+## Configuration Variable Pool
 
 A configuration variable pool is a group of configuration variables.
 
@@ -36,7 +36,7 @@ The steps to create a pool are as follows:
 |:--:|
 | ***Figure 5.** Manage Pools Window* |
 
-## Configuration Variable {#configuration-variable}
+## Configuration Variable
 
 A configuration variable is a global variable that can be used in any module or script and the value is accessed via name using the `ApplicationEntityManager API`.
 
