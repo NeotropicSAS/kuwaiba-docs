@@ -5,6 +5,9 @@
 
 # Administration
 # Navigation
+
+- [Pools](./pools/README.MD)
+
 # Physical
 
 - [Outside Plant Management](./physical/ospman/README.md)
@@ -30,7 +33,6 @@
 - [Layout Editor](./layout_editor.md)
 - [List Type Manager](./list_type_manager.md)
 - [Queries](./queries.md)
-- [Pools](./pools.md)
 - [Physical Connections](./physical_connections.md)
 - [Audit Trail](./audit_trail.md)
 - [Topology Designer](./topology_designer.md)
