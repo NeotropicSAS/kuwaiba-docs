@@ -48,7 +48,7 @@ Basic actions, such as delete to delete the selected item, advanced and explorer
 |:--:|
 | **Figure 9.** New item created |
 
-| Action | description |
-|--------------|------------------------------ --|
+| Action | Description |
+|--------------|--------------------------------|
 | **Copy to pools**| Copy the selected item to a new pool |
 | **Move to pools**| Move the selected item to a new pool |
