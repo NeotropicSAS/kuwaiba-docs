@@ -48,7 +48,7 @@ Las acciones básicas, como eliminar para borrar el ítem seleccionado, avanzada
 |:--:|
 | **Figura 9.** Nuevo item creado |
 
-| Acción    | descripción                        |
+| Acción    | Descripción                        |
 |--------------|------------------------------------|
 | **Copy to pools**| Copia el item seleccionado de a una nueva colección |
 | **Move to pools**| Mueve el item seleccionado de a una nueva colección |

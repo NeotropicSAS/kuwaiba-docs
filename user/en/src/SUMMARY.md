@@ -13,6 +13,9 @@
 - [Outside Plant Management](./physical/ospman/README.md)
 
 # Logical
+
+- [IP Address Manager](./ipman/README.MD)
+
 # Services
 # Planning
 # Other
