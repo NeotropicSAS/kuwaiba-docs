@@ -7,6 +7,9 @@
 
 - [Data Model Manager](./dmman/README.MD)
 
+
+- [List Type Manager](./administration/ltman/README.MD)
+
 # Navigation
 
 - [Pools](./pools/README.MD)
@@ -37,7 +40,6 @@
 - [Navigation](./navigation.md)
 - [Template Manager](./template_manager.md)
 - [Layout Editor](./layout_editor.md)
-- [List Type Manager](./list_type_manager.md)
 - [Queries](./queries.md)
 - [Physical Connections](./physical_connections.md)
 - [Audit Trail](./audit_trail.md)
