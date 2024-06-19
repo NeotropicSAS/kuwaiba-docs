@@ -4,6 +4,9 @@
 - [Introduction](./README.md)
 
 # Administration
+
+- [Data Model Manager](./dmman/README.MD)
+
 # Navigation
 
 - [Pools](./pools/README.MD)

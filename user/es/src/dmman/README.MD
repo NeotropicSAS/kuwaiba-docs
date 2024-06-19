@@ -1,4 +1,4 @@
-# Administrador de modelos de datos
+# Administrador de Modelos de Datos
 
 Una de las características clave de Kuwaiba es que está completamente orientado a objetos[^1]. Significa que cada elemento de negocio (enrutador, ciudad, puerto) y de aplicación (usuarios, tipos) está representado por un **Objeto** en la aplicación y estos objetos son a su vez producto de una abstracción de la realidad llamada Clase.
 
@@ -85,7 +85,7 @@ Los tipos de lista son atributos que señalan un elemento dentro de un conjunto 
 
 Muchos objetos en la base de datos compartirán el mismo proveedor, al igual que muchos otros compartirán el mismo estado. En términos de bases de datos relacionales, esto puede considerarse como una relación de muchos a uno.
 
-![dmman list types](images/dmman-lyst-types-expanded.png)|
+|[dmman list types](images/dmman-lyst-types-expanded.png)|
 |:--:|
 | **Figura 10.** Tipos de lista|
 
@@ -103,7 +103,7 @@ Las pestañas que se pueden ver son:
   Si la clase es abstracta (no se pueden crear instancias de clases abstractas, solo se utilizan para dar consistencia al modelo de datos). El atributo **contable** no se utiliza actualmente, pero debería usarse para marcar clases cuyas instancias pueden tener representaciones gráficas, pero en realidad no forman parte del inventario, como los **Slots**. **In Design** (En diseño) es solo una manera de marcar una clase como parte de una intervención continua del modelo de datos y, por lo tanto, las clases con ese atributo marcado como *TRUE* no se pueden instanciar. El **color** es el color del ícono cuadrado predeterminado que se utiliza para mostrar el objeto en un árbol o vista. Este ícono se utilizará siempre que el atributo **Small Icon** sea nulo. **Small Icon** es el ícono que se usará en los árboles y su tamaño no puede exceder los 16x16 píxeles. **Icon** es el ícono utilizado en las vistas y tiene un tamaño máximo de 32x32 píxeles.
     |![dmman class properties](images/list-type-properties.png)|
     |:--:|
-    | **Figura 12.** Propiedades del objeto seleccionado|
+    | **Figura 12.** Propiedades del tipo de lista seleccionado|
 
     > **Importante**
     > * Todas las clases creadas por el usuario tienen el estado **In Design** establecido como *TRUE* por defecto. No se podrán crear objetos a partir de estas clases hasta que se cambie a *FALSE*. Esta es una medida preventiva para facilitar las pruebas de cambios cuando se crean múltiples clases antes de pasar a producción.
@@ -112,7 +112,7 @@ Las pestañas que se pueden ver son:
   
   |![dmman class attributes](images/list-type-attributes.png)|
   |:--:|
-  | **Figura 13.** Atributos de la clase seleccionada|
+  | **Figura 13.** Atributos del tipo de lista seleccionada|
 
   Haga clic en el botón junto al nombre del atributo para personalizarlo como se muestra en la figura de abajo.
   En esta ventana, puede modificar:
@@ -142,8 +142,7 @@ Las pestañas que se pueden ver son:
 
   |![dmman class attribute properties](images/new-class-attribute-dialog.png)|
   |:--:|
-  | **Figura 15.** Nuevo atributo de la clase seleccionada|
-
+  | **Figura 15.** Nuevo atributo del tipo de lista seleccionado|
 
 [^1]: Programación orientada a objetos [https://en.wikipedia.org/wiki/Object-oriented_programming](https://en.wikipedia.org/wiki/Object-oriented_programming)
 [^2]:Jerarquía de clases [https://en.wikipedia.org/wiki/Class_hierarchy](https://en.wikipedia.org/wiki/Class_hierarchy)
