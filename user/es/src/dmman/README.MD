@@ -107,7 +107,6 @@ Las pestañas que se pueden ver son:
 
     > **Importante**
     > * Todas las clases creadas por el usuario tienen el estado **In Design** establecido como *TRUE* por defecto. No se podrán crear objetos a partir de estas clases hasta que se cambie a *FALSE*. Esta es una medida preventiva para facilitar las pruebas de cambios cuando se crean múltiples clases antes de pasar a producción.
-    > * Como convención, todas las clases abstractas llevan el prefijo **Generic**. Sin embargo, algunas clases principales (como *InventoryObject* o *AdministratorItem*) son abstractas y no siguen esta convención. Se recomienda adherirse a esta norma siempre que sea posible. A menos que tenga un conocimiento profundo del sistema, evite renombrar o eliminar clases principales, especialmente las abstractas.
 
 * **Atributos de la Clase:** Esta sección contiene los campos de clase (atributos). En la figura de abajo, la clase *AdministrativeItem* tiene dos atributos: creationDate y name.
   
