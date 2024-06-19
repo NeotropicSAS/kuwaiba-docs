@@ -42,6 +42,7 @@ The tabs that can be seen are:
   > **Important**
   > * All user-created classes have **In Design** status set to *TRUE* by default. Objects cannot be created from these classes until they are changed to *FALSE*. This is a preventive measure to facilitate testing of changes when creating multiple classes before moving to production.
   > * As a convention, all abstract classes are prefixed with **Generic**. However, some core classes (such as *InventoryObject* or *AdministratorItem*) are abstract and do not follow this convention. It is recommended to adhere to this rule whenever possible. Unless you have deep knowledge of the system, avoid renaming or deleting parent classes, especially abstract ones.
+  > * To name the classes and attributes, we follow the camel case convention. For class names, the first letter is capitalized, as in *MyNewClass*. On the other hand, for attributes, the first letter is written in lowercase, as in *myNewAttribute*. This practice helps improve the readability of the code and maintain a consistent structure in the naming of elements within our program.
 
 * **Class Attributes:** This section contains the class fields (attributes). In the figure below, the *AdministrativeItem* class has two attributes: creationDate and name.
 

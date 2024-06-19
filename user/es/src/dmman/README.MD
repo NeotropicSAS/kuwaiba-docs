@@ -42,6 +42,7 @@ Las pestañas que se pueden ver son:
     > **Importante**
     > * Todas las clases creadas por el usuario tienen el estado **In Design** establecido como *TRUE* por defecto. No se podrán crear objetos a partir de estas clases hasta que se cambie a *FALSE*. Esta es una medida preventiva para facilitar las pruebas de cambios cuando se crean múltiples clases antes de pasar a producción.
     > * Como convención, todas las clases abstractas llevan el prefijo **Generic**. Sin embargo, algunas clases principales (como *InventoryObject* o *AdministratorItem*) son abstractas y no siguen esta convención. Se recomienda adherirse a esta norma siempre que sea posible. A menos que tenga un conocimiento profundo del sistema, evite renombrar o eliminar clases principales, especialmente las abstractas.
+    > * Para nombrar las clases y atributos, seguimos la convención del camel case. En el caso de los nombres de clase, la primera letra se escribe en mayúscula, como en *MyNewClass*. Por otro lado, para los atributos, la primera letra se escribe en minúscula, como en *myNewAttribute*. Esta práctica ayuda a mejorar la legibilidad del código y mantener una estructura consistente en el nombrado de elementos dentro de nuestro programa.
 
 * **Atributos de la Clase:** Esta sección contiene los campos de clase (atributos). En la figura de abajo, la clase *AdministrativeItem* tiene dos atributos: creationDate y name.
   
