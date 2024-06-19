@@ -32,7 +32,7 @@
 
 -----------
 
-- [Data Model Manager](./data_model_manager.md)
+- [Data Model Manager](./dmman/README.MD)
 - [Containment Manager](./containment_manager.md)
 - [Navigation](./navigation.md)
 - [Template Manager](./template_manager.md)

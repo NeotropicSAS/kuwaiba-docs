@@ -28,29 +28,29 @@
 
 # Paneles de control
 
-- [Panel de objetos] (./dashboards/object/README.md)
+- [Panel de objetos](./dashboards/object/README.md)
 
 -----------
 
-- [Administrador de modelo de datos](./data_model_manager.md)
+- [Administrador de modelo de datos](./dmman/README.MD)
 - [Administrador de contención](./containment_manager.md)
 - [Navegación](./navigation.md)
 - [Administrador de plantillas](./template_manager.md)
 - [Editor de diseño](./layout_editor.md)
-- [Administrador de tipos de lista] (./list_type_manager.md)
+- [Administrador de tipos de lista](./list_type_manager.md)
 - [Consultas](./queries.md)
 - [Conexiones físicas](./physical_connections.md)
 - [Pista de auditoría](./audit_trail.md)
 - [Diseñador de topología](./topology_designer.md)
 - [Administrador de software](./software_manager.md)
-- [Administrador de servicios] (./service_manager.md)
+- [Administrador de servicios](./service_manager.md)
 - [Administrador de contratos](./contract_manager.md)
-- [Administrador de tareas] (./task_manager.md)
+- [Administrador de tareas](./task_manager.md)
 - [Módulo de redes SDH](./sdh_networks_module.md)
-- [Administrador de direcciones IP] (./ip_address_manager.md)
+- [Administrador de direcciones IP](./ip_address_manager.md)
 - [Informes](./reporting.md)
 - [Administrador de usuarios](./user_manager.md)
-- [Marco de sincronización] (./synchronization_framework.md)
+- [Marco de sincronización](./synchronization_framework.md)
 - [Favoritos](./favoritos.md)
 - [Gerente de proyecto](./project_manager.md)
 - [Apéndice A. Nomenclatura de múltiples objetos](./appendix_a.md)
