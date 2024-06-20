@@ -1,6 +1,6 @@
 # Summary
 
-- [Introduction](./introduction.md)
+- [Introduction](./README.md)
 - [Getting Started](./home/README.md)
 
 # Administration
