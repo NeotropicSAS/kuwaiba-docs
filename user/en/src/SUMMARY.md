@@ -11,6 +11,8 @@
 
 # Navigation
 
+- [Navigation](./navman/README.md)
+
 - [Pools](./pools/README.MD)
 
 # Physical
