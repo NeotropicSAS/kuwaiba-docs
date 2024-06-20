@@ -5,9 +5,13 @@
 
 # Administration
 
+- [AuditTrail](./auditTrail/README.md)
+- [Containment Manager](./administration/containment/README.MD)
 - [Data Model Manager](./dmman/README.MD)
 - [List Type Manager](./administration/ltman/README.MD)
-- [Containment Manager](./administration/containment/README.MD)
+- [Template Manager](./templateman/README.md)
+- [Task Manager](./taskman/README.md)
+- [User Manager](./userman/README.md)
 
 # Navigation
 
@@ -35,6 +39,7 @@
 # Settings
 
 - [Configuration Variables](./settings/configuration/variables/README.md)
+- [Scheduling](./scheduling/README.md)
 
 -----------
 
