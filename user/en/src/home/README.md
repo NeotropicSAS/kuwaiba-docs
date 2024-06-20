@@ -43,13 +43,13 @@ The recommended order to start exploring the inventory system is shown in Figure
 |:--:|
 | ***Figure 3.** Essential modules* |
 
-1. Data Model Manager.
-2. List Type Manager.
-3. Containment Manager.
-4. Navigation.
-5. Template Manager.
+1. [Data Model Manager](../dmman/index.html).
+2. [List Type Manager](../administration/ltman/index.html).
+3. [Containment Manager](../administration/containment/index.html).
+4. [Navigation](../navman/index.html).
+5. [Template Manager](../templateman/index.html).
 
-> **Note** Depending on the restrictions that the system administrator has defined for the users in the user manager, the options in each menu will change.
+> **Note** Depending on the restrictions that the system administrator has defined for the users in the [User Manager](../userman/index.html), the options in each menu will change.
 
 [^1]: The company logo can be customized.
 [^2]: The home dashboard can be customized.
