@@ -2,7 +2,7 @@
 
 In many scenarios, there are containment structures (see Containment Manager) that are created repeatedly, such as `Building → Floor → Room → Rack`, or `ODF/DDF` with the same number of ports `(24/12/36/48/72/96/144)`, or simply equipment with the same set of attributes. For example, all routers of a certain model: the provider, slots, etc., will always be the same. Creating these elements from scratch each time would be a tedious task. For this reason, Kuwaiba provides the template manager module, which allows the creation of object templates from real inventory elements.
 
-The template manager module, shown in Figure 1, belongs to the `Administration` category.
+The template manager module, shown in Figure 1, belongs to the **Administration** category.
 
 | ![Template Module](images/template_manager_menu.png) |
 |:--:|
@@ -34,7 +34,7 @@ Once the template is created, it will appear in the list of templates created fo
 
 ### Deleting a Template
 
-It is possible to delete templates created for a class. To do so, use the button ![Template Module Btn DElete Template](images/btn_delete_templatel.png)in the template actions shown in Figure 4. This will open the template deletion window shown in Figure 5. Click `OK` to delete it or `CANCEL` if you do not wish to proceed.
+It is possible to delete templates created for a class. To do so, use the button ![Template Module Btn DElete Template](images/btn_delete_templatel.png)in the template actions shown in Figure 4. This will open the template deletion window shown in Figure 5. Click *OK* to delete it or *CANCEL* if you do not wish to proceed.
 
 | ![Template Module](images/template_manager_delete_template.png) |
 |:--:|
@@ -42,11 +42,11 @@ It is possible to delete templates created for a class. To do so, use the button
 
 ### Add Elements
 
-Se pueden agregar `elementos` o `elementos especiales` a las plantillas. Los elementos que pueden ser agregados están determinados por la configuración de contenencia de la clase (ver Administrador de Contenencia).
+Se pueden agregar **elementos** o **elementos especiales** a las plantillas. Los elementos que pueden ser agregados están determinados por la configuración de contenencia de la clase (ver Administrador de Contenencia).
 
-You can add `elements` or `special elements` to templates. The elements that can be added are determined by the containment configuration of the class (see Containment Manager).
+You can add **elements** or **special elements** to templates. The elements that can be added are determined by the containment configuration of the class (see Containment Manager).
 
-To add `elements` to the template, use the ![Template Module Btn Add Elements](images/btn_add_template.png) button in the template actions shown in Figure 4. If you want to add `special elements`, use the ![Template Module Btn Add Special Elements](images/btn_add_special_elements.png) button. This will display the menu shown in Figure 6, where you must select whether you want to create a single element or multiple elements. If the class does not have any elements or special elements assigned in its containment, you will not be able to add elements of this type to the template.
+To add **elements** to the template, use the ![Template Module Btn Add Elements](images/btn_add_template.png) button in the template actions shown in Figure 4. If you want to add **special elements**, use the ![Template Module Btn Add Special Elements](images/btn_add_special_elements.png) button. This will display the menu shown in Figure 6, where you must select whether you want to create a single element or multiple elements. If the class does not have any elements or special elements assigned in its containment, you will not be able to add elements of this type to the template.
 
 | ![Elements Options Menu](images/elements_options_menu.png) |
 |:--:|
@@ -67,9 +67,9 @@ If you select to create multiple elements from the menu in Figure 6, the multipl
 |:--:|
 | ***Figure 8.** Multiple elements creation window* |
 
-Where you must choose the class of the element to add. The available classes depend on the containment configuration of the class to which you are creating the element (see Containment Manager) and enter the `naming pattern` as detailed in Appendix A.
+Where you must choose the class of the element to add. The available classes depend on the containment configuration of the class to which you are creating the element (see Containment Manager) and enter the **naming pattern** as detailed in Appendix A.
 
-The result of using the `naming pattern` [sequence(a,c)], useful for creating multiple elements like buildings in the `City` class, and [multiple-mirror(1,3)], useful for creating ports in the `SpliceBox` class, can be seen in Figures 9 and 10 respectively.
+The result of using the **naming pattern** `[sequence(a,c)]`, useful for creating multiple elements like buildings in the *City* class, and `[multiple-mirror(1,3)]`, useful for creating ports in the *SpliceBox* class, can be seen in Figures 9 and 10 respectively.
 
 | ![Example Sequence](images/example_pattern_frequency.png) |
 |:--:|
@@ -82,13 +82,13 @@ The result of using the `naming pattern` [sequence(a,c)], useful for creating mu
 
 
 ## Template Element Management
-Once the template elements are created, they will be added to the `template structure` section of the main module window, as shown in Figure 11.
+Once the template elements are created, they will be added to the **template structure** section of the main module window, as shown in Figure 11.
 
 | ![List of elements](images/template_manager_list_of_elements.png) |
 |:--:|
 | ***Figure 11.** List of elements* |
 
-In this section, you can not only view the `elements` and the containment tree of the `multiple elements`, but also create new elements or special elements on existing ones or delete them using the![Template Module Btn Element Menu](images/btn_element_menu.png) button of the desired element, which will display the menu shown in Figure 12.
+In this section, you can not only view the **elements** and the containment tree of the **multiple elements**, but also create new elements or special elements on existing ones or delete them using the![Template Module Btn Element Menu](images/btn_element_menu.png) button of the desired element, which will display the menu shown in Figure 12.
 
 | ![Manage elements menu](images/template_manager_element_menu.png) |
 |:--:|
@@ -114,13 +114,13 @@ It is possible to edit the properties or elements of a template once they have b
 
 ## Using the Template
 
-You can create objects using the templates created in the template manager from any Kuwaiba module that has the `object options panel`, as shown in Figure 16. This functionality is available in modules such as navigation, pools, etc.
+You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 16, explained in detail in the section [Object Dashboard](../dashboards/object/README.md). This functionality is available in modules such as navigation, pools, etc. 
 
 | ![Object Options Panel](images/object_opcions_panel.png) |
 |:--:|
 | ***Figure 16.** Object options panel* |
 
-In the `Basic Options` section of the `Object Options Panel` you will find the options `New Object from Template` and `New Special Object from Template` as shown in Figure 17.
+In the **Basic Options** section of the **Object Options Panel** you will find the options **New Object from Template** and **New Special Object from Template** as shown in Figure 17.
 
 | ![Object To Create Objects From Template](images/select_options_to_create_objects.png) |
 |:--:|
@@ -132,7 +132,7 @@ When using them, the window for creating objects from a template, shown in Figur
 |:--:|
 | ***Figure 18.** Object creation window from template* |
 
-For example, we use the `City` class and the previously created template `A sample city`. As a result, we create an object following the template, as observed in Figure 19.
+For example, we use the *City* class and the previously created template *A sample city*. As a result, we create an object following the template, as observed in Figure 19.
 
 | ![Example Object Created From Template](images/object_created_from_template.png) |
 |:--:|

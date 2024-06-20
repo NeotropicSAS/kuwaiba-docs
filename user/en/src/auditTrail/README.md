@@ -1,15 +1,15 @@
 # Audit Trail
 
-The Audit trail module in Figure 1 belongs to the `Administration` category and is capable of tracking the changes performed by the users in the database for audit purposes.
+The Audit trail module in Figure 1 belongs to the **Administration** category and is capable of tracking the changes performed by the users in the database for audit purposes.
 
 | ![Audit Trail Module](images/auditTrail_module.png) |
 |:--:|
 | ***Figure 1.** Audit trail module* |
 
-These changes can be made to inventory objects (equipment, locations, etc) or application objects (pools, tasks, user properties). There are two types of events that are logged: `General events`, that is, those that are not related to any object in particular, like new logins or creation of application objects. `Object-related events`, like property changes or move operations.
+These changes can be made to inventory objects (equipment, locations, etc) or application objects (pools, tasks, user properties). There are two types of events that are logged: **General events**, that is, those that are not related to any object in particular, like new logins or creation of application objects. **Object-related events**, like property changes or move operations.
 
 ## General events
-Once the module is open, we can see the main window of `General events` as shown in Figure 2.
+Once the module is open, we can see the main window of **General events** as shown in Figure 2.
 
 | ![Main Window](images/auditTrail_main_window.png) |
 |:--:|
@@ -23,13 +23,13 @@ To refresh the changes made in the application since entering the module, you ca
 
 The module presents us with information divided into several columns, among which we find:
 
-> - `Timestamp` Field that contains the date when the record was made.
-> - `Type` Field that contains the type of action performed.
-> - `User` Field that contains the user who performed the action.
-> - `Property` When the event type is Object-related events, this field presents the name of the modified property of the object. Otherwise, it will be empty.
-> - `Old Value` When the event type is Object-related events, this field presents the old value previously set in the modified property of the object. Otherwise, it will be empty.
-> - `New Value` When the event type is Object-related events, this field presents the new value assigned to the modified property of the object. Otherwise, it will be empty.
-> - `Notes` Field that contains additional notes about the action, if any.
+> - **Timestamp** Field that contains the date when the record was made.
+> - **Type** Field that contains the type of action performed.
+> - **User** Field that contains the user who performed the action.
+> - **Property** When the event type is Object-related events, this field presents the name of the modified property of the object. Otherwise, it will be empty.
+> - **Old Value** When the event type is Object-related events, this field presents the old value previously set in the modified property of the object. Otherwise, it will be empty.
+> - **New Value** When the event type is Object-related events, this field presents the new value assigned to the modified property of the object. Otherwise, it will be empty.
+> - **Notes** Field that contains additional notes about the action, if any.
 
 ### Filters
 
@@ -55,13 +55,13 @@ The module presents the records in a paginated format, allowing you to navigate 
 
 ## Object-related events
 
-The Object-related events can be found in any Kuwaiba module that has the `object options panel`, as shown in Figure 6. This functionality is available in modules such as navigation, pool, etc.
+The Object-related events can be found in any Kuwaiba module that has the **object options panel** as shown in Figure 6, explained in detail in the section [Object Dashboard](../dashboards/object/README.md). This functionality is available in modules such as navigation, pool, etc.
 
 | ![Object Options Panel](images/object_opcions_panel.png) |
 |:--:|
 | ***Figure 6.** Object options panel* |
 
-In the `Explorers Options` section of the `Object Options Panel` you will find the options `Audit Trail` and `New Special Object from Template` as shown in Figure 7.
+In the **Explorers** option section of the **Object Options Panel** you will find the options **Audit Trail** as shown in Figure 7.
 
 | ![Audit Trail Option](images/select_audit_trail_option.png) |
 |:--:|
@@ -73,7 +73,7 @@ When using, the Object-related window, shown in Figure 8, will appear.
 |:--:|
 | ***Figure 8.** Object-related window* |
 
-The information presented is the same as in `General events` except for the absence of the `Notes` field. Additionally, it includes the ![Object To Create Objects From Template Window](images/btn_information.png) button, not present in `General events` which allows viewing more information about the selected object, as shown in Figure 9.
+The information presented is the same as in **General events** except for the absence of the *Notes* field. Additionally, it includes the ![Object To Create Objects From Template Window](images/btn_information.png) button, not present in **General events** which allows viewing more information about the selected object, as shown in Figure 9.
 
 | ![Information Window](images/information_object.png) |
 |:--:|
