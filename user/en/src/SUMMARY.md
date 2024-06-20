@@ -25,14 +25,16 @@
 
 # Services
 # Planning
+
+- [Template Manager](./templateManager%20/README.md)
+  
 # Other
+
+- [Audit Trail](./auditTrail/README.md)
+  
 # Settings
 
 - [Configuration Variables](./settings/configuration/variables/README.md)
-
-# Dashboards
-
-- [Object Dashboard](./dashboards/object/README.md)
 
 -----------
 

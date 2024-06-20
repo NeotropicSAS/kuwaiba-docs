@@ -52,8 +52,8 @@ The hierarchy shown in Figure 7 is interactive. By selecting any of the elements
 
 Clicking on the `Show More Information` button shown at the top of Figure 8 opens a pop-up window like the one shown in Figure 9, which contains basic information about the selected inventory object.
 
-* **Object Id**. Es el identificador del objeto en la base de datos.  Resulta útil para solucionar problemas. Suele utilizarse en el **Query Manager** para crear queries.
-* **Class Name**. La clase a la que pertenece el objeto del inventario.
+* **Object Id**. It is the identifier of the object in the database.  It is useful for troubleshooting. It is often used in the **Query Manager** to create queries.
+* **Class Name**. The class to which the inventory object belongs.
 * **Containment Path**. Indicates the complete containment structure of the object.
   
 | ![Show more information btn](images/show_more_information_btn.png) |
@@ -344,7 +344,7 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
   | :--: |
   | ***Figure 46**. Fiber splitter view.*|
 
-* **Physical Path View.** Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html)
+* **Physical Path View.** Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html).
 
   | ![Physical Path View](images/physical_path.png) |
   | :--: |
@@ -370,7 +370,7 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
   The view can be downloaded as a jpg image by selecting the `Export as Image` option listed in Figure 48.
   The box at the bottom of Figure 48 allows the user to move more easily through the view in case its size is considerably large.
 
-* **Physical Tree View.** Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html)
+* **Physical Tree View.** Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html).
   
   | ![Move Device](images/physical_tree_view.png) |
   | :--: |
