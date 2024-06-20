@@ -1,4 +1,4 @@
-# Appendix A. Multiple Object Naming
+# Appendix A. Naming Multiple Objects
 
 A naming pattern is used to dynamically create the names of new objects or new special objects
 using the actions New Multiple and New Special Multiple, respectively, using on a simple syntax.

@@ -8,7 +8,7 @@ The scheduling module belongs to the **Settings** category as shown in Figure 1.
 |:--:|
 | ***Figure 1.** Scheduling module* |
 
-## Scheduling Job pool
+## Scheduling Job Pool
 
  Once the scheduling module is open, you need to create a job pool, which will allow you to create and manage jobs in an organized manner. To do this, locate the pool management button represented by a gear icon![Button Manage Pools](images/btn_mange_pools.png)as shown in Figure 2.
 

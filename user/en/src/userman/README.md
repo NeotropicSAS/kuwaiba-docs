@@ -19,7 +19,7 @@ Groups allow for the aggregation of users to simplify their management and admin
 
 ### Groups Actions
 
-#### Create new groups
+#### Create New Groups
 
 To create a new group, use the![Template Module](images/btn_new_group.png)button in the main window of the module. This will open the group creation window, as shown in Figure 3. Here, you will need to enter the name and description of the group. It is advisable to use a descriptive name, as this will be the name displayed in the list of available groups.
 
@@ -34,7 +34,7 @@ Once created, the group will appear in the list of available groups within the a
 | ***Figure 4.** Group list* |
 
 
-#### Delete group
+#### Delete Group
 To delete a group, use the![Btn Delete Groups](images/btn_delete_groups.png)button found in the group actions as shown in Figure 4. This will open the group deletion window in Figure 5. Click *OK* to proceed with deletion or *Cancel* to abort.
 > **Note** Users assigned exclusively to the group being deleted will also be removed unless they are assigned to other groups.
 

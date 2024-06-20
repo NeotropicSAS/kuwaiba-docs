@@ -52,8 +52,7 @@ The module presents the records in a paginated format, allowing you to navigate 
 |:--:|
 | ***Figure 5.** Pagination* |
 
-
-## Object-related events
+## Object-related Events
 
 The Object-related events can be found in any Kuwaiba module that has the **object options panel** as shown in Figure 6, explained in detail in the section [Object Dashboard](../dashboards/object/README.md). This functionality is available in modules such as navigation, pool, etc.
 

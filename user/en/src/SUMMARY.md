@@ -33,4 +33,4 @@
 
 -----------
 
-- [Appendix A. Multiple Object Naming](./appendix_a.md)
+- [Appendix A. Naming Multiple Objects](./appendix_a.md)

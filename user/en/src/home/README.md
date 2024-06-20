@@ -15,16 +15,16 @@ Once the login is done, the system will be redirected to home Figure 2.
 | ***Figure 2.** Home* |
 
 1. It shows the company logo[^1] and is also used to return to home.
-2. [Menu list](./#menu-list).
+2. [Menu Items](./#menu-items).
 3. Shows Kuwaiba information such as version, licenses, etc.
 4. Show user information and logout.
 5. Home dashboard[^2] shows a map with all the `GenericLocation` that has a geographic location set.
 
-## Menu List
+## Menu Items
 
 In kuwaiba, a module defines or groups system features, and the modules are grouped into categories.
 
-| Icon | Menu | Description |
+| Icon | Category | Description |
 |:--:|--|--|
 | ![Administration](images/menu-administration.png) | Administration |  Modules to manage the data model. |
 | ![Navigation](images/menu-navigation.png) | Navigation | Modules that are used to explore, navigate and search inventory assets. |
@@ -35,7 +35,7 @@ In kuwaiba, a module defines or groups system features, and the modules are grou
 | ![Other](images/menu-other.png) | Other | General system settings such as validators and configuration variables. |
 | ![Settings](images/menu-settings.png) | Settings | Any module not fitting the categories above. |
 
-## Essential modules
+## Essential Modules
 
 The recommended order to start exploring the inventory system is shown in Figure 3, follow the links to get started.
 

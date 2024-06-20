@@ -48,7 +48,7 @@ Once the *IP Address Manager* module is opened you can distinguish:
 |:--:|
 | **Figure 8.** Selected element properties |
 
-## Create a new folder of subnets
+## Create a New Folder of Subnets
 
 In the IP Management section, select the button shown in the image below to add a new folder of subnets.
 
@@ -62,7 +62,7 @@ This action will open the dialog box shown below, where the name of the new fold
 |:--:|
 | **Figure 11.** Dialog for creating a new folder of subnets |
 
-## Create a new subnet
+## Create a New Subnet
 
 In the IP Management section, select the button shown in the image below to add a new subnet.
 
@@ -112,7 +112,7 @@ In this segment we can manipulate both the collections of sub-networks and the a
     | **Figure 18.** Create reserved IP address |
   * **Add to favorites** ![button add favorites](images/add-to-favorites.png): This functionality will be available in future versions.
 
-## Properties of the selected element
+## Properties of the Selected Element
 
 The default image changes depending on the selected element, providing detailed information about it.
 
