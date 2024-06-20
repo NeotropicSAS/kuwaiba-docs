@@ -1,6 +1,6 @@
-# Kuwaiba Open Network Inventory User’s Manual
+# Kuwaiba Open Network Inventory Administrator’s Manual
 
-This directory contains the source of the English version of "Kuwaiba Open Network Inventory User’s Manual" book.
+This directory contains the source of the English version of "Kuwaiba Open Network Inventory Administrator’s Manual" book.
 
 ## Requirements
 Building the book requires [Rust] and [mdBook]. Once the first is installed, the second can be installed using [Cargo], Rust's package manager:
