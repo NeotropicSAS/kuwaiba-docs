@@ -1,6 +1,6 @@
-# Home
+# Getting Started
 
-The Kuwaiba home is the first view you have of the system, to enter it you login Figure 1.
+The login is the first view you have of the system Figure 1.
 
 | ![Login](images/figure-login.png) |
 |:--:|
@@ -8,21 +8,21 @@ The Kuwaiba home is the first view you have of the system, to enter it you login
 
 > **Information** Use the user `admin` and password `kuwaiba`.
 
-The home layout is organized as shown in Figure 2.
+Once the login is done, the system will be redirected to home Figure 2.
 
 | ![Home](images/figure-home.png) |
 |:--:|
 | ***Figure 2.** Home* |
 
 1. It shows the company logo[^1] and is also used to return to home.
-2. [Menu list](./#menu-list-for-module-categories).
+2. [Menu list](./#menu-list).
 3. Shows Kuwaiba information such as version, licenses, etc.
 4. Show user information and logout.
 5. Home dashboard[^2] shows a map with all the `GenericLocation` that has a geographic location set.
 
 ## Menu List
 
-In kuwaiba, a module defines or groups system features, and the modules are grouped into categories. The list of menus that appears in Figure 2 is a list of menus for each category.
+In kuwaiba, a module defines or groups system features, and the modules are grouped into categories.
 
 | Icon | Menu | Description |
 |:--:|--|--|
@@ -35,17 +35,19 @@ In kuwaiba, a module defines or groups system features, and the modules are grou
 | ![Other](images/menu-other.png) | Other | General system settings such as validators and configuration variables. |
 | ![Settings](images/menu-settings.png) | Settings | Any module not fitting the categories above. |
 
-## Getting Started
+## Essential modules
 
-Figure 3 shows how to access the essential modules.
+The recommended order to start exploring the inventory system is shown in Figure 3, follow the links to get started.
 
-| ![Home](images/menu-getting-started.png) |
+| ![Essential modules](images/figure-essential-modules.png) |
 |:--:|
-| ***Figure 3.** Getting Started* |
+| ***Figure 3.** Essential modules* |
 
 1. Data Model Manager.
-2. Containment Manager.
-3. Navigation.
+2. List Type Manager.
+3. Containment Manager.
+4. Navigation.
+5. Template Manager.
 
 > **Note** Depending on the restrictions that the system administrator has defined for the users in the user manager, the options in each menu will change.
 
