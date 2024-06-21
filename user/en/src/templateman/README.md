@@ -115,7 +115,7 @@ It is possible to edit the properties or elements of a template once they have b
 
 ## Using the Template
 
-You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 17, explained in detail in the section [Object Options Panel](../navman/README.md#object-options-panel). This functionality is available in modules such as navigation, pools, etc. 
+You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 17, explained in detail in the section [Object Options Panel](../navman/README.md#object-options-panel) in Navigation module. This functionality is available in modules such as navigation, pools, etc. 
 
 | ![Object Options Panel](images/object_opcions_panel.png) |
 |:--:|
