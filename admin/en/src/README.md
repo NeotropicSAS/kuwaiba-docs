@@ -6,16 +6,22 @@
     - [Requirements](#requirements)
       - [Java Development Kit](#java-development-kit)
       - [The Server Application Bundle](#the-server-application-bundle)
+    - [Running the Server](#running-the-server)
   - [Deploying on an Existing Application Server](#deploying-on-an-existing-application-server)
   - [Docker](#docker)
-    - [Using an External Database](#using-an-external-database)
+    - [Pulling the Image](#pulling-the-image)
+    - [Deployment](#deployment)
+      - [Starting the Container](#starting-the-container)
+      - [Using a Custom Database](#using-a-custom-database)
+      - [Additional Information](#additional-information)
+    - [Generate Your Own Image](#generate-your-own-image)
 - [Appendix A. Securing the Server](#appendix-a-securing-the-server)
   - [Recommendations](#recommendations)
 - [Appendix B. Starting the Server on Boot](#appendix-b-starting-the-server-on-boot)
 - [Appendix C. Using a Reverse Proxy](#appendix-c-using-a-reverse-proxy)
 - [Appendix D. Accessing the Database](#appendix-d-accessing-the-database)
 # Introduction
-*This documentation applies to version **2.1.x***
+*This documentation applies to version **2.1.1***
 
 **Kuwaiba** is an enterprise-ready network inventory platform geared towards the Telecommunications industry, but easily adaptable to other domains. It was designed to not only serve as an asset repository, but also to orchestrate complex business processes such as Service Provisioning, Activation, Modification and Termination, and to greatly speed the creation and integration of OSS (as in Operation Support Systems) applications. 
 
@@ -41,16 +47,76 @@ The most important file is `application.properties`. It contains several configu
 
 | Variable Name | Default Value   |Description   |
 | ------------- | ------------- | ------------- |
-| ws.port | 8080 |The port where the server will run. Note that this port is used to serve the UI, but it is different from that used to serve the web service |
-| spring.devtools.add-properties | false |Enable/disable Spring devtools. They're disabled automatically for all `jar` builds, but not for `war` files |
-| general.corporate-logo | http://neotropic.co/img/logo_small.png | Corporate Logo URL. To be used primarily in reports and branding-related features |
+| server.port | `8080` |The port where the server will run. Note that this port is used to serve the UI, but it is different from that used to serve the web service |
+| ws.port | `8081` |The port where the SOAP-based web service will listen |
+| db.port | ``6677`` | Database port, if applicable. The default value is not the same default Neo4J's server port. Connections to this port from other hosts rather than localhost will be denied |
+| spring.devtools.add-properties | `false` |Enable/disable Spring devtools. They're disabled automatically for all `jar` builds, but not for `war` files |
+| general.corporate-logo | `http://neotropic.co/img/logo_small.png` | Corporate Logo URL. To be used primarily in reports and branding-related features |
+| db.path | `/data/db/kuwaiba.db` | Database path |
+| aem.backgrounds-path | ``/data/img/backgrounds`` | Path of the folder where background images for Object Views are saved |
+| bem.attachments-path | ``/data/files/attachments`` | Path of the folder where files attached to inventory objects are stored |
+| spring.scheduler.enabled | ``true`` | Enables/disables the job scheduler service |
 
+### Running the Server
+The simplest method starts the server in foreground and logs in the standard output:
+```bash
+$ /path/to/java/installation/dir/bin/java -jar /path/to/kuwaiba/kuwaiba_server_2.1.x-stable.jar
+```
 
+The [nohup](https://en.wikipedia.org/wiki/Nohup) command allows you to launch the server so that it is not terminated once you logout from the terminal. In this case, unless you redirect the output, the application will log to `/home/<user>/nohup.out`:
+```bash
+$ nohup /path/to/java/installation/dir/bin/java -jar kuwaiba_server_2.1-stable.jar&
+```
 
+In production environments it is highly recommended to create a special, restricted user to run the server. To run the server as that user, you can use the following command (application messages will be logged in `/home/YOURUSER/nohup.out`):
+```bash
+$ sudo runuser -u YOURUSER -- nohup /path/to/java/installation/dir/bin/java -jar kuwaiba_server_2.1-stable.jar&
+```
+[Appendix B](#appendix-b-starting-the-server-on-boot) discusses how to configure the server to start on boot.
 
 ## Deploying on an Existing Application Server
 ## Docker
-### Using an External Database
+### Pulling the Image
+
+For nightly builds (which are not really generated nightly, but at least once a week), use:
+```bash
+$ docker pull neotropic/kuwaiba:v2.1-nightly
+```
+### Deployment
+#### Starting the Container
+
+The container exposes 2 ports: 8080 (application) and 8081 (SOAP-based web service). You can use the following command to run the container and map those ports to the host machine.
+```bash
+$ docker run -dp 8080-8081:8080-8081 --name kuwaiba-server neotropic/kuwaiba:v2.1-nightly
+```
+Now it's possible to access the application by going to http://localhost:8080/kuwaiba⁠, or to access the SOAP-based web service API WSDL at http://localhost:8081/kuwaiba/KuwaibaService?wsdl⁠
+
+#### Using a Custom Database
+
+To avoid losing information across containers when you update an image, you can mount a custom database (thus overriding the stock one) located in your host machine and reuse it in different containers:
+
+```bash
+$ docker run -dp 8080-8081:8080-8081 --name kuwaiba-server -v /path/to/your/custom/database:/data/db/kuwaiba.db neotropic/kuwaiba:v2.1-nightly
+```
+Make sure the user used to run the container has write access on ``/path/to/your/custom/database``. You can download empty or sample databases from the [Sourceforge repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/dbs/)⁠
+
+#### Additional Information
+* **Default Server Credentials:** admin/kuwaiba. There are several other users used to showcase the Process Manager capabilities in ``database 03``. You can check them out in the **User Manager** module. Their passwords are also ``kuwaiba``.
+* **Data Directory:** /data
+* **Application Directory:** /opt/programs
+
+### Generate Your Own Image
+* Fetch the Dockerfile from the [project repository⁠](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/docker/) on SourceForge. Alternatively, you can also download the docker compose file from the same repository⁠
+* Customize the Dockerfile depending on your needs.
+* Build the image with:
+```bash
+$ docker build -t REPOSITORY_NAME:TAG .
+```
+where REPOSITORY_NAME is the name of the repository where the image will be placed and TAG is the tag for such container. Instead, you can also use the docker compose file like this:
+```bash
+$ docker compose -f kuwaiba.yaml up
+```
+
 # Appendix A. Securing the Server
 ## Recommendations
 * Make sure the user running the server only has access to the data directories and has as little other privileges as possible. Also, disable its shell access as instructed in the [installation section](#installation).
