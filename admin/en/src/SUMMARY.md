@@ -1,6 +1,6 @@
 # Summary
 - [Introduction](intro/README.md) 
-- [Installation](installation/intro/README.md) 
+- [Installation](installation/README.md) 
 - [Appendix A. Securing the Server](appendixes/appendix_a.md) 
 - [Appendix B. Starting the Server on Boot](appendixes/appendix_b.md)
 - [Appendix C. Using a Reverse Proxy](appendixes/appendix_c.md)
