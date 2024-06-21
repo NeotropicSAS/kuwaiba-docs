@@ -41,9 +41,6 @@ It is possible to delete templates created for a class. To do so, use the button
 | ***Figure 5.** Template delete window* |
 
 ### Add Elements
-
-Se pueden agregar **elementos** o **elementos especiales** a las plantillas. Los elementos que pueden ser agregados están determinados por la configuración de contenencia de la clase (ver Administrador de Contenencia).
-
 You can add **elements** or **special elements** to templates. The elements that can be added are determined by the containment configuration of the class (see Containment Manager).
 
 To add **elements** to the template, use the ![Template Module Btn Add Elements](images/btn_add_template.png) button in the template actions shown in Figure 4. If you want to add **special elements**, use the ![Template Module Btn Add Special Elements](images/btn_add_special_elements.png) button. This will display the menu shown in Figure 6, where you must select whether you want to create a single element or multiple elements. If the class does not have any elements or special elements assigned in its containment, you will not be able to add elements of this type to the template.
@@ -69,71 +66,75 @@ If you select to create multiple elements from the menu in Figure 6, the multipl
 
 Where you must choose the class of the element to add. The available classes depend on the containment configuration of the class to which you are creating the element (see Containment Manager) and enter the **naming pattern** as detailed in Appendix A.
 
-The result of using the **naming pattern** `[sequence(a,c)]`, useful for creating multiple elements like buildings in the *City* class, and `[multiple-mirror(1,3)]`, useful for creating ports in the *SpliceBox* class, can be seen in Figures 9 and 10 respectively.
+The result of using the **naming pattern** `[sequence(a,c)]`, useful for creating multiple elements like buildings in the *City* class,`[multiple-mirror(1,3)]`, useful for creating ports in the *SpliceBox* class and `[mirror(1,3)]`useful to create mirror ports in *ODF*,*SpliceBox* ** can be seen in Figures 9, 10  and 11 respectively.
 
 | ![Example Sequence](images/example_pattern_frequency.png) |
 |:--:|
 | ***Figure 9.** Result of [sequence(a,c)]* |
 
 
-| ![Example Mirror](images/example_pattern_mirror.png) |
+| ![Example Mirror](images/example_pattern_multiple_mirror.png) |
 |:--:|
 | ***Figure 10.** Result of [multiple-mirror(1,3)]* |
 
+| ![Example Mirror](images/example_pattern_mirror.png) |
+|:--:|
+| ***Figure 11.** Result of [mirror(1,3)]* |
+
 
 ## Template Element Management
-Once the template elements are created, they will be added to the **template structure** section of the main module window, as shown in Figure 11.
+Once the template elements are created, they will be added to the **template structure** section of the main module window, as shown in Figure 12.
 
 | ![List of elements](images/template_manager_list_of_elements.png) |
 |:--:|
-| ***Figure 11.** List of elements* |
+| ***Figure 12.** List of elements* |
 
-In this section, you can not only view the **elements** and the containment tree of the **multiple elements**, but also create new elements or special elements on existing ones or delete them using the![Template Module Btn Element Menu](images/btn_element_menu.png) button of the desired element, which will display the menu shown in Figure 12.
+In this section, you can not only view the **elements** and the containment tree of the **multiple elements**, but also create new elements or special elements on existing ones or delete them using the![Template Module Btn Element Menu](images/btn_element_menu.png) button of the desired element, which will display the menu shown in Figure 13.
 
 | ![Manage elements menu](images/template_manager_element_menu.png) |
 |:--:|
-| ***Figure 12.** Manage elements menu* |
+| ***Figure 13.** Manage elements menu* |
 
-This allows you to create containment structures as complex as needed, following the containment configuration of the class for which the template is created, as shown in Figure 13.
+This allows you to create containment structures as complex as needed, following the containment configuration of the class for which the template is created, as shown in Figure 14.
 
 | ![Template Example](images/tempalte_manager_example.png) |
 |:--:|
-| ***Figure 13.** Template Example* |
+| ***Figure 14.** Template Example* |
 
 ## Editing Properties of a Template or Elements
-It is possible to edit the properties or elements of a template once they have been created. To do this, select the template or an element of the template you wish to edit. The properties sheet of the template, shown in Figure 14, or the properties of the template elements, shown in Figure 15, will appear on the right side of the main module window. Use this to edit the desired properties.
+It is possible to edit the properties or elements of a template once they have been created. To do this, select the template or an element of the template you wish to edit. The properties sheet of the template, shown in Figure 15, or the properties of the template elements, shown in Figure 16, will appear on the right side of the main module window. Use this to edit the desired properties.
 
 | ![Template Property Sheet](images/template_manager_edit_template_properties.png) |
 |:--:|
-| ***Figure 14.** Example of template property sheet* |
+| ***Figure 15.** Example of template property sheet* |
 
 
 | ![Element Property Sheet](images/template_manager_element_edit_properties.png) |
 |:--:|
-| ***Figure 15.** Example of element property sheet* |
+| ***Figure 16.** Example of element property sheet* |
 
 ## Using the Template
 
-You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 16, explained in detail in the section [Object Dashboard](../dashboards/object/README.md). This functionality is available in modules such as navigation, pools, etc. 
+You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 17, explained in detail in the section [Object Options Panel](../navman/README.md#object-options-panel). This functionality is available in modules such as navigation, pools, etc. 
 
 | ![Object Options Panel](images/object_opcions_panel.png) |
 |:--:|
-| ***Figure 16.** Object options panel* |
+| ***Figure 17.** Object options panel* |
 
-In the **Basic Options** section of the **Object Options Panel** you will find the options **New Object from Template** and **New Special Object from Template** as shown in Figure 17.
+In the **Basic Options** section of the **Object Options Panel** you will find the options **New Object from Template** and **New Special Object from Template** as shown in Figure 18.s
 
 | ![Object To Create Objects From Template](images/select_options_to_create_objects.png) |
 |:--:|
-| ***Figure 17.** Options to create objects from template* |
+| ***Figure 18.** Options to create objects from template* |
 
-When using them, the window for creating objects from a template, shown in Figure 18, will appear. The available classes depend on the containment configuration of the selected class.
+When using them, the window for creating objects from a template, shown in Figure 19, will appear. The available classes depend on the containment configuration of the selected class.
 
 | ![Object To Create Objects From Template Window](images/template_manager_create_object.png) |
 |:--:|
-| ***Figure 18.** Object creation window from template* |
+| ***Figure 19.** Object creation window from template* |
 
-For example, we use the *City* class and the previously created template *A sample city*. As a result, we create an object following the template, as observed in Figure 19.
+For example, we use the *City* class and the previously created template *A sample city*. As a result, we create an object following the template, as observed in Figure 20.
 
 | ![Example Object Created From Template](images/object_created_from_template.png) |
 |:--:|
-| ***Figure 19.** Example object created from template* |
+| ***Figure 20.** Example object created from template* |
