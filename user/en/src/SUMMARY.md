@@ -5,13 +5,14 @@
 
 # Administration
 
-- [Data Model Manager](dmman/README.MD)
-- [List Type Manager](administration/ltman/README.MD)
-- [Containment Manager](administration/containment/README.MD)
-- [Template Manager](templateman/README.md)
-- [Audit Trail](auditTrail/README.md)
-- [User Manager](userman/README.md)
-- [Task Manager](taskman/README.md)
+- [Data Model Manager](./dmman/README.MD)
+- [List Type Manager](./administration/ltman/README.MD)
+- [Containment Manager](./administration/containment/README.MD)
+- [Template Manager](./templateman/README.md)
+- [Audit Trail](./auditTrail/README.md)
+- [User Manager](./userman/README.md)
+- [Task Manager](./taskman/README.md)
+- [Reports](./reports/README.md)
 
 # Navigation
 

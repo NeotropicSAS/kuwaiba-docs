@@ -199,7 +199,7 @@ The basic actions of each inventory object are shown in Figure 16 and are descri
     | ***Figure 28**. Manage special relationships.* |
 
 * **Reports.** Displays the reports associated to the objects of this class. In this case, Rack has three associated reports, as shown in Figure 29.
-Selecting a specific report opens a new HTML window with the result of the report execution. This section is explained in detail in the **Reports** chapter.
+Selecting a specific report opens a new HTML window with the result of the report execution. This section is explained in detail in the [Reports][reports] chapter.
 
     > Note: It is necessary to enable popups in the browser so that the report can be executed.
 
@@ -404,3 +404,5 @@ On the right side of Figure 53 is the Object Options Panel, which displays infor
 * **Audit Trail.** It is a sequence of records that documents changes in inventory objects. For more details, see chapter [Audit Trail][auditTrail].
 
 [auditTrail]: ../auditTrail/index.html
+
+[reports]: ../reports/index.html
