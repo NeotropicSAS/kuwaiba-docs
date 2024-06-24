@@ -12,6 +12,7 @@
 - [Audit Trail](./auditTrail/README.md)
 - [User Manager](./userman/README.md)
 - [Task Manager](./taskman/README.md)
+- [Reports](./reports/README.md)
 
 # Navigation
 
