@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Kuwaiba Open Network Inventory User’s Manual v2.1.1"
+
+[output.html]
+git-repository-url = "https://github.com/NeotropicSAS/kuwaiba-docs/tree/main/user/en"
+edit-url-template = "https://github.com/NeotropicSAS/kuwaiba-docs/edit/main/user/en/{path}"

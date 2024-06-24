@@ -35,14 +35,17 @@ Figure 3 shows the workflow for configuring the containment hierarchy.
 5. To delete a class as a possible child, simply uncheck the class.
 6. It is also possible to delete a class from the possible children by clicking on the `x` button.
 
-> **Note:** To avoid adding one by one many classes to a parent, you can use the flexibility of the data model as a hierarchical structure. For example, a Rack may contain within many types of equipment (routers, DDFs, switches, battery banks, etc). Instead of adding each of these classes one by one, you can add a common super class and all of them will be added automatically. For this example a common super class for most of those classes could be GenericCommunicationsElement.
+> **Note:** To avoid adding one by one many classes to a parent, you can use the flexibility of the data model as a hierarchical structure. For example, a `Rack` may contain within many types of equipment (routers, DDFs, switches, battery banks, etc). Instead of adding each of these classes one by one, you can add a common super class and all of them will be added automatically. For this example a common super class for most of those classes could be `GenericCommunicationsElement` Figure 4.
+> | ![Rack Possible Children](images/figure-rack-possible-children.png) |
+> |:--:|
+> | ***Figure 4.** Rack possible children* |
 
 ## Special Containment Hierarchy
 
-This hierarchy is used to model non-physical containment, for example the VLANs of an OLT. VLANs are not physical elements like the OLT boards, but they are part of it and it is for these scenarios that the special containment hierarchy exists Figure 4.
+This hierarchy is used to model non-physical containment, for example the VLANs of an OLT. VLANs are not physical elements like the OLT boards, but they are part of it and it is for these scenarios that the special containment hierarchy exists Figure 5.
 
 | ![Containment Manager](images/figure-olt-special-containment-hierarchy.png) |
 |:--:|
-| ***Figure 4.** OLT Special Containment Hierarchy* |
+| ***Figure 5.** OLT Special Containment Hierarchy* |
 
 The flow to configure the special containment hierarchy is the same as shown in Figure 3.
