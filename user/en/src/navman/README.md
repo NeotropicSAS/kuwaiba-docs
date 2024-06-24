@@ -2,7 +2,7 @@
 
 This module is the main navigation tool of the application, as it presents the physical objects of the inventory organized in a hierarchical containment structure explained in the [Containment Manager](../administration/containment/index.html) chapter.
 
-To access the navigation module In the top bar of the screen, locate the compass symbol shown in Figure 1. Then go to the Navigation section.
+To access the navigation module in the top bar of the screen, locate the compass symbol shown in Figure 1. Then go to the Navigation section.
 
 | ![Navigation](images/navman_access.png) |
 |:--:|
@@ -184,7 +184,7 @@ The basic actions of each inventory object are shown in Figure 16 and are descri
   | ***Figure 26**. Manage other attachments.* |
 
 * **Manage Special Relationships.** Allows you to create arbitrary relationships between objects.
-  > Note: This action should be handled with extreme caution, as it may cause damage to the model.
+  > **Warning** This action should be handled with extreme caution, as it may cause damage to the model.
 
     Figure 27 shows the pop-up window that displays the special relationships that an object has. The ![delete relationship](images/release_special_rel_icon.png) button allows you to delete a relationship.
 
@@ -248,10 +248,10 @@ An example of the object view is shown in Figure 32, where the selected object i
   In the upper left part of Figure 33 a search box appears, where you can search for a specific object that is a direct child of the selected object.
 
   |Icon| Description |
-  | :--:|:--:|
+  | :--:|--|
   | ![download icon](images/icons/download_icon.png)| Save view|
   | ![refresh](images/icons/refresh_view_icon.png)| Update view|
-  | ![refresh](images/icons/connect_icon.png)| Conecta dos nodos (See Physical Connections for more details on how to use it)|
+  | ![refresh](images/icons/connect_icon.png)| Connect two nodes (See Physical Connections for more details on how to use it)|
   | ![background](images/icons/background_icon.png)| Add a background image|
   | ![hide labels](images/icons/labels_icon.png)| Hide/show the labels next to the connections|
   | ![labels color](images/icons/labels_color_icon.png)| Change labels color|
@@ -386,8 +386,10 @@ This component, as its name suggests, explores the structures of a model, includ
 | :--: |
 | ***Figure 51**. Explorers.*|
 
-* **Special Children.** Special children are elements that, while following the concept of containment hierarchy, are used in domain-specific models. This gives them a particular behavior depending on the situation. They cannot be treated as simple objects in the navigation tree since, for example, their removal may require additional tasks beyond simply deleting them from the database, because they are part of a complex workflow. These children respect the special containment hierarchy detailed in the **Special Containment Hierarchy** chapter.
+* **Special Children.** Special children are elements that, while following the concept of containment hierarchy, are used in domain-specific models. This gives them a particular behavior depending on the situation. They cannot be treated as simple objects in the navigation tree since, for example, their removal may require additional tasks beyond simply deleting them from the database, because they are part of a complex workflow. These children respect the special containment hierarchy detailed in the [Special Containment Hierarchy][special-containment-hierarchy] chapter.
 As shown in Figure 52, selecting an object displays a pop-up window with its special children. If any of these special children are selected, its own special children, if any, will be displayed. When selecting any special child, the corresponding object information appears in the Object Options Panel on the right side of the screen.
+
+[special-containment-hierarchy]: ../administration/containment/index.html#special-containment-hierarchy
 
   | ![Explorer Special Children](images/explorer_special_children.png) |
   | :--: |
