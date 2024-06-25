@@ -231,7 +231,11 @@ A view is a graphical representation of a selected object that can be displayed 
 | :--: |
 | ***Figure 31**. Views.*|
 
-* **Object View.** A view is a graphical representation of what is inside an object. All instances (objects) of subclasses of `ViewableObject` have an ObjectView that shows the direct children of the selected node.
+#### **Object View**
+
+> Applies to objects of class or subclass `ViewableObject`
+
+A view is a graphical representation of what is inside an object. All instances (objects) of subclasses of `ViewableObject` have an ObjectView that shows the direct children of the selected node.
 Most objects, except for logical and administrative assets and a few physical ones such as slots and ports, are subclasses of `ViewableObject`.
 An example of the object view is shown in Figure 32, where the selected object is a country and in the object view are the cities and states that are direct children of the selected country.
 
@@ -257,7 +261,11 @@ An example of the object view is shown in Figure 32, where the selected object i
   | ![labels color](images/icons/labels_color_icon.png)| Change labels color|
   | ![labels color](images/icons/export_icon.png)| Export as image |
 
-* **Rack View.** This view only works with objects of the Rack class or its subclasses. It shows how the elements contained in the selected object are organized, according to their position and the number of rack units used.
+#### **Rack View**
+
+> Applies to objects of class or subclass `Rack`
+
+This view only works with objects of the Rack class or its subclasses. It shows how the elements contained in the selected object are organized, according to their position and the number of rack units used.
   
   | ![Explorer Special Children](images/rack_view.png) |
   | :--: |
@@ -277,63 +285,71 @@ An example of the object view is shown in Figure 32, where the selected object i
   | :--: |
   | ***Figure 36**. Rack children properties.*|
 
-    A menu is shown at the top of Figure 34.
+  A menu is shown at the top of Figure 34.
 
-    | ![Rack View Menu](images/rack_view_menu.png) |
-    | :--: |
-    | ***Figure 37**. Rack view menu.*|
+  | ![Rack View Menu](images/rack_view_menu.png) |
+  | :--: |
+  | ***Figure 37**. Rack view menu.*|
 
-  * The `Show/Hide Help` button provides the user with a short guide to the use of the tool, as shown in Figure 38.
+* The `Show/Hide Help` button provides the user with a short guide to the use of the tool, as shown in Figure 38.
 
-    | ![Rack View Help](images/rack_view_help.png) |
-    | :--: |
-    | ***Figure 38**. Rack view help.*|
+  | ![Rack View Help](images/rack_view_help.png) |
+  | :--: |
+  | ***Figure 38**. Rack view help.*|
 
-  * The tool offers a more detailed view of the rack and its components, by clicking on the `Show Detailed View` option as shown below.
-  
-    | ![Detailed View](images/detailed_rack_view.png) |
-    | :--: |
-    | ***Figure 39**. Detailed rack view.*|
+* The tool offers a more detailed view of the rack and its components, by clicking on the `Show Detailed View` option as shown below.
 
-  * The icon ![detailed port](images/icons/port_icon.png) opens a new window with the connected devices and their status, as shown in Figure 40.
-  
-    | ![Detailed View](images/port_summary.png) |
-    | :--: |
-    ***Figure 40**. Device summary.*|
+  | ![Detailed View](images/detailed_rack_view.png) |
+  | :--: |
+  | ***Figure 39**. Detailed rack view.*|
 
-  * The icon ![connection list](images/icons/connection_list.png) opens a window with the connections between the devices, as shown in Figure 41.
-  
-    | ![Connection List](images/connection_list.png) |
-    | :--: |
-    | ***Figure 41**. Connection list.*|
+* The icon ![detailed port](images/icons/port_icon.png) opens a new window with the connected devices and their status, as shown in Figure 40.
 
-  * The icon ![edit properties](images/icons/rack_edit_properties.png) is used to edit the attributes of the selected rack, as shown in Figure 42.
+  | ![Detailed View](images/port_summary.png) |
+  | :--: |
+  ***Figure 40**. Device summary.*|
 
-    | ![Edit Rack Properties](images/edit_rack_properties.png) |
-    | :--: |
-    | ***Figure 42**. Rack properties.*|
+* The icon ![connection list](images/icons/connection_list.png) opens a window with the connections between the devices, as shown in Figure 41.
 
-  Finally, in Figure 34, on the left side of the view, there are two options that appear next to each of the devices:
+  | ![Connection List](images/connection_list.png) |
+  | :--: |
+  | ***Figure 41**. Connection list.*|
 
-  * The icon ![Port Summary By Device icon](images/icons/port_summary_by_device.png) opens a new window with the port information for each device, as shown in Figure 43.
-  
-    | ![Port Summary By Device](images/port_summary_by_device.png) |
-    | :--: |
-    | ***Figure 43**. Port summary by device.*|
+* The icon ![edit properties](images/icons/rack_edit_properties.png) is used to edit the attributes of the selected rack, as shown in Figure 42.
 
-  * The icon ![Port Summary By Device](images/icons/move_device_icon.png) allows you to move the device to a different position within the rack.
-  
-    | ![Move Device](images/move_device.png) |
-    | :--: |
-    | ***Figure 44**. Move device in the rack.*|
+  | ![Edit Rack Properties](images/edit_rack_properties.png) |
+  | :--: |
+  | ***Figure 42**. Rack properties.*|
 
-* **Splice Box View.** This view represents the splices made by a splice box, using the `mirror`, `endpointA` and `endpointB` relationships. In the example in Figure 45, a splice box with 4 input ports (IN-001, IN-002, IN-003 and IN-004) and 4 output ports (OUT-001, OUT-002, OUT-003 and OUT-004) is shown, where each input port is connected to a corresponding output port using a `mirror` relationship. Also visible is a fiber path labeled 001 (related to the splice box ports via the `endpointA` and `endpointB` relationships), which enters the splice box through port IN-001 and exits through output port OUT-001. The figure also shows the organization of the connections and the internal structure of the splice box, highlighting the splices currently in use (marked in blue) versus those available (marked in gray).
+Finally, in Figure 34, on the left side of the view, there are two options that appear next to each of the devices:
+
+* The icon ![Port Summary By Device icon](images/icons/port_summary_by_device.png) opens a new window with the port information for each device, as shown in Figure 43.
+
+  | ![Port Summary By Device](images/port_summary_by_device.png) |
+  | :--: |
+  | ***Figure 43**. Port summary by device.*|
+
+* The icon ![Port Summary By Device](images/icons/move_device_icon.png) allows you to move the device to a different position within the rack.
+
+  | ![Move Device](images/move_device.png) |
+  | :--: |
+  | ***Figure 44**. Move device in the rack.*|
+
+#### **Splice Box View**
+
+> Applies to objects of class or subclass `SpliceBox`
+
+This view represents the splices made by a splice box, using the `mirror`, `endpointA` and `endpointB` relationships. In the example in Figure 45, a splice box with 4 input ports (IN-001, IN-002, IN-003 and IN-004) and 4 output ports (OUT-001, OUT-002, OUT-003 and OUT-004) is shown, where each input port is connected to a corresponding output port using a `mirror` relationship. Also visible is a fiber path labeled 001 (related to the splice box ports via the `endpointA` and `endpointB` relationships), which enters the splice box through port IN-001 and exits through output port OUT-001. The figure also shows the organization of the connections and the internal structure of the splice box, highlighting the splices currently in use (marked in blue) versus those available (marked in gray).
   
   | ![Move Device](images/splice_box_view.png) |
   | :--: |
   | ***Figure 45**. Splice box view.*|
 
-* **Fiber Splitter View.** It shows the operation of a fiber splitter, illustrating how a single fiber signal is distributed to multiple outputs. The fiber splitter view is based on the `multipleMirror`, `endpointA` and `endpointB` relationships.
+#### **Fiber Splitter View**
+
+> Applies to objects of class or subclass `FiberSplitter`
+
+It shows the operation of a fiber splitter, illustrating how a single fiber signal is distributed to multiple outputs. The fiber splitter view is based on the `multipleMirror`, `endpointA` and `endpointB` relationships.
 The `endpointA` and endpointB relationships identify the ports where the fiber path enters and exits, while the `multipleMirror` relationship is the relationship between the single fiber splitter input port and the N output ports.
 
   In the view presented in Figure 46, a fiber splitter called 1x16 Secondary Splitter was selected, which has 16 output ports (001-OUT to 016-OUT) connected to the splitter's input port (IN-001) where the fiber optic cable enters.
@@ -344,7 +360,11 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
   | :--: |
   | ***Figure 46**. Fiber splitter view.*|
 
-* **Physical Path View.** Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html).
+#### **Physical Path View**
+
+> Applies to objects of class or subclass `GenericPort`
+
+Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html).
 
   | ![Physical Path View](images/physical_path.png) |
   | :--: |
@@ -370,7 +390,11 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
   The view can be downloaded as a jpg image by selecting the `Export as Image` option listed in Figure 48.
   The box at the bottom of Figure 48 allows the user to move more easily through the view in case its size is considerably large.
 
-* **Physical Tree View.** Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html).
+#### **Physical Tree View**
+
+> Applies to objects of class or subclass `GenericPort`
+
+Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html).
   
   | ![Move Device](images/physical_tree_view.png) |
   | :--: |
