@@ -1,4 +1,4 @@
-# Validators
+# Validator Definition
 
 Validators are flags that indicate the status, condition or certain characteristics of specific objects. These flags can take the form of percentages, status messages, among others. Validators are used to provide quick and easily interpretable information about the objects of the classes to which they are associated.
 
