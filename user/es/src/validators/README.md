@@ -1,6 +1,6 @@
 # Validadores
 
-Los validadores son banderas que indican el estado, condición o ciertas características sobre objetos específicos dentro de un sistema o contexto. Estas banderas pueden adoptar la forma de porcentajes, mensajes de estado, entre otros. Los validadores se utilizan para proporcionar información rápida y fácilmente interpretable sobre los objetos de las clases a los que están asociados.
+Los validadores son banderas que indican el estado, condición o ciertas características sobre objetos específicos. Estas banderas pueden adoptar la forma de porcentajes, mensajes de estado, entre otros. Los validadores se utilizan para proporcionar información rápida y fácilmente interpretable sobre los objetos de las clases a los que están asociados.
 
 Para acceder al módulo de validadores, localice en el menú superior de la pantalla la categoría `Settings`, representada por el símbolo ![Settings](images/icons/settings_icon.png). Al hacer clic, se desplegará un segundo menú. Seleccione la opción `Validator Definition`, lo que abrirá la interfaz del módulo de validadores, como se muestra en la Figura 2.
 
@@ -12,7 +12,7 @@ Para acceder al módulo de validadores, localice en el menú superior de la pant
 | :--: |
 | ***Figura 2.** Validadores.* |
 
-Como se observa en la Figura 2, en la interfaz inicial del módulo aparece una lista en la parte izquierda con todos los validadores existentes. En la parte superior, en la caja de búsqueda marcada con `Classes`, se pueden filtrar los validadores por la clase a la que pertenecen. Al seleccionar el icono ![class list](images/icons/class_list.png), se mostrará una lista con todas las clases. De igual forma, puede escribir el nombre de la clase de interés en la caja de búsqueda, y la lista se actualizará de acuerdo con lo que ingrese en el campo, como se muestra en la Figura 3.
+Como se observa en la Figura 2, en la interfaz inicial del módulo aparece una lista en la parte izquierda con todos los validadores existentes. En la parte superior, en la caja de búsqueda marcada con `Classes`, se pueden filtrar los validadores por la clase a la que pertenecen. Al seleccionar el icono ![class list](images/icons/class_list.png), se mostrará una lista con todas las clases. De igual forma, puede escribir el nombre de la clase de interés en la caja de búsqueda, y la lista se actualizará de acuerdo a lo que ingrese en el campo, como se muestra en la Figura 3.
 
 | ![validators menu](images/filter_search.png) |
 | :--: |
@@ -28,7 +28,7 @@ De igual forma, el módulo cuenta con una segunda caja de búsqueda, indicada en
 
 | ![validators by name](images/second_filter_search.png) |
 | :--: |
-| ***Figura 5.** Búsqueda de filtros por nombre.* |
+| ***Figura 5.** Búsqueda de validadores por nombre.* |
 
 Para agregar un nuevo validador, se selecciona el icono ![create icon](images/icons/create_validator_icon.png) mostrado en la Figura 2. Esto abrirá una ventana emergente, similar a la indicada en la Figura 6, donde el usuario puede seleccionar la clase a la que pertenece el validador, ingresar su nombre y añadir una descripción.
 
@@ -36,13 +36,13 @@ Para agregar un nuevo validador, se selecciona el icono ![create icon](images/ic
 | :--: |
 | ***Figura 6.** Crear validador.* |
 
-Al seleccionar un validador de interés, el script será mostrado en la parte derecha de la pantalla, como muestra la Figura 7. 
+Al seleccionar un validador de interés, el script será mostrado en la parte derecha de la pantalla, como muestra la Figura 7.
 
 | ![validator](images/validator.png) |
 | :--: |
 | ***Figura 7.** Vista del validador seleccionado.* |
 
-Para el ejemplo de la Figura 7, se seleccionó el validador `license state`. En el recuadro rojo se indica el nombre del validador. Justo debajo, se muestra el contenido del validador, el cual será explicado en la subsección SUB. En la parte superior derecha se encuentran cuatro botones, los cuales se detallan en la Figura 8.
+Para el ejemplo de la Figura 7, se seleccionó el validador `license state`. En el recuadro rojo se indica el nombre del validador. Justo debajo, se muestra el contenido del validador, el cual será explicado en la subsección [Contenido de un Validador](#contenido-de-un-validador). En la parte superior derecha se encuentran cuatro botones, los cuales se detallan en la Figura 8.
 
 | ![validator](images/validator_options.png) |
 | :--: |
@@ -72,7 +72,7 @@ Tomando como ejemplo el validador de la Figura 7 (cuyo contenido se aprecia mejo
 
 * Todos los validadores extienden de la clase `ValidatorDefinition`. Esto se puede apreciar en la linea 15 de la Figura 10. **No debe ser modificado por el usuario**.
 * Todos los validadores cuentan con un constructor que **no debe ser modificado por el usuario**, es decir, siempre es el mismo.
-* Cuenta con un método `run`, el cual inyecta los entity managers de la aplicación (ApplicationEntityManager, BusinessEntityManager, MetadataEntityManager), el ConnectionManager y el identificador del objeto y la clase a la cual pertenece. La firma de este método no debe ser modificada. El usuario puede alterar su contenido, ya que es dentro de este método donde se agrega el contenido de valor del validador. Dicha inyección permite utilizar los métodos de los entity managers para construir la logica del filtro. La documentación la encuentra la API Java documentada de Kuwaiba[^API].
+* Cuenta con un método `run`, el cual inyecta los entity managers de la aplicación (ApplicationEntityManager, BusinessEntityManager, MetadataEntityManager), el ConnectionManager y el identificador del objeto y la clase a la cual pertenece. La firma de este método no debe ser modificada. El usuario puede alterar su contenido, ya que es dentro de este método donde se agrega el contenido de valor del validador. Dicha inyección permite utilizar los métodos de los entity managers para construir la lógica del filtro. La documentación la encuentra la API Java documentada de Kuwaiba[^API].
 * Existen cuatro formas de establecer un validador:
   * **Sufijo:** Agrega un texto después del nombre del objeto. La propiedad es denominada `suffix`.
   * **Prefijo:** Agrega un texto antes del nombre del objeto. La propiedad es denominada `prefix`.
