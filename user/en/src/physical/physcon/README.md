@@ -134,15 +134,105 @@ Shows how the ports are connected within the device, the IP address and assigned
 
 ### Edit Connections
 
-> Applies to objects of class or subclass `GenericPhysicalConnection`
+> Applies to objects of class or subclass `GenericPhysicalConnection` Figure 16
+
+| ![Subclasses GenericPhysicalConnection](images/figure-subclasses-generic-physical-connection.png) |
+|:--:|
+| ***Figure 16.** Subclasses GenericPhysicalConnection* |
+
+To execute the action, look for an object that is a subclass `GenericPhysicalConnection` select it and click on the action Edit Connections Figure 17.
+
+| ![Edit connections action](images/figure-edit-connections-action.png) |
+|:--:|
+| ***Figure 17.** Edit connections action* |
+
+A window appears, the flow to edit a connection is shown in Figure 18.
+
+| ![Edit connections window](images/figure-edit-connections-window.png) |
+|:--:|
+| ***Figure 18.** Edit connections window* |
+
+1. Select the endpoint A.
+2. Select a link.
+3. Select the endpoint B.
+4. Click on the button Connect Selected Endpoints to the link.
+5. Disconnect only the endpoint A of the link.
+6. Disconnect only the endpoint B of the link.
+7. Disconnect the endpoint A and the endpoint B of the link.
 
 ### Connect Using a Link
 
-> Applies to objects of class or subclass `GenericPort`
+> Applies to objects of class or subclass `GenericPort` Figure 19.
+
+| ![Subclasses GenericPort](images/figure-subclasses-generic-port.png) |
+|:--:|
+| ***Figure 19.** Subclasses GenericPort* |
+
+To execute the action, look for an object that is a subclass `GenericPort` select it and click on the action `Connect to...` Figure 20.
+
+| ![Connect using link action](images/figure-connect-using-link-action.png) |
+|:--:|
+| ***Figure 20.** Connect using link action* |
+
+In this example we will connect the port of an ODF with a port of an OLT, for this we must select the target port Figure 21.
+
+| ![Connect using link new window](images/figure-connect-using-link-new-window.png) |
+|:--:|
+| ***Figure 21.** Connect using link new window* |
+
+Figure 22 shows the steps to find the OLT port to connect.
+
+| ![Select connection target port window](images/figure-select-connection-target-port.png) |
+|:--:|
+| ***Figure 22.** Select connection target port window* |
+
+Once the target port is selected, we use the suggested connection name and click on the `Connect` button.
+
+| ![Connect using link window](images/figure-connect-using-link-window.png) |
+|:--:|
+| ***Figure 23.** Connect using link window* |
+
+1. Suggested connection name.
+
+Figure 24 shows the new link using the [physical path view][physical-path-view] for the ODF port.
+
+| ![New link in physical path](images/figure-new-link-in-physical-path.png) |
+|:--:|
+| ***Figure 24.** New link in physical path* |
 
 ### Connect Using a Container
 
-> Applies to objects of class or subclass `GenericLocation`, `GenericDistributionFrame`, `GenericSplicingDevice`
+> Applies to objects of class or subclass `GenericLocation` Figure 25, `GenericDistributionFrame` or `GenericSplicingDevice`
+
+| ![Subclasses GenericLocation](images/figure-subclasses-generic-location.png) |
+|:--:|
+| ***Figure 25.** Subclasses GenericLocation* |
+
+To execute the action, look for an object that is a subclass `GenericLocation`, `GenericDistributionFrame` or`GenericSplicingDevice` select it and click on the action `Connect to...` Figure 26.
+
+| ![Connect using container action](images/figure-connect-using-container-action.png) |
+|:--:|
+| ***Figure 26.** Connect using container action* |
+
+1. Select an object.
+2. Click on the `Connect to...` action.
+3. Select connection type.
+4. Optional select a template for the connection.
+5. Select the other end of the connection.
+6. Suggested connection name.
+7. Click on the `Connect` button that will create the connection and open the window in Figure 27.
+
+| ![Edit connections new container window](images/figure-edit-connections-new-container-window.png) |
+|:--:|
+| ***Figure 27.** Edit connections new container window* |
+
+If you click on the OK button, the window to [edit connections][edit-connections] will open Figure 28.
+
+[edit-connections]: #edit-connections
+
+| ![New container in edit connection window](images/figure-new-container-in-edit-connections-window.png) |
+|:--:|
+| ***Figure 28.** New container in edit connection window* |
 
 ## Views
 
