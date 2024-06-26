@@ -44,7 +44,8 @@ To create a new report, select the ![create report](images/icons/create_class_le
 | ***Figure 5**. Create class level report.* |
 
 > **Note.** If you have previously filtered the reports by class before creating a new one, when you open the creation window, the Class Name field will default to the class that was selected in the filter.
-> **Important.** In the Type field of Figure 5, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. Their selection is not yet available in this version.
+> 
+> **Important.** In the Type field of Figure 5, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently 
 
 To view and modify the contents of a specific report, select it. The contents of the report are displayed on the right side of the screen, as shown in Figure 6.
 
@@ -115,7 +116,7 @@ You can create inventory level reports by clicking on the ![create_inventory_rep
 | :--: |
 | ***Figure 14**. Inventory level report filtering.* |
 
-> **Important.** In the Type field of Figure 14, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. Their selection is not yet available in this version.
+> **Important.** In the Type field of Figure 14, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently 
 
 To view and modify the contents of a specific report, select it. The contents of the report are displayed on the right side of the screen, as shown in Figure 15.
 
@@ -143,7 +144,7 @@ In the upper right part of Figure 15, there are four buttons, detailed below.
 * The icon ![delete](images/icons/delete_report_icon.png) deletes a report.
 * The icon ![execute](images/icons/execute_report.png) runs the report and opens a new tab in the browser with the HTML report output.
 
-## How to create scripts
+## How to Create Scripts
 
 Creating complex scripts requires some knowledge about the Persistence API and the database structure. It’s out of the scope of this document to deeply explore these topics, but this section will give you a starting point. More documentation and examples will be published in the coming releases; for now, use the reports provided in the directory scripts in the client installation bundle as reference.
 
@@ -155,14 +156,11 @@ Creating complex scripts requires some knowledge about the Persistence API and t
     | --------------|------|-------|
     | instanceNode | Neo4jNode |   Only applicable to class level reports. It’s the node in the database that holds the information of the object that triggered the report. |
     | graphDb | Neo4j GraphDatabase | The reference to the connection handler. This gives complete access to the database. Use with caution.
-    | objectIndex |  Neo4j Index | An index that contains all the inventory objects.
-    | defaultReports | DefaultReports | A reference to the class that contains the builtin, hard-coded reports. |
     | className | String | Only applicable to class level reports. The class of the object that triggered the report. | 
     | objectId | Long | Only applicable to class level reports. The id of the object that triggered the report. |
     | parameters | HashMap[String, String] | Only applicable to inventory level reports. The list of parameters provided during the execution of the report. |
 
 * There are some built-in reports that could serve as reference on how to retrieve and manipulate the information from the database. They are a temporary solution and will be converted to actual scripts in future releases, but they can help you get started on how to use the Persistence API.
-* `org.neotropic.kuwaiba.modules.optional.reports.defaults.DefaultReports`[^defaultReports] contains those hard-coded reports.
+* Sample Reports can be found in <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/>, where report-related scripts have the prefix `RP` in their name.
 
 [^reportRef]: Reports: https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/modules/optional/reports/html/package-summary.html
-[^defaultReports]: Default Reports: https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/modules/optional/reports/html/package-summary.html
