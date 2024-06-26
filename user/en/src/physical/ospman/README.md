@@ -185,11 +185,24 @@ Some characteristics of the map can be changed using the [configuration variable
 
 By default the map is displayed using [OpenLayers](https://openlayers.org/) and the Open Street Map (OSM) tiled layer, to use a different map provider you must update the value of the configuration variable `general.maps.provider` to one of the following allowed values:
 
-* com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.osm.OsmProvider
-* com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.bmaps.BmapsProvider
-* com.neotropic.kuwaiba.modules.commercial.ospman.providers.google.GoogleMapsMapProvider
+* `com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.osm.OsmProvider`
+* `com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.bmaps.BmapsProvider`
+* `com.neotropic.kuwaiba.modules.commercial.ospman.providers.google.GoogleMapsMapProvider`
 
-> **Note:** The *BmapsProvider* and *GoogleMapsMapProvider* require the value of the configuration variable `general.maps.apiKey` to be set.
+> **Notes**
+>
+> * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.google.GoogleMapsMapProvider` require the value of the configuration variable `general.maps.apiKey` to be set.
+> * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.bmaps.BmapsProvider` require the value of the configuration variables `general.maps.apiKey` and `general.maps.provider.bmaps.imagerySet` the possible values ​​of the last one are:
+>   * `Aerial`
+>   * `AerialWithLabels`
+>   * `AerialWithLabelsOnDemand`
+>   * `Streetside`
+>   * `BirdsEye`
+>   * `BirdsEyeWithLabels`
+>   * `Road`
+>   * `CanvasDark`
+>   * `CanvasLight`
+>   * `CanvasGray`
 
 In addition to the listed providers, it is possible to extend the functionality of this module to use other providers such as [Leaflet](https://leafletjs.com/).
 
