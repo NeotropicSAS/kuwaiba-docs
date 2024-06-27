@@ -13,7 +13,7 @@
 - [User Manager](userman/README.md)
 - [Task Manager](taskman/README.md)
 - [Reports](reports/README.md)
-- [Validator Definition](validators/README.md)
+- [Validators](validators/README.md)
 
 # Navigation
 
