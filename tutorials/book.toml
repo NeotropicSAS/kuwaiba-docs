@@ -1,0 +1,10 @@
+[book]
+authors = ["Neotropic SAS <contact@neotropic.co>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Kuwaiba Open Network Inventory Tutorials"
+
+[output.html]
+git-repository-url = "https://github.com/NeotropicSAS/kuwaiba-docs/tree/main/tutorials"
+edit-url-template = "https://github.com/NeotropicSAS/kuwaiba-docs/edit/main/tutorials/{path}"
