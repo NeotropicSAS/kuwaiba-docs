@@ -59,3 +59,34 @@ To manage the configuration variable, select the configuration variable pool or 
 | ![Manage Pool](images/edit-new-configuration-variable.png) |
 |:--:|
 | ***Figure 8.** Edit configuration variable* |
+
+## Default Values
+
+The default values ​​of the configuration variables are listed below by module:
+
+### Outside Plant Management
+
+The default values ​​of the configuration variables used by the [Outside Plant Management][ospman] are listed below by pool:
+
+[ospman]: ../../../physical/ospman/index.html#customize-the-map
+
+* General
+
+  * `general.maps.provider` *com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.osm.OsmProvider*
+  * `general.maps.apiKey` *null*
+  * `general.maps.language` *english*
+  * `general.maps.provider.bmaps.imagerySet` *Aerial*
+
+* Widgets
+  * `widgets.simplemap.centerLatitude` *30.5632664*
+  * `widgets.simplemap.centerLongitude` *-46.6540234*
+  * `widgets.simplemap.zoom` *4*
+
+* Outside Plant
+  * `module.ospman.colorForLabels` *white*
+  * `module.ospman.fillColorForEdgeLabels` *orange*
+  * `module.ospman.fillColorForNodeLabels` *blue*
+  * `module.ospman.fillColorForSelectedEdgeLabels` *pink*
+  * `module.ospman.fillColorForSelectedNodeLabels` *orange*
+  * `module.ospman.fontSizeForLabels` *12px*
+  * `module.ospman.minZoomForLabels` *12*
