@@ -131,11 +131,16 @@ If you click the container, it will be added automatically, and you will be aske
 
 ![Connections added to the OSP View](images/29_container_imported.png)
 
-We want to connect the back ports of the ODFs on each side using the first fiber of the first subconduit. On the **SFA-BUI-01** side, you will notice that the front port is already connected, since we connected the devices to the corresponding front ports.
+We want to connect the back ports of the ODFs on each side using the first fiber of the first subconduit. On the **SFA-BUI-01** side, you will notice that the front port is already connected, since we connected the devices to the corresponding front ports. You don't have to connect both sides, but we'll do it in this example
 
 ![Connecting the links in an imported container](images/30_connecting_fibers.png)
 
-You don't have to connect both sides, but we'll do it in this example. With the **Selection Tool** (the button with the hand icon), you can select the container and change its route. Do the same with the container connecting **SFA-BUI-03**.
+> Note
+> 
+> If it's relevant for your application, you can also create the lambdas under the `OpticalLinks` (as [Special Children](https://kuwaiba.org/docs/manuals/user/administration/containment/index.html#special-containment-hierarchy)) and later relate them to services or logical resources like virtual circuits. They are not to be connected, as they are not either **Links** or **Containers**, they act like channels that use the physical medium.
+> ![Using lambdas](images/35_wavelengths.png) 
+
+With the **Selection Tool** (the button with the hand icon), you can select the container and change its route. Do the same with the container connecting **SFA-BUI-03**.
 
 ![Changing the route of a container](images/31a_connections_with_path.png)
 
@@ -147,7 +152,11 @@ Clicking the target node will launch a similar wizard to the one we saw before, 
 
 ![Creating a container in the OSP module](images/32_new_container_from_ospm.png)
 
-You can edit the connections of a given container at any moment by right-clicking it and selecting the option in the context menu. The ring should look like this:
+You can edit the connections of a given container at any moment by right-clicking it and selecting the option in the context menu. You can also launch the wizard from the **Advanced Actions** menu in the [Navigation](https://kuwaiba.org/docs/manuals/user/navman/index.html) module, using the **Edit Connections** action.
+
+![Launching Edit Connections from the Navigation module](images/36_launching_edit_connections_from_navigation.png)
+
+In the end, the ring should look like this:
 
 ![Full ring](images/33_ring_full.png)
 
