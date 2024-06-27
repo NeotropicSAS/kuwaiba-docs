@@ -179,7 +179,12 @@ Figure 19 shows the tools to manage the OSP views.
 
 ## Customize the Map
 
-Some characteristics of the map can be changed using the [configuration variables](../../settings/configuration/variables/index.html) below are the changes enabled for the user.
+Some characteristics of the map can be changed using the [configuration variables][settings-configuration-variables] below are the changes enabled for the user.
+
+> **Note:** the [default values][settings-configuration-variables-default-values-ospman] ​​are listed in the configuration variables module.
+
+[settings-configuration-variables]: ../../settings/configuration/variables/index.html
+[settings-configuration-variables-default-values-ospman]: ../../settings/configuration/variables/index.html#outside-plant-management
 
 ### Map Provider
 
@@ -225,27 +230,3 @@ To change the color or fill color of the labels of the nodes or edges, the follo
 * `module.ospman.fillColorForSelectedNodeLabels` The fill color for the map selected node labels.
 * `module.ospman.fontSizeForLabels` The font size for the map labels.
 * `module.ospman.minZoomForLabels` The minimum zoom level for the map when displaying.
-
-### Default Values of Configuration Variables
-
-The default values ​​of the configuration variables used by this module are listed below by pool:
-
-* General
-
-  * `general.maps.provider` *com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.osm.OsmProvider*
-  * `general.maps.apiKey` *API-KEY*
-  * `general.maps.language` *english*
-
-* Widgets
-  * `widgets.simplemap.centerLatitude` *30.5632664*
-  * `widgets.simplemap.centerLongitude` *-46.6540234*
-  * `widgets.simplemap.zoom` *4*
-
-* Outside Plant
-  * `module.ospman.colorForLabels` *white*
-  * `module.ospman.fillColorForEdgeLabels` *orange*
-  * `module.ospman.fillColorForNodeLabels` *blue*
-  * `module.ospman.fillColorForSelectedEdgeLabels` *pink*
-  * `module.ospman.fillColorForSelectedNodeLabels` *orange*
-  * `module.ospman.fontSizeForLabels` *12px*
-  * `module.ospman.minZoomForLabels` *12*
