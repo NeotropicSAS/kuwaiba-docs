@@ -116,7 +116,7 @@ You can create inventory level reports by clicking on the ![create_inventory_rep
 | :--: |
 | ***Figure 14**. Inventory level report filtering.* |
 
-> **Important.** In the Type field of Figure 14, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently 
+> **Important.** In the Type field of Figure 14, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently.
 
 To view and modify the contents of a specific report, select it. The contents of the report are displayed on the right side of the screen, as shown in Figure 15.
 
