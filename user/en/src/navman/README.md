@@ -85,6 +85,8 @@ Figure 11 shows the components that make up the Object Options Panel. Each of th
 
 Displays the values of the attributes of an inventory object. These attributes match the visible attributes defined in the Containment Manager. All changes are automatically entered into the database when the Enter key is pressed.
 
+The `F2` key on your keyboard allows you to quickly change the name of the selected object.
+
 | ![Object Properties](images/object_properties.png) |
 | :--: |
 | ***Figure 12**. Object Properties.*|
@@ -233,7 +235,7 @@ A view is a graphical representation of a selected object that can be displayed 
 
 #### **Object View**
 
-> Applies to objects of class or subclass `ViewableObject`
+> Applies to objects of the `ViewableObject` subclasses
 
 A view is a graphical representation of what is inside an object. All instances (objects) of subclasses of `ViewableObject` have an ObjectView that shows the direct children of the selected node.
 Most objects, except for logical and administrative assets and a few physical ones such as slots and ports, are subclasses of `ViewableObject`.
@@ -362,7 +364,7 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
 
 #### **Physical Path View**
 
-> Applies to objects of class or subclass `GenericPort`
+> Applies to objects of the `GenericPort` subclasses
 
 Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html).
 
@@ -392,7 +394,7 @@ Calculates and plots the longest path from a source port to another port, consid
 
 #### **Physical Tree View**
 
-> Applies to objects of class or subclass `GenericPort`
+> Applies to objects of the `GenericPort` subclasses.
 
 Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html).
   
