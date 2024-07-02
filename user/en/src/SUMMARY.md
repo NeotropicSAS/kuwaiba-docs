@@ -24,11 +24,13 @@
 
 - [Outside Plant Management](physical/ospman/README.md)
 - [Physical Connections](physical/physcon/README.md)
+<!-- - [Connectivity Manager](physical/connectivityman/README.md) -->
 
 # Logical
 
 - [IP Address Manager](ipman/README.MD)
-  
+<!-- - [New Logical Circuit](logical/new-logical-circuit/README.MD) -->
+
 # Settings
 
 - [Scheduling](scheduling/README.md)
