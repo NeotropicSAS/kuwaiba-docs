@@ -15,6 +15,7 @@
 - [Reports](reports/README.md)
 - [Validators](validators/README.md)
 - [Filters](filters/README.md)
+- [Favorites](favorites/README.md)
 
 # Navigation
 
