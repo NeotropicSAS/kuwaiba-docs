@@ -14,6 +14,9 @@
 - [Task Manager](taskman/README.md)
 - [Reports](reports/README.md)
 - [Validators](validators/README.md)
+- [Filters](filters/README.md)
+- [Favorites](favorites/README.md)
+- [Session Manager](sessman/README.md)
 
 # Navigation
 
