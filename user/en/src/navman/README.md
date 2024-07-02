@@ -64,7 +64,7 @@ Clicking on the `Show More Information` button shown at the top of Figure 8 open
 | :--: |
 | ***Figure 9**. Object Information.*|
 
-On the right side of Figure 6, shown in more detail in Figure 10, there is a filter bar at the top. This bar is used if the Rack has filters associated with it. Filters, as the name implies, filter the children of an object according to the conditions evaluated in the filter. For more information, see the **Filters** section. Below the filter field, the descending hierarchy of the class of interest is displayed, i.e. the inventory objects contained in the selected Rack. When selecting any of the objects in Figure 10, the interface will display similar content as in Figure 6, but with the information of the newly selected object.
+On the right side of Figure 6, shown in more detail in Figure 10, there is a filter bar at the top. This bar is used if the Rack has filters associated with it. Filters, as the name implies, filter the children of an object according to the conditions evaluated in the filter. For more information, see the [Filters][filters] section. Below the filter field, the descending hierarchy of the class of interest is displayed, i.e. the inventory objects contained in the selected Rack. When selecting any of the objects in Figure 10, the interface will display similar content as in Figure 6, but with the information of the newly selected object.
 Next to some objects shown in Figure 8, some percentages are observed. These represent the results of the validators associated with the object class. For more information, see chapter [Validator Definition][validators].
 
 | ![Containment Object](images/containment_object.png) |
@@ -213,7 +213,7 @@ Selecting a specific report opens a new HTML window with the result of the repor
 
 * **Move to Pool.** Move the inventory object to a pool containing elements of the same type as the object of interest. For more details see [Pools](../../pools/index.html) chapter.
   
-* **Add to Folder.** All inventory objects can be added to an existing Favorites Folder. See more details in chapter **Favorites**.
+* **Add to Folder.** All inventory objects can be added to an existing Favorites Folder. See more details in [Favorites][favorites]  chapter.
   
 * **Delete Object.** Deletes the object. This will fail if the object has an incoming relationship, for example, a Port connected to a cable.
 
@@ -436,3 +436,7 @@ On the right side of Figure 53 is the Object Options Panel, which displays infor
 [reports]: ../reports/index.html
 
 [validators]: ../validators/index.html
+
+[favorites]: ../favorites/index.html
+
+[filters]: ../filters/index.html
