@@ -3,7 +3,6 @@
   - [Configuring the Templates](#configuring-the-templates)
   - [Creating the Devices](#creating-the-devices)
   - [Connecting the Devices](#connecting-the-devices)
-  - [Summary](#summary)
   - [Cloning the Original Site](#cloning-the-original-site)
   - [Connecting the Sites](#connecting-the-sites)
     - [Using the Object View](#using-the-object-view)
@@ -71,9 +70,9 @@ That's it. If you see a yellow line between the ODF and the multiplexer, you did
 
 >**Note:** The port appears blue, with a `[+]` in its name. That can be done with [Validators](https://kuwaiba.org/docs/manuals/user/validators/index.html). **Validators** are customizable pieces of logic that check for a condition you code, and can influence the way inventory objects are displayed in the GUI. You can do some pretty neat things with them, but that will be discussed in another tutorial. The sample database has a few validators in it. The empty database has none.
 
-## Summary
-So far, we have created a single site with a DWDM multiplexer and an ODF, and connected them using an `OpticalLink` (fiber) by opening the parent rack's **Object View** and using the physical connection tool. We also learned to create **Templates**, and the concept of **mirror** as a way to *bridge* two ports back-to-back to provide continuity to a connection. In the next section, we will clone this site two more times, rename the relevant objects, and connect all the sites using containers in order to 
-form a ring.
+> **Summary**
+> 
+> So far, we have created a single site with a DWDM multiplexer and an ODF, and connected them using an `OpticalLink` (fiber) by opening the parent rack's **Object View** and using the physical connection tool. We also learned to create **Templates**, and the concept of **mirror** as a way to *bridge* two ports back-to-back to provide continuity to a connection. In the next section, we will clone this site two more times, rename the relevant objects, and connect all the sites using containers in order to form a ring.
 
 ## Cloning the Original Site
 We will use the **Copy to...** operation available in the **Basic Actions** section or the **...** button next to the object we want to copy. This will open a so-called *Simple Object Selector*.
