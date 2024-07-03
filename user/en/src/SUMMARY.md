@@ -27,7 +27,7 @@
 
 - [Outside Plant Management](physical/ospman/README.md)
 - [Physical Connections](physical/physcon/README.md)
-<!-- - [Connectivity Manager](physical/connectivityman/README.md) -->
+- [Connectivity Manager](physical/connectivityman/README.md)
 
 # Logical
 

@@ -121,101 +121,137 @@ The basic actions of each inventory object are shown in Figure 16 and are descri
 | :--: |
 | ***Figure 16**. Basic Actions.*|
 
-* **New Object.** Creates a single object as a child of Root using the standard containment hierarchy.
+#### New Object
 
-  | ![Create Object](images/create_object_action.png) |
-  | :--: |
-  | ***Figure 17**. Create Object.*|
+Creates a single object as a child of Root using the standard containment hierarchy.
 
-* **New Multiple Objects.** Creates a defined number of objects at a time using a given naming pattern.
+| ![Create Object](images/create_object_action.png) |
+| :--: |
+| ***Figure 17**. Create Object.*|
 
-  | ![Create multiple Objects](images/create_multiple_objects_action.png) |
-  | :--: |
-  | ***Figure 18**. Create Multiple Objects.*|
+#### New Multiple Objects
 
-* **New Object from Template.** Creates an object (and possibly a complex containment structure under it) from a previously defined template. See more details in chapter [Template Manager](../templateManager%20/index.html).
+Creates a defined number of objects at a time using a given [naming pattern][appendix_a].
 
-* **New Special Object.** Creates an object in the Special Containment Hierarchy (see [Containment Manager](../administration/containment/index.html)).
+[appendix_a]: ../appendix_a.md
+
+| ![Create multiple Objects](images/create_multiple_objects_action.png) |
+| :--: |
+| ***Figure 18**. Create Multiple Objects.*|
+
+#### New Object from Template
+
+Creates an object (and possibly a complex containment structure under it) from a previously defined template. See more details in chapter [Template Manager](../templateManager%20/index.html).
+
+#### New Special Object
+
+Creates an object in the Special Containment Hierarchy (see [Containment Manager](../administration/containment/index.html)).
   
-    | ![Create Special Object](images/create_special_object_action.png) |
-  | :--: |
-  | ***Figure 19**. Create Special Object.*|
+| ![Create Special Object](images/create_special_object_action.png) |
+| :--: |
+| ***Figure 19**. Create Special Object.*|
 
-* **New Multiple Special Objects.** Creates several objects of the special containment hierarchy using a pattern.
+#### New Multiple Special Objects
 
-  | ![Create Multiple Special Objects](images/create_multiple_special_objects_action.png) |
-  | :--: |
-  | ***Figure 20**. Create multiple special objects.*|
+Creates several objects of the special containment hierarchy [using a pattern][appendix_a].
 
-* **New Special Object from Template.** Creates a special containment hierarchy object from a Template defined in the [Template Manager](../templateManager%20/index.html).
+| ![Create Multiple Special Objects](images/create_multiple_special_objects_action.png) |
+| :--: |
+| ***Figure 20**. Create multiple special objects.*|
+
+#### New Special Object from Template
+
+Creates a special containment hierarchy object from a Template defined in the [Template Manager](../templateManager%20/index.html).
   
-* **Copy to.** A plain copy operation.
+#### Copy to
 
-  | ![Copy Object](images/copy_action.png) |
-  | :--: |
-  | ***Figure 21**. Copy object to another object.*|
+A plain copy operation.
 
-* **Move to.** Moves the object respecting the containment hierarchy.
+| ![Copy Object](images/copy_action.png) |
+| :--: |
+| ***Figure 21**. Copy object to another object.*|
 
-  | ![Move Object](images/move_object_action.png) |
-  | :--: |
-  | ***Figure 22**. Move object to another object.*|
+#### Move to
 
-* **Copy as Special to.** Copies the object respecting the special containment hierarchy.
+Moves the object respecting the containment hierarchy.
 
-  | ![Copy as Special Action](images/copy_special_action.png) |
-  | :--: |
-  | ***Figure 23**. Copy as special object to another object.*|
+| ![Move Object](images/move_object_action.png) |
+| :--: |
+| ***Figure 22**. Move object to another object.*|
 
-* **Move as Special to.** Moves the object respecting the special containment hierarchy.
+#### Copy as Special to
+
+Copies the object respecting the special containment hierarchy.
+
+| ![Copy as Special Action](images/copy_special_action.png) |
+| :--: |
+| ***Figure 23**. Copy as special object to another object.*|
+
+#### Move as Special to
+
+Moves the object respecting the special containment hierarchy.
   
-  | ![Move as Special Action](images/move_special_action.png) |
-  | :--: |
-  | ***Figure 24**. Move as special object to another object.* |
+| ![Move as Special Action](images/move_special_action.png) |
+| :--: |
+| ***Figure 24**. Move as special object to another object.* |
 
-* **Manage Attachments.** Handles attachments directly related to the object, as well as attachments associated with list-type items linked to the object. Figure 25 shows how attachments directly related to the object can be viewed, added, deleted or downloaded. In this case, an MPLS Router has an attachment directly related to the object.
+#### Manage Attachments
 
-  | ![Manage Direct Attachments](images/manage_attachments_action.png) |
-  | :--: |
-  | ***Figure 25**. Manage direct attachments.* |
+Handles attachments directly related to the object, as well as attachments associated with list-type items linked to the object. Figure 25 shows how attachments directly related to the object can be viewed, added, deleted or downloaded. In this case, an MPLS Router has an attachment directly related to the object.
 
-  On the other hand, in Figure 26, it is observed that the attachments indirectly related to the object can only be viewed and downloaded, but not modified. In this case, the MPLS Router has an attachment indirectly related to the object.
+| ![Manage Direct Attachments](images/manage_attachments_action.png) |
+| :--: |
+| ***Figure 25**. Manage direct attachments.* |
 
-  | ![Manage other Attachments](images/manage_other_attachments_action.png) |
-  | :--: |
-  | ***Figure 26**. Manage other attachments.* |
+On the other hand, in Figure 26, it is observed that the attachments indirectly related to the object can only be viewed and downloaded, but not modified. In this case, the MPLS Router has an attachment indirectly related to the object.
 
-* **Manage Special Relationships.** Allows you to create arbitrary relationships between objects.
-  > **Warning** This action should be handled with extreme caution, as it may cause damage to the model.
+| ![Manage other Attachments](images/manage_other_attachments_action.png) |
+| :--: |
+| ***Figure 26**. Manage other attachments.* |
 
-    Figure 27 shows the pop-up window that displays the special relationships that an object has. The ![delete relationship](images/release_special_rel_icon.png) button allows you to delete a relationship.
+#### Manage Special Relationships
 
-    | ![Manage relationships](images/manage_special_rel.png) |
-    | :--: |
-    | ***Figure 27**. Manage special relationships.* |
+Allows you to create arbitrary relationships between objects.
+> **Warning** This action should be handled with extreme caution, as it may cause damage to the model.
 
-    To create a new special relationship, select the New Special Relationship button. This will open a new window where you can define the name of the relationship and specify the object with which this special relationship will be established.
+Figure 27 shows the pop-up window that displays the special relationships that an object has. The ![delete relationship](images/release_special_rel_icon.png) button allows you to delete a relationship.
 
-    | ![create special relationships](images/create_new_special_relationship.png) |
-    | :--: |
-    | ***Figure 28**. Manage special relationships.* |
+| ![Manage relationships](images/manage_special_rel.png) |
+| :--: |
+| ***Figure 27**. Manage special relationships.* |
 
-* **Reports.** Displays the reports associated to the objects of this class. In this case, Rack has three associated reports, as shown in Figure 29.
+To create a new special relationship, select the New Special Relationship button. This will open a new window where you can define the name of the relationship and specify the object with which this special relationship will be established.
+
+| ![create special relationships](images/create_new_special_relationship.png) |
+| :--: |
+| ***Figure 28**. Manage special relationships.* |
+
+#### Reports
+
+Displays the reports associated to the objects of this class. In this case, Rack has three associated reports, as shown in Figure 29.
 Selecting a specific report opens a new HTML window with the result of the report execution. This section is explained in detail in the [Reports][reports] chapter.
 
-    > Note: It is necessary to enable popups in the browser so that the report can be executed.
+> Note: It is necessary to enable popups in the browser so that the report can be executed.
 
-  | ![Reports](images/reports_action.png) |
-  | :--: |
-  | ***Figure 29**. Reports.*|
+| ![Reports](images/reports_action.png) |
+| :--: |
+| ***Figure 29**. Reports.*|
 
-* **Copy to Pool.** Copy the inventory object to a pool containing elements of the same type as the object to be copied. See more details in [Pools](../../pools/index.html).
+#### Copy to Pool
 
-* **Move to Pool.** Move the inventory object to a pool containing elements of the same type as the object of interest. For more details see [Pools](../../pools/index.html) chapter.
+Copy the inventory object to a pool containing elements of the same type as the object to be copied. See more details in [Pools](../../pools/index.html).
+
+#### Move to Pool
+
+Move the inventory object to a pool containing elements of the same type as the object of interest. For more details see [Pools](../../pools/index.html) chapter.
   
-* **Add to Folder.** All inventory objects can be added to an existing Favorites Folder. See more details in [Favorites][favorites]  chapter.
+#### Add to Folder
+
+All inventory objects can be added to an existing Favorites Folder. See more details in [Favorites][favorites]  chapter.
   
-* **Delete Object.** Deletes the object. This will fail if the object has an incoming relationship, for example, a Port connected to a cable.
+#### Delete Object
+
+Deletes the object. This will fail if the object has an incoming relationship, for example, a Port connected to a cable.
 
 ### Advanced Actions
 
