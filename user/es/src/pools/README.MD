@@ -1,6 +1,6 @@
 # Colecciones
 
-El módulo de *Colecciones* (Pools) se refiere a un grupo de recursos gestionados colectivamente para optimizar su uso y disponibilidad. En términos simples, un "pool" es un depósito compartido de recursos similares que pueden ser utilizados por diferentes partes o procesos dentro de un sistema y que no se pueden colocar en el árbol de navegación estándar. La mayoría de estos recursos son elementos lógicos o administrativos, como VLANs o VPNs. Puedes imaginar una colección como una bolsa donde se colocan recursos que no tienen un lugar específico en la estructura tradicional.
+El módulo de *Colecciones* (Pools) se refiere a un grupo de recursos gestionados colectivamente para optimizar su uso y disponibilidad. En términos simples, un "pool" es un depósito compartido de recursos similares que pueden ser utilizados por diferentes partes o procesos dentro de un sistema y que no se pueden colocar en el árbol de navegación estándar. La mayoría de estos recursos son elementos lógicos o administrativos, como VLANs o VPNs. Puedes imaginar una colección como una bolsa donde se colocan recursos que no tienen un lugar específico en el inventario.
 
 Para abrir el modulo de *Colecciones*, seleccioné en el menu de opciones *Opciones -> Pools*.
 |![pool menu option](images/menu-option.png)|
@@ -50,5 +50,5 @@ Las acciones básicas, como eliminar para borrar el ítem seleccionado, avanzada
 
 | Acción    | Descripción                        |
 |--------------|------------------------------------|
-| **Copy to pools**| Copia el item seleccionado de a una nueva colección |
-| **Move to pools**| Mueve el item seleccionado de a una nueva colección |
+| **Copy to Pool**| Copia el item seleccionado de a una nueva colección |
+| **Move to Pool**| Mueve el item seleccionado de a una nueva colección |

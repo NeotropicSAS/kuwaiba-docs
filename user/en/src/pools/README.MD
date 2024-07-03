@@ -1,6 +1,6 @@
 # Pools
 
-The *Pools* module refers to a group of resources managed collectively to optimize their use and availability. In simple terms, a "pool" is a shared repository of similar resources that can be used by different parties or processes within a system and that cannot be placed in the standard navigation tree. Most of these resources are logical or administrative elements, such as VLANs or VPNs. You can imagine a pool as a bag where resources that do not have a specific place in the traditional structure are placed.
+The *Pools* module refers to a group of resources managed collectively to optimize their use and availability. In simple terms, a "pool" is a shared repository of similar resources that can be used by different parties or processes within a system and that cannot be placed in the standard navigation tree. Most of these resources are logical or administrative elements, such as VLANs or VPNs. You can imagine a pool as a bag where resources that do not have a specific place in the inventory structure are placed.
 
 To open the *Pools* module, I selected *Options -> Pools* in the options menu.
 |![pool menu option](images/menu-option.png)|
@@ -50,5 +50,5 @@ Basic actions, such as delete to delete the selected item, advanced and explorer
 
 | Action | Description |
 |--------------|--------------------------------|
-| **Copy to pools**| Copy the selected item to a new pool |
-| **Move to pools**| Move the selected item to a new pool |
+| **Copy to Pool**| Copy the selected item to a new pool |
+| **Move to Pool**| Move the selected item to a new pool |
