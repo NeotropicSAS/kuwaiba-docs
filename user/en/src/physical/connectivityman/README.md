@@ -1,6 +1,9 @@
 # Connectivity Manager
 
-The connectivity manager module helps with the creation of physical and logical circuits. The access method is shown in Figure 1.
+The connectivity manager module helps with the creation of [physical][creating-a-physical-circuit] and [logical][creating-a-logical-circuit] circuits. The access method is shown in Figure 1.
+
+[creating-a-physical-circuit]: #creating-a-physical-circuit
+[creating-a-logical-circuit]: #creating-a-logical-circuit
 
 | ![Connectivity manager module][figure-1] |
 |:--:|
