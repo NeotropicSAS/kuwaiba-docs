@@ -448,7 +448,9 @@ This component, as its name suggests, explores the structures of a model, includ
 | :--: |
 | ***Figure 51**. Explorers.*|
 
-* **Special Children.** Special children are elements that, while following the concept of containment hierarchy, are used in domain-specific models. This gives them a particular behavior depending on the situation. They cannot be treated as simple objects in the navigation tree since, for example, their removal may require additional tasks beyond simply deleting them from the database, because they are part of a complex workflow. These children respect the special containment hierarchy detailed in the [Special Containment Hierarchy][special-containment-hierarchy] chapter.
+#### Special Children
+
+Special children are elements that, while following the concept of containment hierarchy, are used in domain-specific models. This gives them a particular behavior depending on the situation. They cannot be treated as simple objects in the navigation tree since, for example, their removal may require additional tasks beyond simply deleting them from the database, because they are part of a complex workflow. These children respect the special containment hierarchy detailed in the [Special Containment Hierarchy][special-containment-hierarchy] chapter.
 As shown in Figure 52, selecting an object displays a pop-up window with its special children. If any of these special children are selected, its own special children, if any, will be displayed. When selecting any special child, the corresponding object information appears in the Object Options Panel on the right side of the screen.
 
 [special-containment-hierarchy]: ../administration/containment/index.html#special-containment-hierarchy
@@ -457,7 +459,9 @@ As shown in Figure 52, selecting an object displays a pop-up window with its spe
   | :--: |
   | ***Figure 52**. Special children explorer.*|
 
-* **Relationships.** Allows you to view the special relationships of the selected object. When an object is part of a specific domain model (such as SDH, Physical Connections, MPLS, Services, etc.), there are special links to other objects called **relationships**. These relationships, with documented names according to the model, can be displayed using this explorer.
+#### Relationships
+
+Allows you to view the special relationships of the selected object. When an object is part of a specific domain model (such as SDH, Physical Connections, MPLS, Services, etc.), there are special links to other objects called **relationships**. These relationships, with documented names according to the model, can be displayed using this explorer.
 Figure 53 shows the relationships of an Optical Link, where three types of relationships are observed. The `parent` relationship, which is common to all inventory objects and is used to navigate upwards in the containment structure, and the `endpointA` and `endpointB` relationships, which are used in the Physical Connections model. Selecting either of the latter two relationships expands the displayed tree, indicating the object with which the relationship exists and, in turn, displaying the relationships of that object.
 On the right side of Figure 53 is the Object Options Panel, which displays information and actions related to the specific object selected.
 
@@ -465,7 +469,9 @@ On the right side of Figure 53 is the Object Options Panel, which displays infor
   | :--: |
   | ***Figure 53**. Relationships explorer.*|
 
-* **Audit Trail.** It is a sequence of records that documents changes in inventory objects. For more details, see chapter [Audit Trail][auditTrail].
+#### Audit Trail
+
+It is a sequence of records that documents changes in inventory objects. For more details, see chapter [Audit Trail][auditTrail].
 
 [auditTrail]: ../auditTrail/index.html
 
