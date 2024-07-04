@@ -40,7 +40,7 @@ It is possible to delete templates created for a class. To do so, use the button
 |:--:|
 | ***Figure 5.** Template delete window* |
 
-### Add Elements
+### Adding Elements
 You can add **elements** or **special elements** to templates. The elements that can be added are determined by the containment configuration of the class (see Containment Manager).
 
 To add **elements** to the template, use the ![Template Module Btn Add Elements](images/btn_add_template.png) button in the template actions shown in Figure 4. If you want to add **special elements**, use the ![Template Module Btn Add Special Elements](images/btn_add_special_elements.png) button. This will display the menu shown in Figure 6, where you must select whether you want to create a single element or multiple elements. If the class does not have any elements or special elements assigned in its containment, you will not be able to add elements of this type to the template.
@@ -137,4 +137,4 @@ For example, we use the *City* class and the previously created template *A samp
 
 | ![Example Object Created From Template](images/object_created_from_template.png) |
 |:--:|
-| ***Figure 20.** Example object created from template* |
+| ***Figure 20.** Sample object created from template* |

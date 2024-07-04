@@ -215,14 +215,3 @@ To delete a topology, select it and use the ![Btn Remove](images/btn_remove.png)
 |![Delete Topology](images/topology_delete_view_window.png)|
 |:--:|
 | ***Figure 32.**delete topology window* |
-
-
-
-
-
-![](images/)
-
-
-|![](images/)|
-|:--:|
-| ***Figure .** Window create topology view* |

@@ -19,7 +19,7 @@ Groups allow for the aggregation of users to simplify their management and admin
 
 ### Groups Actions
 
-#### Create new groups
+#### Creating new groups
 
 To create a new group, use the![Template Module](images/btn_new_group.png)button in the main window of the module. This will open the group creation window, as shown in Figure 3. Here, you will need to enter the name and description of the group. It is advisable to use a descriptive name, as this will be the name displayed in the list of available groups.
 
@@ -34,7 +34,7 @@ Once created, the group will appear in the list of available groups within the a
 | ***Figure 4.** Group list* |
 
 
-#### Delete group
+#### Deleting groups
 To delete a group, use the![Btn Delete Groups](images/btn_delete_groups.png)button found in the group actions as shown in Figure 4. This will open the group deletion window in Figure 5. Click *OK* to proceed with deletion or *Cancel* to abort.
 > **Note** Users assigned exclusively to the group being deleted will also be removed unless they are assigned to other groups.
 
@@ -42,7 +42,7 @@ To delete a group, use the![Btn Delete Groups](images/btn_delete_groups.png)butt
 |:--:|
 | ***Figure 5.** Groups delete window* |
 
-#### Update Group
+#### Updating Groups
 To edit the properties of a group, use the![Btn Update Groups](images/btn_update_group.png)button found in the group actions as shown in Figure 4. This will open the edit window in Figure 6, where you can enter the new values. Click *OK* to update the group or *Cancel* if you decide not to proceed.
 
 |![Groups Update Window](images/userman_update_groups_window.png)|
@@ -51,7 +51,7 @@ To edit the properties of a group, use the![Btn Update Groups](images/btn_update
 
 ## Users
 ### Users Actions
-#### Create User
+#### Creating Users
 A user consists of the following properties: 
 
 | Property           | Description |
@@ -69,7 +69,7 @@ A user consists of the following properties:
 >- **GUI User**: Users that will access the system via desktop client or web interface.
 >- **Web Service Interface User**: Users that will access the system via web service.
 >- **Southbound Interface User**: Users that will access the system via automated interfaces, such as southbound interfaces or scheduled tasks.
->- **System**: Users that will make process in Kuwaiba.
+>- **System**: users used by application modules to automate tasks.
 >- **External application**: Users that will make process in externals applications.
 
 To create a new user, they must be assigned to a group. Use the![Btn UCreate User](images/btn_add_user.png)button to create and assign the user to the desired group. This will open the user creation window shown in Figure 7. Fill in the fields and click *OK* to proceed or *Cancel* to abort.
@@ -90,7 +90,7 @@ When selecting a user, the main module window will display the information, acti
 |:--:|
 | ***Figure 9.** User information* |
 
-#### Update User
+#### Updating Users
 To update user properties, modify them using the fields shown in Figure 9. Once the desired properties have been updated, use the![Btn Update User](images/btn_update_user.png)button to save the changes.
 
 #### Related User To Group
@@ -129,7 +129,7 @@ To quickly assign write privileges to a user across all modules, check the *All 
 > **Warning** 
 > When assigning permissions to inexperienced users, exercise caution with the modules to which you grant privileges; improper use can potentially corrupt the database.
 
-#### Delete User
+#### Deleting Users
 To delete a user, use the![Btn Delete User](images/btn_delete_user.png)button shown in Figure 9. This will open the confirmation window in Figure 15. In this window, click *OK* to delete the user. If you do not wish to proceed, click *Cancel*.
 > **Note** Deleting a user will also remove them from all assigned groups, so proceed with caution.
 

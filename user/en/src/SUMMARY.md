@@ -34,6 +34,10 @@
 - [IP Address Manager](ipman/README.MD)
 <!-- - [New Logical Circuit](logical/new-logical-circuit/README.MD) -->
 
+# Planning
+
+- [Topology Designer](topology/README.md)
+
 # Settings
 
 - [Scheduling](scheduling/README.md)
