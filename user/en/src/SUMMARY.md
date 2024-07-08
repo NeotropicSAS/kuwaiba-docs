@@ -33,6 +33,7 @@
 
 - [IP Address Manager](ipman/README.MD)
 - [New Logical Circuit](logical/new-logical-circuit/README.MD)
+- [MPLS Networks](logical/mpls/README.MD)
 
 # Planning
 
