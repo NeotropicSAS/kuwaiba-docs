@@ -84,7 +84,7 @@ Continuing with the diagram, we add two fiber splitters. It is not possible to a
 |:--:|
 | ***Figure 13.** Invalid element* |
 
-Now we add the network users from the diagram, represented by houses and the building, searching for "house" and "building" just as we did earlier with the fiber splitters, as shown in Figure 14.
+Now we add the network users from the diagram, represented by houses and the building, searching for `House` and `Building` just as we did earlier with the fiber splitters, as shown in Figure 14.
 
 |![Add New Elements](images/topology_add_houses.png)|
 |:--:|
