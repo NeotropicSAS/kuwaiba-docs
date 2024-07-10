@@ -100,3 +100,25 @@ Using the MPLS link detection tool between nodes [Figure 8][figure-8].
 | ***Figure 8.** View with MPLSLink* |
 
 [figure-8]: images/figure-new-mpls-view-with-connections.png
+
+## Module Actions
+
+### Delete MPLS Link
+
+> Applies to object instances of `MPLSLink` subclasses.
+
+| ![Delete MPLS Link][figure-9] |
+|:--:|
+| ***Figure 9.** Delete MPLS Link* |
+
+[figure-9]: images/figure-delete-mpls-link.png
+
+### Relate to VLAN
+
+> Applies to object instances of `GenericPort` subclasses.
+
+| ![Relate to VLAN][figure-10] |
+|:--:|
+| ***Figure 10.** Relate to VLAN* |
+
+[figure-10]: images/figure-relate-to-vlan.png
