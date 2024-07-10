@@ -360,13 +360,49 @@ Before creating the logical circuit, the service to which it will be associated 
 
 ### Create Logical Connection
 
-Figure 30 shows the step by step to create a logical connection.
+Logical connection are used to represent point-to-point connections like those used in modules [SDH][sdh] and [MPLS][mpls].
 
-| ![Create Logical Connection][figure-30] |
+[sdh]: ../../logical/sdh/index.html
+[mpls]: ../../logical/mpls/index.html
+
+The logical connection created in this module are similar to MPLS [Figure 30][figure-30].
+
+| ![MPLS relationships][figure-30] |
 |:--:|
-| ***Figure 30.** Create Logical Connection* |
+| ***Figure 30.** MPLS relationships* |
 
-[figure-30]: images/figure-logical-circuit.png
+The difference with MPS is the objects and relationships used [Figure 31][figure-31].
+
+[figure-30]: images/figure-mpls-relationships.png
+
+| ![Last mile circuit relationships][figure-31] |
+|:--:|
+| ***Figure 31.** Last mile circuit relationships* |
+
+[figure-31]: images/figure-last-mile-circuit-relationships.png
+
+The types of logical connections are the subclasses of `GenericLastMileCircuit` to add more options that adapt to your needs, just create subclasses using the [Data Model Manager][dmman], for example MetroEthernet.
+
+[dmman]: ../../dmman/index.html
+
+| ![Custom GenericLastMileCircuit subclasses][figure-32] |
+|:--:|
+| ***Figure 32.** Custom GenericLastMileCircuit subclasses* |
+
+[figure-32]: images/figure-generic-last-mile-circuit-subclases.png
+
+> **Notes**
+>
+> * Logical connections were designed for last mile services, however currently they are used interchangeably to represent logical circuits.
+> * It is possible that the model will be simplified in the future, it is recommended to use `Circuit` to facilitate the migration.
+
+Figure 33 shows the step by step to create a logical connection.
+
+| ![Create Logical Connection][figure-33] |
+|:--:|
+| ***Figure 33.** Create Logical Connection* |
+
+[figure-33]: images/figure-logical-circuit.png
 
 1. Select source port.
 2. Select target port.
@@ -375,14 +411,14 @@ Figure 30 shows the step by step to create a logical connection.
 5. Search service by name or class.
 6. Click on the `Create Logical Connection` button.
 
-Using the [Navigation][navman] module you can search for the new logical connection the Figure 31 shows the [relationships explorer][relationships] for the created logical connection.
+Using the [Navigation][navman] module you can search for the new logical connection the Figure 34 shows the [relationships explorer][relationships] for the created logical connection.
 
 [relationships]: ../../navman/index.html#relationships
 
-| ![Logical connection relationships][figure-31] |
+| ![Logical connection relationships][figure-34] |
 |:--:|
-| ***Figure 31.** Logical connection relationships* |
+| ***Figure 34.** Logical connection relationships* |
 
-[figure-31]: images/figure-logical-connection-relationships.png
+[figure-34]: images/figure-logical-connection-relationships.png
 
 [^note1]: Object names in Kuwaiba should use a naming convention to facilitate their management.

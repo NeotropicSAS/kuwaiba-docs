@@ -14,9 +14,9 @@ This module allows to create end-to-end virtual circuits and all other logical e
 
 In short, Transport and ContainerLinks provide the foundations for the hierarchy, while the TributaryLinks provide information about where the circuits are delivered (that is, what are the endpoints of the connections).
 
-## Creating a SDH view
+## Creating an SDH view
 
-To create a SDH topology, go to the menu option [Figure 2][figure-2].
+To create an SDH topology, go to the menu option [Figure 2][figure-2].
 
 | ![SDH Module][figure-2] |
 |:--:|
