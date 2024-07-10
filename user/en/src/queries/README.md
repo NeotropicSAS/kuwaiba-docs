@@ -156,7 +156,14 @@ When we execute the query, we obtain the desired routers as shown in Figure 24.
 
 ## Using Scripted Queries
 
-This option allows us to create queries using Groovy scripts the creation of scripts is beyond the scope of this document; however, you can find more detail and examples in the scripts provided by the application. To start, locate **Scripted Builder** in the main window of the module, as shown in Figure 25.
+This option allows us to create queries using Groovy scripts. The queries created with these scripts have low-level access to the application's database. Thanks to the use of scripts, it is possible to reuse these scripted queries in other modules of the application outside the queries module, allowing precise data retrieval and manipulation.
+
+For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../physical/ospman/README.md#map-tools) for more details.
+
+> **Information**
+the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-queries/).
+
+To start, locate **Scripted Builder** in the main window of the module, as shown in Figure 25.
 
 |![Query Builder](images/queries_scripted.png)|
 |:--:|
@@ -201,6 +208,9 @@ Clicking on the script will display the editor and actions associated with the s
 |![Script Editor](images/queries_main_script.png)|
 |:--:|
 | ***Figure 31.** Script editor* |
+
+> **Warning**
+> The changes made by scripted queries in the database can break things if your code is wrong. Proceed with caution.
 
 To edit the properties of a script after it has been created, use the![Btn Edit Pool](images/btn_edit_script_properties.png)button. This will open the window shown in Figure 32, where you can edit the properties by double-clicking on the desired property.
 
