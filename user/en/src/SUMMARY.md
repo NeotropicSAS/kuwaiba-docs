@@ -22,7 +22,7 @@
 # Navigation
 
 - [Navigation](navman/README.md)
-- [Queries](pools/README.MD)
+- [Queries](queries/README.md)
 - [Pools](pools/README.MD)
 
 # Physical
