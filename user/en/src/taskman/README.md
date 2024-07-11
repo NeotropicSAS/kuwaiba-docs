@@ -35,7 +35,6 @@ A task consists of the following properties:
 #### Create Tasks
 To create a task, use the![Btn Create Task](images/btn_create_tasks.png)button in the main window of the module. The task creation window shown in Figure 3 will open. You will need to enter the name and description of the task. It is advisable to use a descriptive name, as this will be the name displayed in the list of available task. Click *OK* to create the task or *CANCEL* if you do not wish to proceed.
 
-
 |![Create Task Window](images/taskman_create_task_window.png)|
 |:--:|
 | ***Figure 3.** Create task window* |
@@ -53,7 +52,10 @@ When selecting a task the main module window will display the information and bu
 | ***Figure 5.** Task information* |
 
 #### Script
-In the script section shown in Figure 5, you can define your own scripts, which can range from custom inventory queries to the creation of complex objects. But, It is out of the scope of this document to teach how to code scripts, however, in the directory scripts of the client installer, you will find some samples to guide you through.
+In the script section shown in Figure 5, you can define your own scripts, which can range from custom inventory queries to the perform complex actions.
+
+> **Information**
+It is out of the scope of this document to teach how to code scripts, however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-task/).
 
 ##### Script Parameters
 It is important to note that most scripts will require input parameters. These parameters can be easily added to the task so that the user can fill them in before executing the task. To manage the parameters, click on the![Btn manage Parameters](images/btn_manage_parameters.png)button. The parameter management window shown in Figure 6 will open, allowing you to create, edit, and delete parameters.
@@ -87,7 +89,7 @@ Or use the![Btn Execute](images/btn_execute.png)button seen in Figure 5 to save 
 |:--:|
 | ***Figure 10.** Script execution* |
 
-Si se producen errores en la ejecución del script, su resultado se vera resaltado en color rojo como se ve en la Figura 11.
+If errors occur during the script execution, the result will be highlighted in red, as shown in Figure 11.
 
 |![Fali Script Execution Example](images/script_execution_fail.png)|
 |:--:|
@@ -114,4 +116,4 @@ To delete a task, use the![Btn Create Task](images/btn_delete.png)button seen in
 | ***Figure 13.** Delete task confirmation window* |
 
 #### Schedule Task
-Es posible programar la ejecución de las tareas para ello utilice el modulo de scheduling explicado en detalle en la sección [Scheduling module](../scheduling/README.md).
+It is possible to schedule task execution using the scheduling module, explained in detail in the [Scheduling module](../scheduling/README.md) section.  
