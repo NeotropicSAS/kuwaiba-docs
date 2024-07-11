@@ -37,6 +37,10 @@
 - [MPLS Networks](logical/mpls/README.MD)
 - [SDH Networks](logical/sdh/README.MD)
 
+# Services
+
+- [Service Manager](serviceman/README.md)
+
 # Planning
 
 - [Topology Designer](topology/README.md)
