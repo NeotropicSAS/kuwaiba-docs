@@ -18,6 +18,7 @@
 - [Favorites](favorites/README.md)
 - [Session Manager](sessman/README.md)
 - [Projects](projects/README.md)
+- [Synchronization Framework](sync/README.md)
 
 # Navigation
 
