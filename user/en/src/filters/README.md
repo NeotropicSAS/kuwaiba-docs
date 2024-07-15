@@ -92,7 +92,7 @@ In the Navigation module, when selecting an object that has associated filters, 
 | :--: |
 | ***Figure 13.** Result of filter applied.* |
 
-Examples of filters can be found at <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/>. Filter scripts contain the prefix `FT` in their name.
+Examples of filters can be found at <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-filter/>. Filter scripts contain the prefix `FT` in their name.
 
 [^Groovy]: Groovy language: http://www.groovy-lang.org/
 [^API_Kuwaiba]: Persistence API: https://kuwaiba.org/docs/dev/javadoc/current/
