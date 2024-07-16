@@ -112,6 +112,10 @@ Once the view nodes are created, they are connected using the connection tools.
 |:--:|
 | ***Figure 17.** Simple OSP View* |
 
+For more details on the connections edition see [Edit Connections][edit-connections].
+
+[edit-connections]: ../physcon/index.html#edit-connections
+
 ## Node Tools
 
 | ![Node tools](images/figure-node-tools.png) |
@@ -122,7 +126,7 @@ Figure 19 shows the node tools window that appears when you right click on a nod
 
 | Tool | Description |
 | -- | -- |
-| ![Splicing Tool](images/tool-splicing.png) | This tool is used to do fiber optic splicing of the cables that reach the selected node. |
+| ![Splicing Tool](images/tool-splicing.png) | This tool is used to do fiber optic splicing of the cables that reach the selected node. See [splicing tool](#splicing-tool) |
 | ![View Content Tool](images/tool-view-contents.png) | Used to view the devices within the node, you can list all or use filters. See [view content tool](#view-content-tool) |
 | ![Geographical Queries Tool](images/tool-geographical-queries.png) | Using the node coordinates, [geographical queries][geographical-queries] filter the network elements within a search radius. |
 | ![Remove Tool](images/tool-remove.png) | Remove the node from the view only, to remove the node from the inventory it is necessary to do so from the navigation module |
@@ -139,7 +143,7 @@ Figure 20 shows the connection tools window that appears when you right click on
 
 | Tool | Description |
 | -- | -- |
-| ![Edit Connection](images/tool-edit-connection.png) | The edit connection tool was covered in the adding connections section Figure 15. |
+| ![Edit Connection](images/tool-edit-connection.png) | The edit connection tool was covered in the [adding connections](#adding-connections) section Figure 15. |
 | ![Remove Tool](images/tool-remove.png) | Remove the node from the view only, to remove the node from the inventory it is necessary to do so through the navigation module |
 
 ## Map Tools
@@ -297,6 +301,138 @@ For more details on the physical tree view see the [navigation][physical-tree-vi
 
 [figure-28]: images/figure-filters.png
 
+## Splicing Tool
+
+For Kuwaiba, splicing a fiber is creating the relationship `endpointA` or `endpointB`. For example using manholes that contain the primary splitter, splicing of the fibers that are not yet connected to the splitter will be done.
+
+In [Figure 29][figure-29] there are three fields that must be set: the location, the cable, and a device. In the field to select the location, all the nodes in the view are listed; the value that appears by default is that of the node that opened the tool.
+
+| ![Splicing window][figure-29] |
+|:--:|
+| ***Figure 29.** Splicing window* |
+
+[figure-29]: images/figure-splicing-window.png
+
+Click on the `Select Cable` button, [Figure 29][figure-29], a window will open that lists the cables that enter and leave the node, select the cable and then one of the tubes on which the splice will be made [Figure 30][figure-30].
+
+| ![Select cable][figure-30] |
+|:--:|
+| ***Figure 30.** Select cable* |
+
+Click on the `Select Device` button, [Figure 29][figure-29], a window appears and will list the devices in the node, select the device on which the splice will be made [Figure 31][figure-31].
+
+[figure-30]: images/figure-select-cable-window.png
+
+| ![Select device][figure-31] |
+|:--:|
+| ***Figure 31.** Select device* |
+
+[figure-31]: images/figure-select-device-window.png
+
+Once the cable and device are selected, the location view is loaded [Figure 32][figure-32].
+
+| ![Location view][figure-32] |
+|:--:|
+| ***Figure 32.** Location view* |
+
+[figure-32]: images/figure-location-view.png
+
+The location of the device can be changed using the button ![Change device position](images/tool-change-device-position.png) [Figure 33][figure-33]
+
+| ![Changed location view][figure-33] |
+|:--:|
+| ***Figure 33.** Changed location view* |
+
+[figure-33]: images/figure-changed-location-view.png
+
+The location view have some tools for management to access them, right click on the port or fiber.
+
+[Figure 34][figure-34] shows the port tools, most of them have already been explained in other chapters, the links are listed below:
+
+| ![Port tools][figure-34] |
+|:--:|
+| ***Figure 34.** Port tools* |
+
+[figure-34]: images/figure-port-tools.png
+
+1. [Property Sheet][object-properties].
+2. [Manage Port Mirroring][manage-port-mirroring].
+3. [Show Physical Path][physical-path-view].
+4. [Show Physical Tree][physical-tree-view].
+
+[object-properties]: ../../navman/index.html#object-properties
+[manage-port-mirroring]: ../physcon/index.html#manage-port-mirroring
+
+[Figure 35][figure-35] shows the fiber tools, all have been covered in other chapters, the list of links is shown below:
+
+| ![Fiber tools][figure-35] |
+|:--:|
+| ***Figure 35.** Fiber tools* |
+
+[figure-35]: images/figure-fiber-tools.png
+
+1. [Property Sheet][object-properties].
+2. [Show Physical Path Endpoint A/B][physical-path-view].
+3. [Show Physical Tree Endpoint A/B][physical-tree-view].
+
+[Figure 36][figure-36] shows an example of using the fiber property sheet tool to set its color.
+
+| ![Set fiber color][figure-36] |
+|:--:|
+| ***Figure 36.** Set fiber color* |
+
+[figure-36]: images/figure-set-fiber-color.png
+
+1. Right click on the fiber, click on the property sheet tool.
+2. Double click on the value of the `color` property.
+3. Select fiber color.
+4. Click on the `Accept` button.
+5. Click on the `Close` button.
+
+To update the fiber color in the location view click the refresh button ![Refresh location view](images/tool-refresh-location-view.png) [Figure 37][figure-37].
+
+> **Note:** following fiber optic cable color codes[^note1] define the colors for the other fibers.
+
+[col-codes]: https://www.thefoa.org/tech/ColCodes.htm
+
+| ![Location view refreshed][figure-37] |
+|:--:|
+| ***Figure 37.** Location view refreshed* |
+
+[figure-37]: images/figure-refresh-location-view.png
+
+There are two ways to splice from a port to fiber [Figure 38][figure-38] or from fiber to port [Figure 39][figure-39].
+
+| ![Splicing from port to fiber][figure-38] |
+|:--:|
+| ***Figure 38.** Splicing from port to fiber* |
+
+[figure-38]: images/figure-splicing-from-port-to-fiber.png
+
+| ![Splicing from fiber to port][figure-39] |
+|:--:|
+| ***Figure 39.** Splicing from fiber to port* |
+
+[figure-39]: images/figure-splicing-from-fiber-to-port.png
+
+[Figure 40][figure-40] shows the splicing of fibers 2, 3 and 4.
+
+| ![Fiber splicing][figure-40] |
+|:--:|
+| ***Figure 40.** Fiber splicing* |
+
+[figure-40]: images/figure-splicing-fibers.png
+
+[Figure 41][figure-41] shows the [relationships explorer][relationships] for fiber 2.
+
+[relationships]: ../../navman/index.html#relationships
+
+| ![Fiber relationships][figure-41] |
+|:--:|
+| ***Figure 41.** Fiber relationships* |
+
+[figure-41]: images/figure-fiber-relationships.png
+
 ## Customize the Map
 
 Some characteristics of the map can be changed using the [configuration variables][settings-configuration-variables] below are the changes enabled for the user.
@@ -350,3 +486,5 @@ To change the color or fill color of the labels of the nodes or edges, the follo
 * `module.ospman.fillColorForSelectedNodeLabels` The fill color for the map selected node labels.
 * `module.ospman.fontSizeForLabels` The font size for the map labels.
 * `module.ospman.minZoomForLabels` The minimum zoom level for the map when displaying.
+
+[^note1]: [Fiber Optic Cable And Connector Color Codes][col-codes]
