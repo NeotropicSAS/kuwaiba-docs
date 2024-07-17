@@ -6,6 +6,24 @@ The outside plant module manages the OSP views which are composed of nodes and c
 |:--:|
 | ***Figure 1.** Outside plant module* |
 
+In this chapter the following topics will be addressed:
+
+* [Creating an FTTH OSP view](#creating-an-ftth-osp-view)
+  * [Adding Nodes](#adding-nodes)
+  * [Adding Connections](#adding-connections)
+* [Node Tools](#node-tools)
+* [Connection Tools](#connection-tools)
+* [Map Tools](#map-tools)
+* [OSP View Tools](#osp-view-tools)
+* [Geographical Queries](#geographical-queries)
+* [View Content Tool](#view-content-tool)
+  * [Filters](#filters)
+* [Splicing Tool](#splicing-tool)
+* [Customize the Map](#customize-the-map)
+  * [Map Provider](#map-provider)
+  * [Map Center and Zoom](#map-center-and-zoom)
+  * [Map Labels](#map-labels)
+
 ## Creating an FTTH OSP view
 
 To build the osp view we are going to use as a reference the diagram in Figure 2 in which we have a central office where the OLT will be located, a primary splitter and a secondary splitter, to which the client's ONT will be connected.
