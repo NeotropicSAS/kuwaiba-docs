@@ -69,7 +69,7 @@ This configuration is for Debian, but it should work for any derivative distribu
             server_name localhost; # Replace 'localhost' with your FQDN if available
                 
             location / {
-                proxy_pass http://YOUR_IP_ADDRESS:PORT; # Replace PORT with the port Kuwaiba is running on (default is 8080, but it might be different if changed)
+                proxy_pass http://YOUR_IP_ADDRESS:PORT; # Replace PORT with the port Kuwaiba is running on (default is 8080, but could be different if the default settings were changed)
                 include proxy_params;
             }
         }
