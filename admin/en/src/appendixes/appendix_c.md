@@ -1,6 +1,12 @@
 # Appendix C. Using a Reverse Proxy 
 
-This configuration is for Ubuntu, but it should work for any Linux distribution.
+Adding a reverse proxy with Nginx in front of Kuwaiba can provide several benefits:
+
+1. Security: Nginx can help protect Kuwaiba by hiding its internal structure and adding an additional layer of security.
+2. Load Balancing: If you have multiple instances of Kuwaiba, Nginx can distribute the load among them.
+3. URL Rewriting: Nginx can rewrite URLs to make them more user-friendly and consistent.
+
+This configuration is for Debian, but it should work for any derivative distribution like Ubuntu.
 
 1. **Installing Nginx:**
    
@@ -12,12 +18,15 @@ This configuration is for Ubuntu, but it should work for any Linux distribution.
     ``` bash
       sudo apt install nginx
     ```
-    
-    Allow access to Nginx through your firewall. if applicable:
-    
-    ``` bash
-      sudo ufw allow 'Nginx HTTP'
-    ```
+
+    > **Note**
+    >
+    > This step it's optional
+    >
+    > Allow access to Nginx through your firewall. if applicable
+    >
+    >   sudo ufw allow 'Nginx HTTP'
+    > 
     
     Verify that Nginx is running:
    
@@ -57,10 +66,10 @@ This configuration is for Ubuntu, but it should work for any Linux distribution.
             listen 80;
             listen [::]:80;
 
-            server_name localhost;
+            server_name localhost; # Replace 'localhost' with your FQDN if available
                 
             location / {
-                proxy_pass http://YOUR_IP_ADDRESS:8080;
+                proxy_pass http://YOUR_IP_ADDRESS:PORT; # Replace PORT with the port Kuwaiba is running on (default is 8080, but it might be different if changed)
                 include proxy_params;
             }
         }
