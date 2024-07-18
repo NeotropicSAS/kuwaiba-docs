@@ -2,9 +2,9 @@
 
 Adding a reverse proxy with Nginx in front of Kuwaiba can provide several benefits:
 
-1. Security: Nginx can help protect Kuwaiba by hiding its internal structure and adding an additional layer of security.
-2. Load Balancing: If you have multiple instances of Kuwaiba, Nginx can distribute the load among them.
-3. URL Rewriting: Nginx can rewrite URLs to make them more user-friendly and consistent.
+1. Redirecting the traffic from standard HTTP/HTTPS ports 80/443 to 8080   allows  a non-privileged user to run Kuwaiba
+2. Security: Nginx can help protect Kuwaiba by hiding its internal structure and adding an additional layer of security.
+3. Load Balancing: If you have multiple instances of Kuwaiba, Nginx can distribute the load among them.
 
 This configuration is for Debian, but it should work for any derivative distribution like Ubuntu.
 
@@ -21,11 +21,11 @@ This configuration is for Debian, but it should work for any derivative distribu
 
     > **Note**
     >
-    > This step it's optional
+    > This step is optional
     >
-    > Allow access to Nginx through your firewall. if applicable
+    > Allow access to Nginx through your firewall. if applicable:
     >
-    >   sudo ufw allow 'Nginx HTTP'
+    > sudo ufw allow 'Nginx HTTP'
     > 
     
     Verify that Nginx is running:
