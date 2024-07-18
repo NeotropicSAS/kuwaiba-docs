@@ -21,7 +21,7 @@ This configuration is for Debian, but it should work for any derivative distribu
 
     > Note
     >
-    > This step is optional, allow access to Nginx through your firewall. if applicable: 
+    >  This step is optional. If applicable, allow access to Nginx through your firewall using the following command:
     >
     > sudo ufw allow 'Nginx HTTP'
     > 
