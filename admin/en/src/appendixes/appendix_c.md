@@ -8,7 +8,7 @@ Adding a reverse proxy with Nginx in front of Kuwaiba can provide several benefi
 
 This configuration is for Debian, but it should work for any derivative distribution like Ubuntu.
 
-1. **Installing Nginx:**
+1. Install Nginx:
    
     Update you repository index, then install Nginx:
    
@@ -19,11 +19,9 @@ This configuration is for Debian, but it should work for any derivative distribu
       sudo apt install nginx
     ```
 
-    > **Note**
+    > Note
     >
-    > This step is optional
-    >
-    > Allow access to Nginx through your firewall. if applicable:
+    > This step is optional, allow access to Nginx through your firewall. if applicable: 
     >
     > sudo ufw allow 'Nginx HTTP'
     > 
@@ -51,7 +49,7 @@ This configuration is for Debian, but it should work for any derivative distribu
     ```
     
 
-2. **Configuring your Server Block:**
+2. Edit your Server Block:
    
     Create and open a new Nginx configuration file using nano or your preferred text editor:
 
@@ -59,7 +57,7 @@ This configuration is for Debian, but it should work for any derivative distribu
         sudo nano /etc/nginx/sites-available/kuwaiba
     ```
 
-    Insert the following into your new file:
+    Insert the following text into your new file:
    
    ``` bash
         server {
@@ -92,7 +90,7 @@ This configuration is for Debian, but it should work for any derivative distribu
     ``` bash
         sudo systemctl restart nginx
     ```
-3. **Run Kuwaiba and open your browser:**
+3. Run Kuwaiba and open your browser:
    
    ``` bash
         localhost/kuwaiba
