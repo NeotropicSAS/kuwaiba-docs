@@ -4,7 +4,7 @@ Digital certificates are an essential part of internet security. They function a
 
 In the context of web applications, digital certificates allow secure connections to be established using the HTTPS (HyperText Transfer Protocol Secure) protocol. This ensures that data transmitted between the user's browser and the web server is protected from malicious attacks. To configure HTTPS on a web server, you need to implement an SSL (Secure Sockets Layer) certificate, which is stored in a keystore, a secure container for keys and certificates.
 
-In addition to certificates issued by a CA, there are also self-signed certificates. These digital certificates are signed by the same entity that creates them, rather than by a CA. Which will be the type we are going to implement.
+In addition to certificates issued by a CA, there are also self-signed certificates. These digital certificates are signed by the same entity that creates them, rather than by a CA, which will be the type we are going to implement.
 
 1. Create the Certificate Authority (CA) Private Key
 
