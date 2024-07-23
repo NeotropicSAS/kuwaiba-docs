@@ -12,7 +12,7 @@ The physical connections module registers basic actions, advanced actions and vi
   * [Edit Connections](#edit-connections)
   * [Connect Using a Link](#connect-using-a-link)
   * [Connect Using a Container](#connect-using-a-container)
-  * [Views](#views)
+* [Views](#views)
 
 ## Physical Connections
 
