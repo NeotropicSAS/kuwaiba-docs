@@ -4,11 +4,11 @@ Digital certificates are an essential part of internet security. They function a
 
 In the context of web applications, digital certificates allow secure connections to be established using the HTTPS (HyperText Transfer Protocol Secure) protocol. This ensures that data transmitted between the user's browser and the web server is protected from malicious attacks. To configure HTTPS on a web server, you need to implement an SSL (Secure Sockets Layer) certificate, which is stored in a keystore, a secure container for keys and certificates.
 
-In addition to certificates issued by a CA, there are also self-signed certificates. These digital certificates are signed by the same entity that creates them, rather than by a CA.
+In addition to certificates issued by a CA, there are also self-signed certificates. These digital certificates are signed by the same entity that creates them, rather than by a CA, which will be the type we are going to implement.
 
-1. Create a private key:
+1. Create the Certificate Authority (CA) Private Key:
 
-    Create a private key in the location you want, for this example it was created in the root directory in a folder called                         certificate:
+    Create a private key in the desired location. In this example, it was created in the root directory within a folder named `certificate`:
     
     ``` bash
         mkdir certificate
@@ -31,11 +31,16 @@ In addition to certificates issued by a CA, there are also self-signed certifica
     >  Whenever you are asked for a password, use the same password to avoid confusion.
     >
 
-2.  Export the Certificate as PEM Format:
+2. Export the certificate as a PEM format:
     
     ``` bash
        openssl req -x509 -sha256 -new -nodes -days 3650 -key CA.key  -out CA.pem
     ```
+    Enter your password and the requested information:
+
+    > **Note**
+    >
+    > The requested fields can be left empty
 
     ``` bash
         ● Output:
@@ -57,14 +62,9 @@ In addition to certificates issued by a CA, there are also self-signed certifica
             Email Address []:
     ```
     
-    > **Note**
-    >
-    > The requested fields can be left empty
-    >
-    
-3. Create and Sign a Domain Certificate
+3. Create and Sign a Domain Certificate:
 
-    Create a Directory for the Domain inside folder certificate:
+    Create a Directory for the Domain inside folder `certificate`:
     
     ``` bash
         mkdir neotropic.co
@@ -76,6 +76,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
     ``` bash
         openssl genrsa -out neotropic.co.key -des3 2048
     ```
+    Enter a password:
     
     ``` bash
         ● Output:
@@ -107,6 +108,12 @@ In addition to certificates issued by a CA, there are also self-signed certifica
     ``` bash
         openssl req -new -key neotropic.co.key -out neotropic.co.csr
     ```
+    Enter your password and the requested information:
+
+    > **Note**
+    >
+    > The requested fields can be left empty except for (`A challenge password [ ]:YOUR_PASSWORD`)
+    >
     
     ``` bash
         ● Output:
@@ -131,19 +138,13 @@ In addition to certificates issued by a CA, there are also self-signed certifica
             A challenge password []:neotropic
             An optional company name []:
     ```
-    
-     > **Note**
-    >
-    > The requested fields can be left empty except for " A challenge password [ ]:YOUR_PASSWORD  "
-    >
-    
-4. Request certificate
 
     Sign the certificate request (`neotropic.co.csr`) using the CA certificate (`CA.pem`) and private key (`CA.key`). This will generate a new certificate (`neotropic.co.crt`):
 
     ``` bash
-            openssl x509 -req -in neotropic.co.csr -CA ../CA.pem -CAkey ../CA.key  -CAcreateserial  -days 3650 -sha256 -extfile neotropic.co.ext -out neotropic.co.crt
+        openssl x509 -req -in neotropic.co.csr -CA ../CA.pem -CAkey ../CA.key  -CAcreateserial  -days 3650 -sha256 -extfile neotropic.co.ext -out neotropic.co.crt
     ```
+    Enter a password:
     
     ``` bash
         ● Output:
@@ -153,13 +154,14 @@ In addition to certificates issued by a CA, there are also self-signed certifica
 
     ```
     
-5. Convert to PKCS12 Format
+4. Convert to PKCS12 Format:
 
     Export the certificate and private key to PKCS12 format:
     
     ``` bash
         openssl  pkcs12 -export -in neotropic.co.crt -inkey neotropic.co.key -out neotropic.co.p12 -name default
     ```
+    Enter your password:
     
     ``` bash
         ● Output:
@@ -168,7 +170,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
             Verifying - Enter Export Password:
     ```
 
-6. Update kuwaiba application properties
+5. Update kuwaiba application properties:
 
     Change the application port in application properties:
     
@@ -186,12 +188,24 @@ In addition to certificates issued by a CA, there are also self-signed certifica
     ```
     
 
-7. Run Kuwaiba and open your browser
+6. Run Kuwaiba and open your browser:
 
     ``` bash
         https://localhost:8443/kuwaiba/
     ```
 
+    Click on the following button (`you can also view the url with https`):
+
+    ![certificate step 1](images/appendix_e_certificate_step1.png)
+
+    Click on (`Connection not secure`) and then on (`More information`) and you will see the following information:
+
+    Click on (`View certificate`):
+
+    ![certificate step 2](images/appendix_e_certtificate_step2.png)
+
+    Your certificate:
+
+    ![certificate view](images/appendix_e_certificate_view.png)
 
 
-    
