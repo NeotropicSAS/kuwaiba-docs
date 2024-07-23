@@ -6,7 +6,7 @@ In the context of web applications, digital certificates allow secure connection
 
 In addition to certificates issued by a CA, there are also self-signed certificates. These digital certificates are signed by the same entity that creates them, rather than by a CA, which will be the type we are going to implement.
 
-1. Create the Certificate Authority (CA) Private Key
+1. Create the Certificate Authority (CA) Private Key:
 
     Create a private key in the desired location. In this example, it was created in the root directory within a folder named `certificate`:
     
@@ -62,7 +62,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
             Email Address []:
     ```
     
-3. Create and Sign a Domain Certificate
+3. Create and Sign a Domain Certificate:
 
     Create a Directory for the Domain inside folder `certificate`:
     
@@ -154,7 +154,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
 
     ```
     
-4. Convert to PKCS12 Format
+4. Convert to PKCS12 Format:
 
     Export the certificate and private key to PKCS12 format:
     
@@ -170,7 +170,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
             Verifying - Enter Export Password:
     ```
 
-5. Update kuwaiba application properties
+5. Update kuwaiba application properties:
 
     Change the application port in application properties:
     
@@ -188,7 +188,7 @@ In addition to certificates issued by a CA, there are also self-signed certifica
     ```
     
 
-6. Run Kuwaiba and open your browser
+6. Run Kuwaiba and open your browser:
 
     ``` bash
         https://localhost:8443/kuwaiba/
