@@ -269,7 +269,7 @@ A view is a graphical representation of a selected object that can be displayed 
 | :--: |
 | ***Figure 31**. Views.*|
 
-#### **Object View**
+#### Object View
 
 > Applies to objects of the `ViewableObject` subclasses
 
@@ -293,7 +293,7 @@ An example of the object view is shown in Figure 32, where the selected object i
   | :--:|--|
   | ![download icon](images/icons/download_icon.png)| Save view|
   | ![refresh](images/icons/refresh_view_icon.png)| Update view|
-  | ![refresh](images/icons/connect_icon.png)| Connect two nodes (See Physical Connections for more details on how to use it)|
+  | ![refresh](images/icons/connect_icon.png)| Connect two nodes (See [Physical Connections](../physical/physcon/index.html) for more details on how to use it)|
   | ![background](images/icons/background_icon.png)| Add a background image|
   | ![hide labels](images/icons/labels_icon.png)| Hide/show the labels next to the connections|
   | ![labels color](images/icons/labels_color_icon.png)| Change labels color|

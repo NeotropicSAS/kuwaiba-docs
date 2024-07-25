@@ -158,7 +158,7 @@ When we execute the query, we obtain the desired routers as shown in Figure 24.
 
 This option allows us to create queries using Groovy scripts. The queries created with these scripts have low-level access to the application's database. Thanks to the use of scripts, it is possible to reuse these scripted queries in other modules of the application outside the queries module, allowing precise data retrieval and manipulation.
 
-For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../physical/ospman/README.md#map-tools) for more details.
+For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../physical/ospman/index.html#geographical-queries) for more details.
 
 > **Information**
 the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-queries/).

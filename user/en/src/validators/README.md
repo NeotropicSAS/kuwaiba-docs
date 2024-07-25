@@ -92,4 +92,4 @@ Figure 11 shows the validators, added as a suffix to the name of the objects, in
 You can see some examples of validators in SourceForge[^SourceForgeScripts]. Validator scripts start with `VD` in their name.
 
   [^API]: Kuwaiba Persistence API: https://kuwaiba.org/docs/dev/javadoc/current/
-  [^SourceForgeScripts]: SourceForge Validator Scripts: https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/
+  [^SourceForgeScripts]: SourceForge Validator Scripts: https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-validator/

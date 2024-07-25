@@ -18,6 +18,7 @@
 - [Favorites](favorites/README.md)
 - [Session Manager](sessman/README.md)
 - [Projects](projects/README.md)
+- [Synchronization Framework](sync/README.md)
 
 # Navigation
 
@@ -27,9 +28,9 @@
 
 # Physical
 
-- [Outside Plant Management](physical/ospman/README.md)
 - [Physical Connections](physical/physcon/README.md)
 - [Connectivity Manager](physical/connectivityman/README.md)
+- [Outside Plant Management](physical/ospman/README.md)
 
 # Logical
 
@@ -37,6 +38,10 @@
 - [New Logical Circuit](logical/new-logical-circuit/README.MD)
 - [MPLS Networks](logical/mpls/README.MD)
 - [SDH Networks](logical/sdh/README.MD)
+
+# Services
+
+- [Service Manager](serviceman/README.md)
 
 # Planning
 
