@@ -9,6 +9,6 @@ This module is part of the *Other* category, as shown in Figure 1.
 
 Once opened, we will see the main window of the module, as shown in Figure 2. From here you can create your layouts.
 
-|![Main Window](images/queries_main_window.png)|
+|![Main Window](images/layout_module_main.png)|
 |:--:|
 | ***Figure 2.** Queries manager main window* |

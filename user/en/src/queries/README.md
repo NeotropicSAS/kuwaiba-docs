@@ -160,8 +160,8 @@ This option allows us to create queries using Groovy scripts. The queries create
 
 For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../physical/ospman/index.html#geographical-queries) for more details.
 
-> **Information**
-the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-queries/).
+> **Warning**
+> The changes made by scripted queries in the database can break things if your code is wrong. Proceed with caution.
 
 To start, locate **Scripted Builder** in the main window of the module, as shown in Figure 25.
 
@@ -209,32 +209,44 @@ Clicking on the script will display the editor and actions associated with the s
 |:--:|
 | ***Figure 31.** Script editor* |
 
-> **Warning**
-> The changes made by scripted queries in the database can break things if your code is wrong. Proceed with caution.
+> **Information**
+the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-queries/).
 
-To edit the properties of a script after it has been created, use the![Btn Edit Pool](images/btn_edit_script_properties.png)button. This will open the window shown in Figure 32, where you can edit the properties by double-clicking on the desired property.
+once the script is created you can save the changes using the ![Btn Save Script](images/btn_save_script.png)button seen in Figure 32.
 
-|![Edit Script Properties Window](images/queries_edit_script_properties_window.png)|
+|![Script Editor](images/queries_script_example.png)|
 |:--:|
-| ***Figure 32.** Edit script properties window* |
+| ***Figure 32.** Script example* |
 
-To delete a script, use the![Btn Delete Script](images/btn_delete_script.png)button. This will open the confirmation window shown in Figure 33. Click *OK* to proceed with the deletion or *Cancel* if you do not wish to delete it.
-
-|![Delete Script Confirmation Window](images/queries_delete_script_window.png)|
-|:--:|
-| ***Figure 33.** Delete script confirmation window* |
-
-To save the changes made to the script, use the ![Btn Save Script](images/btn_save_script.png)button. Similarly, use the![Edit Script Properties Window](images/btn_execute_script.png)button to save the changes to the script and open the script execution window, as shown in Figure 34.
+Similarly, use the![Edit Script Properties Window](images/btn_execute_script.png)button to save the changes to the script and open the script execution window, as shown in Figure 33.
 
 |![Execute Scripted Window](images/queries_execute_script_window.png)|
 |:--:|
-| ***Figure 34.** Execute scripted query window* |
+| ***Figure 33.** Execute scripted query window* |
 
-It's important to note that most scripts will require input parameters. As seen in Figure 34, you can add parameters before executing the script. To do this, enter the parameter name and value, then click ![Btn Add Parameter](images/btn_add_parameter.png). Once you've added the necessary parameters, click *OK* to execute the script, as shown in Figure 35.
+It's important to note that most scripts will require input parameters. As seen in Figure 34, you can add parameters before executing the script. To do this, enter the parameter name and value, then click ![Btn Add Parameter](images/btn_add_parameter.png). Once you've added the necessary parameters, click *OK* to execute the script, as shown in Figure 34.
 
 |![Execute Script](images/queries_parameter.png)|
 |:--:|
-| ***Figure 35.** Execute script* |
+| ***Figure 34.** Execute script* |
+
+The result of the script execution will appear in the pop-up window as seen in Figure 35.
+
+|![Execute Script](images/queries_script_result.png)|
+|:--:|
+| ***Figure 35.** Script result* |
+
+To edit the properties of a script after it has been created, use the![Btn Edit Pool](images/btn_edit_script_properties.png)button seen in Figure 32. This will open the window shown in Figure 36, where you can edit the properties by double-clicking on the desired property.
+
+|![Edit Script Properties Window](images/queries_edit_script_properties_window.png)|
+|:--:|
+| ***Figure 36.** Edit script properties window* |
+
+To delete a script, use the![Btn Delete Script](images/btn_delete_script.png)button. This will open the confirmation window shown in Figure 37. Click *OK* to proceed with the deletion or *Cancel* if you do not wish to delete it.
+
+|![Delete Script Confirmation Window](images/queries_delete_script_window.png)|
+|:--:|
+| ***Figure 37.** Delete script confirmation window* |
 
 
 
