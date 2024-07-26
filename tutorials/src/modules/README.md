@@ -48,14 +48,14 @@ The modules in Kuwaiba help structure and organize various aspects of the system
 
     > **Note**
     >
-    > You can also add the dependency directly by editing the pom.xml file 
+    > You can also add the dependency directly by editing the pom.xml file. 
     >
 
-2. Module Structure
+2. Module Structure:
 
     Create the following Packages within the `Source Packages` of your Module:
-    - persistence
-    - (`Your module name`), for this example renthouse :
+    - persistence.
+    - (`Your module name`), for this example renthouse.
    
     | ![Rent House Structure](images/Rent_house_structure.png) |
     |:--:|
@@ -87,10 +87,10 @@ The modules in Kuwaiba help structure and organize various aspects of the system
 
     > **Note**
     >
-    > You can also add the dependency directly by editing the pom.xml file 
+    > You can also add the dependency directly by editing the pom.xml file. 
     >
 
-
+3. 
 
 
 
