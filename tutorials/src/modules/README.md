@@ -12,19 +12,19 @@ The modules in Kuwaiba help structure and organize various aspects of the system
 
     Create a new project inside the **Modules** folder:
 
-    | ![Core Modules Root](images/Core_Modules_root.png) |
+    | ![Core Modules Root](images/core_modules_root.png) |
     |:--:|
     | ***Figure 2: Core Modules Root folder*** |
 
     Create a Java application with Maven and name it as you prefer  (In this example, it was named **RentHouse**):
 
-    | ![Create new Project](images/Create_new_project.png) |
+    | ![Create new Project](images/create_new_project.png) |
     |:--:|
     | ***Figure 3: Creating a New Project*** |
 
     Your project:
 
-    | ![Create new Project](images/Module_created_RentHouse.png) |
+    | ![Create new Project](images/module_created_rent_house.png) |
     |:--:|
     | ***Figure 4: Module Created RentHouse*** |
 
@@ -36,13 +36,13 @@ The modules in Kuwaiba help structure and organize various aspects of the system
 
     Right-click on `Dependencies` and then click on `Add Dependency`:
 
-    | ![Web Client Dependencies folder](images/Web_client_dependencies.png) |
+    | ![Web Client Dependencies folder](images/web_client_dependencies.png) |
     |:--:|
     | ***Figure 6: Web Client Dependencies folder*** |
 
     Select your project and add it to dependencies:
 
-    | ![Web Client Dependency Added](images/Rent_house_dependecy.png) |
+    | ![Web Client Dependency Added](images/rent_house_dependecy.png) |
     |:--:|
     | ***Figure 7: Web Client Dependency Added*** |
 
@@ -57,31 +57,31 @@ The modules in Kuwaiba help structure and organize various aspects of the system
     - persistence.
     - (`Your module name`), for this example renthouse.
    
-    | ![Rent House Structure](images/Rent_house_structure.png) |
+    | ![Rent House Structure](images/rent_house_structure.png) |
     |:--:|
     | ***Figure 8: Rent House Packages Structure*** |
 
     Create the following Classes within the previously created packages:
 
-    | ![Classes of each Package](images/Rent_house_files.png) |
+    | ![Classes of each Package](images/rent_house_files.png) |
     |:--:|
     | ***Figure 9: Classes of each Package*** |
 
     Open the **Persistence API** Application in the **Core Modules** of the Main Kuwaiba Application:
 
-    | ![Persistent API](images/Kuwaiba_Persistence_API.png) |
+    | ![Persistent API](images/kuwaiba_persistence_api.png) |
     |:--:|
     | ***Figure 10: Persistence API*** |
 
     Add **Persistence API** to your module dependencies, right-click on `Dependencies` and then click on `Add Dependency`:
 
-     | ![Rent House Dependency](images/Rent_house_dependencies.png) |
+     | ![Rent House Dependency](images/rent_house_dependencies.png) |
     |:--:|
     | ***Figure 11: RentHouse Dependencies folder*** |
 
     Select **Persistence API** and add it to dependencies of your Module:
 
-    | ![Persistence API Dependency Added](images/Persistence_API_dependecy.png) |
+    | ![Persistence API Dependency Added](images/persistence_api_dependecy.png) |
     |:--:|
     | ***Figure 12: Persistence API Dependency Added*** |
 
@@ -258,19 +258,19 @@ The modules in Kuwaiba help structure and organize various aspects of the system
 
     Go to User Manager:
 
-    | ![User Manager](images/Home_user_manager.png) |
+    | ![User Manager](images/home_user_manager.png) |
     |:--:|
     | ***Figure 13: User Manager*** |
     
     In the Administrators section, look for and enable your module for the Neotropic Customer (admin):
 
-    | ![Enable Module](images/Enable_rent_house_module.png) |
+    | ![Enable Module](images/enable_rent_house_module.png) |
     |:--:|
     | ***Figure 14: Enable the Module*** |
 
     Navigate to your view:
 
-    | ![Enable Module](images/Rent_House_view.png) |
+    | ![Enable Module](images/rent_house_view.png) |
     |:--:|
     | ***Figure 15: Rent House View*** |
 
