@@ -1,5 +1,5 @@
 # Creating a New Module
-Modules in Kuwaiba help structure and organize various aspects of the system, facilitating the management of a wide range of resources and functionalities. They adapt to the changing requirements of the business and technological environment. Additionally, you can model any aspect relevant to everyday life.
+Modules in **Kuwaiba** help structure and organize various aspects of the system, facilitating the management of a wide range of resources and functionalities. They adapt to the changing requirements of the business and technological environment. Additionally, you can model any aspect relevant to everyday life.
 
 - [Creating a New Module](#creating-a-new-module)
   - [Create a Module](#create-a-module)
@@ -13,22 +13,22 @@ Modules in Kuwaiba help structure and organize various aspects of the system, fa
     - [Internationalization and Localization Module](#internationalization-and-localization-module)
     - [Translation Service](#translation-service)
     - [Using Business Entity Manager](#using-business-entity-manager)
-  - [Enable your Module:](#enable-your-module)
+  - [Enable your Module](#enable-your-module)
 
 
 ## Create a Module
 
 ### Kuwaiba Modules
 
-Application modules are located in the modules folder of the main application.
+Application modules are located in the **Modules** folder of the main application.
 
-Kuwaiba handles 3 types of modules:
+**Kuwaiba** handles 3 types of modules:
 
 - **Core Modules:** Main modules of the application.
-- **Optional Modules:** These are additional modules specific for telecommunications management that are not essential for the basic operation of    Kuwaiba. Although Kuwaiba can operate without these modules, they can be useful for users who need advanced telecommunication-related functionalities.
+- **Optional Modules:** These are additional modules specific for telecommunications management that are not essential for the basic operation of    **Kuwaiba**. Although **Kuwaiba** can operate without these modules, they can be useful for users who need telecommunication-related functionalities.
 - **Commercial Modules:** Modules designed to be licensed commercially and that will not be open source, providing functions for more specific telecommunications technologies.
 
-In the modules folder you can create your own module:
+In the **Modules** folder you can create your own module:
 
 | ![Kuwaiba Root](images/kuwaiba_modules.png) | 
 |:--:|
@@ -40,7 +40,7 @@ Create a Java application with Maven and name it as you prefer  (In this example
 |:--:|
 | ***Figure 2: Creating a New Project*** |
 
-Your project:
+Your Project:
 
 | ![Core Modules Root](images/kuwaiba_rent_house.png) |
 |:--:|
@@ -48,9 +48,9 @@ Your project:
 
 ### Web Client
 
-In the main Kuwaiba application, we also have the **Web Client**, which serves as the entry point for the entire project.
+In the main **Kuwaiba** application, we also have the **Web Client**, which serves as the entry point for the entire project.
 
-Open the **Web Client** Application in the Main Kuwaiba Application:
+Open the **Web Client** Application in the Main **Kuwaiba** Application:
 
 | ![Web Client](images/kuwaiba_web_client.png) |
 |:--:|
@@ -79,21 +79,39 @@ Create the following Packages within the `Source Packages` of your Module:
 - persistence.
 - (`Your module name`), for this example renthouse.
 
+> **Note**
+>
+>   Verify that your Packages follow this structure:
+> 
+>   org.neotropic.kuwaiba.modules.YOUR_PACKAGE
+>
+
+
+
 | ![Rent House Structure](images/rent_house_structure.png) |
 |:--:|
 | ***Figure 7: Rent House Packages Structure*** |
 
-Create the following Classes within the previously created packages:
+Create the following Classes within the previously created Packages:
 
 | ![Classes of each Package](images/rent_house_files.png) |
 |:--:|
 | ***Figure 8: Classes of each Package*** |
 
+- persistence
+  - `RentHouseService`: The RentHouseService class is a Spring service component to facilitate interaction with inventory objects.
+- renthouse
+  - `RentHouse`: The RentHouse class is a Spring component to define a specific module within the Kuwaiba application.
+  - `RentHouseLayout`: This class is designed to define the layout structure for the Rent House module.
+  - `RentHouseUI`: The RentHouseUI class is a Vaadin UI component designed to provide the user interface for the Rent House module.
+
+Later, we will write the code that should go into each class.
+
 ### Persistence API
 
-Contains the definition of the classes and interfaces necessary for communication with the database. For this purpose, Kuwaiba uses the Persistence API, which allows you to manage data in the database.
+Contains the definition of the classes and interfaces necessary for communication with the database. For this purpose, **Kuwaiba** uses the **Persistence API**, which allows you to manage data in the database.
 
-Open the **Persistence API** Application in the **Core Modules** of the Main Kuwaiba Application:
+Open the **Persistence API** Application in the **Core Modules** of the Main **Kuwaiba** Application:
 
 | ![Persistent API](images/kuwaiba_persistence_api.png) |
 |:--:|
@@ -122,18 +140,18 @@ Select **Persistence API** and add it to dependencies of your Module:
 
 Since Kuwaiba's data model is dynamic, the system allows you to create any object you need to manage your inventory, providing high flexibility and customization in its administration.
 
-In Kuwaiba there are two types of Classes to create inventory objects:
+In **Kuwaiba** there are two types of Classes to create inventory objects:
 
 - `BusinessObject`: It's a class that is used to map the inventory objects.
 - `BusinessObjectLight`: It's the super class of Business Object.
 
-BusinessObjectLight allows you to manage objects with the essential attributes of an entity in the database, such as ID, name, and class type. On the other hand, BusinessObject also includes these basic attributes and allows you to create objects with additional attributes, such as the creation date.
+`BusinessObjectLight` allows you to manage objects with the essential attributes of an entity in the database, such as ID, name, and class type. On the other hand, `BusinessObject` also includes these basic attributes and allows you to create objects with additional attributes, such as the creation date.
 
-For the following implementation, we will use BusinessObjectLight to display the houses registered in the inventory, along with their basic attributes: id, name, and className.
+For the implementation of the example, we will use `BusinessObjectLight` to display the houses registered in the inventory, along with their basic attributes: id, name, and className. But first, we must understand some other concepts, which will be explained later.
 
 ### Entity Manager Interfaces
 
-They are interfaces that define primitives. Kuwaiba has three types of Entity Manager:
+They are interfaces that define fundamental operations and interactions with different aspects of the system. In **Kuwaiba**, there are three types of **Entity Managers**, each serving a distinct purpose:
  
 - `MetadataEntityManager`:Responsible for data model manipulation.
 - `BusinessEntityManager`: Used to manipulate inventory objects, including adding, removing, updating, and retrieving items from the inventory.
@@ -141,19 +159,19 @@ They are interfaces that define primitives. Kuwaiba has three types of Entity Ma
 
 ### Internationalization and Localization Module
 
-It's used to manage and adapt the content of an application or system to different languages and regions.
+It's used to manage and adapt the content of **Kuwaiba** to different languages and regions.
 
 | ![Internationalization and Localization Module](images/kuwaiba_Internationalizarion_localization.png) |
 |:--:|
 | ***Figure 12: Internationalization and Localization Module*** |
 
-Modify messages_en_US.properties and messages_es_CO.properties files.
+Modify `messages_en_US.properties` and `messages_es_CO.properties` files:
 
 | ![Internationalization and Localization Module Structure](images/internationalization_localization.png) |
 |:--:|
 | ***Figure 13: Internationalization and Localization Module Structure*** |
 
-Add the following content in the messages_en_US.properties file:
+Add the following content in the `messages_en_US.properties` file:
 
 ``` bash
     module.rent.house.name=Rent House Module
@@ -161,7 +179,7 @@ Add the following content in the messages_en_US.properties file:
     module.rent.house.title=Rent House :: Kuwaiba Open Network Inventory
 ```
 
-Add the following content in the messages_es_CO.properties file:
+Add the following content in the `messages_es_CO.properties` file:
 
 ``` bash
     module.rent.house.name=Renta de casas
@@ -177,7 +195,7 @@ This interface provides translation services.
     @Autowired
     private TranslationService ts;
 ```
-Use the Translation Service:
+Use the `Translation Service`:
 
 ``` java
     public String getTranslation() {
@@ -190,7 +208,9 @@ We will need the steps used in [Internationalization and Localization Module](#i
 
 ### Using Business Entity Manager
 
-Consume the service through BusinessEntityManager interface. Insert the following code into your service Class:
+Now that we have covered the previous concepts, let's begin writing the code for each class.
+
+Consume the service through `BusinessEntityManager` interface. Insert the following code into your service Class:
 
 ``` java
     @Service
@@ -212,7 +232,7 @@ Consume the service through BusinessEntityManager interface. Insert the followin
     }
 ```
 
-You can access the BusinessEntityManager interface to explore other services that Kuwaiba provides for managing inventory objects.
+You can access the `BusinessEntityManager` interface to explore other services that Kuwaiba provides for managing inventory objects.
 
 Insert the following code into your Module Class:
 
@@ -317,7 +337,6 @@ Create your view inside your UI Class:
             try{
                 List<BusinessObjectLight> objects = new ArrayList();
                 
-                //
                 objects = this.rhs.findAllBusinessObjectLight("House", 1, 10);
                 
                 this.gridObjects = new Grid<>(BusinessObjectLight.class, false);
@@ -342,9 +361,9 @@ Create your view inside your UI Class:
         }
     }
 ```
-## Enable your Module:
+## Enable your Module
 
-Go to User Manager:
+Go to **User Manager**:
 
 | ![User Manager](images/home_user_manager.png) |
 |:--:|
