@@ -145,7 +145,7 @@ In **Kuwaiba** there are two types of Classes to create inventory objects:
 - `BusinessObject`: It's a class that is used to map the inventory objects.
 - `BusinessObjectLight`: It's the super class of Business Object.
 
-`BusinessObjectLight` allows you to manage objects with the essential attributes of an entity in the database, such as ID, name, and class type. On the other hand, `BusinessObject` also includes these basic attributes and allows you to create objects with additional attributes, such as the creation date.
+`BusinessObjectLight` allows you to manage objects with the essential attributes of an entity in the database, such as id, name, and className. On the other hand, `BusinessObject` also includes these basic attributes and allows you to create objects with additional attributes, such as the creation date.
 
 For the implementation of the example, we will use `BusinessObjectLight` to display the houses registered in the inventory, along with their basic attributes: id, name, and className. But first, we must understand some other concepts, which will be explained later.
 
@@ -155,7 +155,7 @@ They are interfaces that define fundamental operations and interactions with dif
  
 - `MetadataEntityManager`:Responsible for data model manipulation.
 - `BusinessEntityManager`: Used to manipulate inventory objects, including adding, removing, updating, and retrieving items from the inventory.
-- `ApplicationEntityManager`:Responsible for everything related to the application, such as user management and session handling 
+- `ApplicationEntityManager`:Responsible for everything related to the application, such as user management and session handling.
 
 ### Internationalization and Localization Module
 
