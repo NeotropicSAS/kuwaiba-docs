@@ -1,6 +1,6 @@
-# Projects
+# Project Manager
 
-The Project module allows you to manage all your projects (planning, maintenance, deployment, etc.), their activities and associated resources in one place. The current version of the module offers basic functionality, which will be extended in the future.
+The **Project Manager** module allows you to manage all your projects (network planning, maintenance, network roll-out, etc.), their activities and associated network resources in one place. The current version of the module offers basic functionality, which will be extended in the future.
 
 To access the project module, locate the icon ![planning](images/icons/planning_icon.png) in the menu at the top of the screen. When clicked, a vertical menu will be displayed where the user can select the `Project Manager` option, which will direct the user to the interface shown in Figure 2.
 
@@ -14,7 +14,7 @@ To access the project module, locate the icon ![planning](images/icons/planning_
 
 In Figure 2, a list of all existing projects should be displayed, as there are currently no projects in the inventory, the message `There are no projects so far` is displayed.
 
-To create a project, you must first identify or create a pool. A pool is like a bag that can contain one or more projects (see more in [Pools chapter][pools]). To create a pool or modify existing pools, select the icon ![manage_pools_icon](images/icons/manage_pools_icon.png) which will open a new pop-up window like the one shown in Figure 3.
+To create a project, you must first identify or create a pool. A pool is like a bag that can contain one or more projects (see more in [Pools][pools]). To create a pool or modify existing pools, select the icon ![manage_pools_icon](images/icons/manage_pools_icon.png) which will open a new pop-up window like the one shown in Figure 3.
 
 | ![manage_pool](images/manage_pools.png) |
 | :--: |
@@ -140,6 +140,6 @@ If you reload the project module and select the project again, it appears in the
 
 * The icon ![release_from_project](images/icons/release_relation_project.png) removes the relationship between the object and the project.
 
-[pools]: ../pools/index.html
-[list_type_manager]: ../administration/ltman/index.html
-[navigation]: ../navman/index.html
+[pools]: ../../navigation/pools/index.hml
+[list_type_manager]: ../../administration/ltman/index.html
+[navigation]: ../../navigation/navman/index.html

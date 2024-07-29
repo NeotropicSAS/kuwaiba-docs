@@ -5,26 +5,22 @@
 
 # Administration
 
-- [Data Model Manager](dmman/README.MD)
+- [Data Model Manager](administration/dmman/README.MD)
 - [List Type Manager](administration/ltman/README.MD)
 - [Containment Manager](administration/containment/README.MD)
-- [Template Manager](templateman/README.md)
-- [Audit Trail](auditTrail/README.md)
-- [User Manager](userman/README.md)
-- [Task Manager](taskman/README.md)
-- [Reports](reports/README.md)
-- [Validators](validators/README.md)
-- [Filters](filters/README.md)
-- [Favorites](favorites/README.md)
-- [Session Manager](sessman/README.md)
-- [Projects](projects/README.md)
-- [Synchronization Framework](sync/README.md)
+- [Template Manager](administration/templateman/README.md)
+- [Audit Trail](administration/audit-trail/README.md)
+- [User Manager](administration/userman/README.md)
+- [Task Manager](administration/taskman/README.md)
+- [Session Manager](administration/sessman/README.md)
+- [Scheduling](administration/scheduling/README.md)
 
 # Navigation
 
-- [Navigation](navman/README.md)
-- [Queries](queries/README.md)
-- [Pools](pools/README.MD)
+- [Navigation](navigation/navman/README.md)
+- [Queries](navigation/queries/README.md)
+- [Pools](navigation/pools/README.MD)
+- [Favorites](navigation/favorites/README.md)
 
 # Physical
 
@@ -34,24 +30,30 @@
 
 # Logical
 
-- [IP Address Manager](ipman/README.MD)
+- [IP Address Manager](logical/ipman/README.MD)
 - [New Logical Circuit](logical/new-logical-circuit/README.MD)
 - [MPLS Networks](logical/mpls/README.MD)
 - [SDH Networks](logical/sdh/README.MD)
 
 # Services
 
-- [Service Manager](serviceman/README.md)
+- [Service Manager](services/serviceman/README.md)
 
 # Planning
 
-- [Topology Designer](topology/README.md)
+- [Topology Designer](planning/topoman/README.md)
+- [Projects](planning/projects/README.md)
 
 # Settings
+- [Validators](settings/validators/README.md)
+- [Filters](settings/filters/README.md)
+- [Configuration Variables](settings/variables/README.md)
 
-- [Scheduling](scheduling/README.md)
-- [Configuration Variables](settings/configuration/variables/README.md)
+# Other
+- [Synchronization Framework](other/sync/README.md)
+- [Reports](other/reports/README.md)
+- [Layout Editor](other/layman/README.md)
 
------------
+# Appendixes
 
-- [Appendix A. Naming Multiple Objects](appendix_a.md)
+- [Appendix A. Naming Multiple Objects](appendixes/appendix_a.md)
