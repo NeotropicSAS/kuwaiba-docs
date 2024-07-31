@@ -81,7 +81,7 @@ Taking as an example the validator in Figure 7 (whose content is best seen in Fi
   
   To set the properties of the validator, make use of the Properties, as shown in line 29 of Figure 10. It works as a HashMap, where the key is the property you want to set and the value is the value you want to give it, for example: `Properties.setProperties("color", "#00FF00")`.
 
-In the Navigation module, the validators related to an object can be observed, since, as mentioned above, the validators are returned together with the information of a given object.
+In the [Navigation][navman] module, the validators related to an object can be observed, since, as mentioned above, the validators are returned together with the information of a given object.
 
 | ![validator content](images/objects_validators.png) |
 | :--: |
@@ -90,6 +90,8 @@ In the Navigation module, the validators related to an object can be observed, s
 Figure 11 shows the validators, added as a suffix to the name of the objects, in red.
 
 You can see some examples of validators in SourceForge[^SourceForgeScripts]. Validator scripts start with `VD` in their name.
+
+[navman]: ../../navigation/navman/index.html
 
   [^API]: Kuwaiba Persistence API: https://kuwaiba.org/docs/dev/javadoc/current/
   [^SourceForgeScripts]: SourceForge Validator Scripts: https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-validator/

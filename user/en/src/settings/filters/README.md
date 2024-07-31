@@ -82,7 +82,7 @@ Figure 8 presents the filter script, which contains the logic that defines the p
 * The filters have a constructor that injects the Entity Managers (BussinesEntityManager, ApplicationEntityManager and MetadataEntityManager) together with the ConnectionManger. This constructor **should not be modified by the user**.
 * All filters contain a `run` method that receives the class and object identifier, along with some filter parameters. The signature of this method must not be modified, but its contents can be altered. It is within this method that the user inserts the logic of what he wants the filter to do. It is here that you can make use of the methods of the various EntityManagers mentioned above. To do this, refer to the Kuwaiba Persistence API [^API_Kuwaiba]. Also, using the ConnectionManager you can perform cypher[^cypher] statements directly on the filter, although this practice is not recommended.
 
-In the Navigation module, when selecting an object that has associated filters, a bar appears at the top, as shown in Figure 12. By default, this bar displays the message No Filter Selected. Clicking on the ![list](images/icons/class_list_icon.png) icon displays a list with all the available filters associated to the class. When one of these filters is selected, it is executed and the result is reflected in the objects, updating the initial list according to the filter result, as shown in Figure 13.
+In the [Navigation][navigation] module, when selecting an object that has associated filters, a bar appears at the top, as shown in Figure 12. By default, this bar displays the message No Filter Selected. Clicking on the ![list](images/icons/class_list_icon.png) icon displays a list with all the available filters associated to the class. When one of these filters is selected, it is executed and the result is reflected in the objects, updating the initial list according to the filter result, as shown in Figure 13.
 
 | ![Filter content](images/filter_nav.png) |
 | :--: |
@@ -92,7 +92,9 @@ In the Navigation module, when selecting an object that has associated filters, 
 | :--: |
 | ***Figure 13.** Result of filter applied.* |
 
-Examples of filters can be found at <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-filter/>. Filter scripts contain the prefix `FT` in their name.
+Examples of filters can be found at <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/filters/>. Filter scripts contain the prefix `FT` in their name.
+
+[navigation]: ../../navigation/navman/index.html
 
 [^Groovy]: Groovy language: http://www.groovy-lang.org/
 [^API_Kuwaiba]: Persistence API: https://kuwaiba.org/docs/dev/javadoc/current/

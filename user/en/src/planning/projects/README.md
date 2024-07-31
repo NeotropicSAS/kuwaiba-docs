@@ -140,6 +140,6 @@ If you reload the project module and select the project again, it appears in the
 
 * The icon ![release_from_project](images/icons/release_relation_project.png) removes the relationship between the object and the project.
 
-[pools]: ../../navigation/pools/index.hml
+[pools]: ../../navigation/pools/index.html
 [list_type_manager]: ../../administration/ltman/index.html
 [navigation]: ../../navigation/navman/index.html

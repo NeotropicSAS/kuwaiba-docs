@@ -92,7 +92,7 @@ When a report is selected, a new tab opens in the browser with the HTML output o
 
 > **Note:** Reports belonging to abstract classes are applicable to their subclasses. For example, if a report is created for the `GenericLocation` class, it will be available for its subclasses such as `Building`, `House`, `Neighborhood`, among others.
 
-[navman]: ../navman/index.html
+[navman]: ../../navigation/navman/index.html
 
 ## Inventory Level Reports
 
@@ -161,6 +161,6 @@ Creating complex scripts requires some knowledge about the Persistence API and t
     | parameters | HashMap[String, String] | Only applicable to inventory level reports. The list of parameters provided during the execution of the report. |
 
 * There are some built-in reports that could serve as reference on how to retrieve and manipulate the information from the database. They are a temporary solution and will be converted to actual scripts in future releases, but they can help you get started on how to use the Persistence API.
-* Sample Reports can be found in <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-reports/>, where report-related scripts have the prefix `RP` in their name.
+* Sample Reports can be found in <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/reports/>, where report-related scripts have the prefix `RP` in their name.
 
 [^reportRef]: Reports: https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/modules/optional/reports/html/package-summary.html
