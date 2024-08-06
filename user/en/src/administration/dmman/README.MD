@@ -56,7 +56,7 @@ The tabs that can be seen are:
   > * As a convention, all abstract classes are prefixed with *Generic*. However, some core classes (such as `InventoryObject` or `AdministratorItem`) are abstract and do not follow this convention. It is recommended to adhere to this rule whenever possible. Unless you have deep knowledge of the system, avoid renaming or deleting parent classes, especially abstract ones.
   > * To name the classes and attributes, we follow the camel case convention. For class names, the first letter is capitalized, as in `MyNewClass`. On the other hand, for attributes, the first letter is written in lowercase, as in **myNewAttribute**. This practice helps improve the readability of the code and maintain a consistent structure in the naming of elements within our program.
 
-* **Class Attributes:** This section contains the class fields (attributes). In the figure below, the GenericCommunicationsElement class includes common attributes, such as *creationDate* and *name*, as well as other attributes specific to the selected class.
+* **Class Attributes:** This section contains the class fields (attributes). In the figure below, the GenericCommunicationsElement class includes common attributes, such as **creationDate** and **name**, as well as other attributes specific to the selected class.
 
   |![dmman class attributes](images/class-attributes.png)|
   |:--:|
@@ -99,15 +99,15 @@ List types are attribute type whose value is an element within a list of items. 
 
 Many objects in the database will share the same provider, just as many others will share the same state. In relational database terms, this can be thought of as a many-to-one relationship.
 
-Please note that this section shows how to create attribute types of the *list* kind, not their lists themselves, for that see the [List Type Manager](../ltman/README.MD).
+Please note that this section shows how to create attribute types of the *list* kind, not their lists themselves, for that see the [List Type Manager](../ltman/index.html).
 
 |![dmman list types](images/dmman-list-types-expanded.png)|
 |:--:|
-| **Figure 10.** List types |
+| **Figure 10.** Class hierarchy for list types |
 
 ### Creating a List Type
 
-List types are subclasses of `GenericObjectList` or one of its utility subclasses. In most cases, your new list types will fit into one of the existing branches, so avoid creating abstract subclasses unless you know very well what you are doing, so you don't pollute the data model unnecessarily. List type creation works exactly like for any other class seen in the past sections. Just make sure you uncheck the **inDesign** option once you are ready to create list type items in the [List Type Manager](../ltman/README.MD). 
+List types are subclasses of `GenericObjectList` or one of its utility subclasses. In most cases, your new list types will fit into one of the existing branches, so avoid creating abstract subclasses unless you know very well what you are doing, so you don't pollute the data model unnecessarily. List type creation works exactly like for any other class seen in the past sections. Just make sure you uncheck the **inDesign** option once you are ready to create list type items in the [List Type Manager](../ltman/index.html). 
 
 |![dmman class attribute properties](images/new-list-type-dialog.png)|
 |:--:|
@@ -120,7 +120,7 @@ Once the new list type is created, you can tell other classes to use it by creat
 |:--:|
 | **Figure 12.** Using the new list type |
 
-Now our routers will have a new list type attribute whose value can be chosen from a list created in the [List Type Manager](../ltman/README.MD)
+Now our routers will have a new list type attribute whose value can be chosen from a list created in the [List Type Manager](../ltman/index.html)
 
 > **Important**
 > 
