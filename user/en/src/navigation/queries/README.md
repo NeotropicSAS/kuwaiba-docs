@@ -23,7 +23,7 @@ This option allows us to create queries using the module's graphical interface. 
 |:--:|
 | ***Figure 3.** Query builder* |
 
-To create a query, search for and select the class of the element you want to find, as shown in Figure 4. [Abstract classes](../dmman/README.MD) are supported.
+To create a query, search for and select the class of the element you want to find, as shown in Figure 4. [Abstract classes](../../administration/dmman/README.MD) are supported.
 
 |![Select Class](images/queries_search_class.png)|
 |:--:|
@@ -38,7 +38,7 @@ Once the class is chosen, a graphical representation of it will be placed on the
 You can search for a wider range of elements by selecting an abstract class (often called *GenericSomething*). In the previous example, it will search for all *Racks* in the database, but if you choose *GenericPhysicalNode*, it will search for all physical nodes, that is, all objects that can be connected via a container (see the Physical Connections chapter for more information about containers). This includes: *buildings*, *rooms*, *floors*, *towers*, *shelters*, and *facilities*.
 
 > **Important**
->- If you want to see all objects in the database (at least all relevant to the inventory) search for *InventoryObject*, which is the root of all classes related to the inventory. To see the complete hierarchy see related chapter [Data Model Manager](../dmman/README.MD)
+>- If you want to see all objects in the database (at least all relevant to the inventory) search for *InventoryObject*, which is the root of all classes related to the inventory. To see the complete hierarchy see related chapter [Data Model Manager](../../administration/dmman/README.MD)
 
 When you select a class, the **Execute Query** button will be enabled, allowing you to run the query. If you run it at this moment, the system will return all elements of the selected class, paginated in sets of 10 results, showing only the object's name, as seen in Figure 6.
 
@@ -60,7 +60,7 @@ Setting other attributes in the search box as visible will result in those field
 
 ### Adding conditions
 
-To perform more complex queries, you can add search conditions for any of the class attributes using the ![Btn Add Filter](images/btn_add_condition.png) button. There are two types of attributes: those stored directly in the class node, such as *name*, *id*, *creationDate*, etc. Called simple attributes, and attributes whose information is stored in a separate node, called **list type attributes** (See [list type attributes](../administration/ltman/README.MD) for details).
+To perform more complex queries, you can add search conditions for any of the class attributes using the ![Btn Add Filter](images/btn_add_condition.png) button. There are two types of attributes: those stored directly in the class node, such as *name*, *id*, *creationDate*, etc. Called simple attributes, and attributes whose information is stored in a separate node, called **list type attributes** (See [list type attributes](../../administration/ltman/README.MD) for details).
 
 Clicking on the ![Btn Add Filter](images/btn_add_condition.png) button for a class attribute will open the window shown in Figure 9. Enter a filter type and the desired value, then click *OK*.
 
@@ -130,7 +130,7 @@ We will see that a graphical representation is immediately placed on the canvas,
 |:--:|
 | ***Figure 20.** Advanced search filter* |
 
-Finally, when using the ![Btn Add Filter](images/btn_add_condition.png)  button for the parent attribute, the window shown in Figure 21 will appear. This allows for a search considering the containment of the class. Refer to the [containment manager](../administration/containment/README.MD) for more details.
+Finally, when using the ![Btn Add Filter](images/btn_add_condition.png)  button for the parent attribute, the window shown in Figure 21 will appear. This allows for a search considering the containment of the class. Refer to the [containment manager](../../administration/containment/README.MD) for more details.
 
 |![Select Parent Filter Window](images/queries_select_parent.png)|
 |:--:|
@@ -158,7 +158,7 @@ When we execute the query, we obtain the desired routers as shown in Figure 24.
 
 This option allows us to create queries using Groovy scripts. The queries created with these scripts have low-level access to the application's database. Thanks to the use of scripts, it is possible to reuse these scripted queries in other modules of the application outside the queries module, allowing precise data retrieval and manipulation.
 
-For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../physical/ospman/index.html#geographical-queries) for more details.
+For example, the queries created in the *ospman.geo* pool as seen in Figure 25 are used to perform geographical queries. Refer to the [Outside Plant Management](../../physical/ospman/README.md#geographical-queries) for more details.
 
 > **Warning**
 > The changes made by scripted queries in the database can break things if your code is wrong. Proceed with caution.
@@ -210,7 +210,7 @@ Clicking on the script will display the editor and actions associated with the s
 | ***Figure 31.** Script editor* |
 
 > **Information**
-the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-queries/).
+the creation of scripted query is beyond the scope of this document; however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/queries/).
 
 once the script is created you can save the changes using the ![Btn Save Script](images/btn_save_script.png)button seen in Figure 32.
 

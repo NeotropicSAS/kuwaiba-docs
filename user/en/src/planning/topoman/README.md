@@ -186,7 +186,7 @@ The![Btn View](images/btn_view.png) button allows you to show or hide a thumbnai
 |:--:|
 | ***Figure 28.** Thumbnail* |
 
-You can assign a background image to the topology using the [Create Topology Window](images/btn_background.png) button, which will display the window seen in Figure 29. This window allows you to clear the current background image and upload a new one.
+You can assign a background image to the topology using the ![Create Topology Window](images/btn_background.png) button, which will display the window seen in Figure 29. This window allows you to clear the current background image and upload a new one.
 
 |![BIrd View](images/topology_manage_background.png)|
 |:--:|

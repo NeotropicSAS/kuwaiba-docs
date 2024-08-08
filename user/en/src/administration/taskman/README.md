@@ -55,7 +55,7 @@ When selecting a task the main module window will display the information and bu
 In the script section shown in Figure 5, you can define your own scripts, which can range from custom inventory queries to the perform complex actions.
 
 > **Information**
-It is out of the scope of this document to teach how to code scripts, however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/scripted-task/).
+It is out of the scope of this document to teach how to code scripts, however, you can find more detail and examples in the scripts available in this [repository](https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/tasks/).
 
 ##### Script Parameters
 It is important to note that most scripts will require input parameters. These parameters can be easily added to the task so that the user can fill them in before executing the task. To manage the parameters, click on the![Btn manage Parameters](images/btn_manage_parameters.png)button. The parameter management window shown in Figure 6 will open, allowing you to create, edit, and delete parameters.

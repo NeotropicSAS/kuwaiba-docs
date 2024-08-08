@@ -87,8 +87,7 @@ If all mandatory properties marked with * are filled in correctly, the *OK* butt
 
 When a new job is created, it will be scheduled and queued to be executed according to the assigned execution interval. It can be viewed in the main window of the module as seen in Figure 8. Upon creating a job, it will **automatically be scheduled** every time the application starts. If for any reason you do not want it to be executed, you can disable its execution by setting the **Enable** property to **False** or by deleting the job.
 
-Once the job is executed, the result of its execution will be logged in the *general events* of the AuditTrail using the name **scheduler**. You can refer to [AuditTrail](../auditTrail/README.md) for more details.
-
+Once the job is executed, the result of its execution will be logged in the *general events* of the AuditTrail using the name **scheduler**. You can refer to [AuditTrail](../audit-trail/README.mdauditTrail/README.md) for more details.
 
 |![Scheduling](images/scheduled_job.png) |
 |:--:|

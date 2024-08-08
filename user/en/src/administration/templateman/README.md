@@ -1,6 +1,6 @@
 # Template Manager
 
-In many scenarios, there are containment structures (see [Containment Manager](../administration/containment/README.MD)) that are created repeatedly, such as `Building → Floor → Room → Rack`, or `ODF/DDF` with the same number of ports `(24/12/36/48/72/96/144)`, or simply equipment with the same set of attributes. For example, all routers of a certain model: the provider, slots, etc., will always be the same. Creating these elements from scratch each time would be a tedious task. For this reason, Kuwaiba provides the template manager module, which allows the creation of object templates from real inventory elements.
+In many scenarios, there are containment structures (see [Containment Manager](../containment/README.MD)) that are created repeatedly, such as `Building → Floor → Room → Rack`, or `ODF/DDF` with the same number of ports `(24/12/36/48/72/96/144)`, or simply equipment with the same set of attributes. For example, all routers of a certain model: the provider, slots, etc., will always be the same. Creating these elements from scratch each time would be a tedious task. For this reason, Kuwaiba provides the template manager module, which allows the creation of object templates from real inventory elements.
 
 The template manager module, shown in Figure 1, belongs to the **Administration** category.
 
@@ -115,7 +115,7 @@ It is possible to edit the properties or elements of a template once they have b
 
 ## Using the Template
 
-You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 17, explained in detail in the section [Object Options Panel](../navman/README.md#object-options-panel) in Navigation module. This functionality is available in modules such as navigation, pools, etc. 
+You can create objects using the templates created in the template manager from any Kuwaiba module that has the **object options panel** as shown in Figure 17, explained in detail in the section [Object Options Panel](../../navigation/navman/README.md#object-options-panel) in Navigation module. This functionality is available in modules such as navigation, pools, etc. 
 
 | ![Object Options Panel](images/object_opcions_panel.png) |
 |:--:|
