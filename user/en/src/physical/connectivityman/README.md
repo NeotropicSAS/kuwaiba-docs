@@ -23,8 +23,8 @@ Clicking on the module will open a window Figure 2.
 2. Link to [Template Manager][templateman] module.
 3. Link to [Navigation][navman] module
 
-[templateman]: ../../templateman/index.html
-[navman]: ../../navman/index.html
+[templateman]: ../../administration/templateman/index.html
+[navman]: ../../navigation/navman/index.html
 
 | ![Select new object parent][figure-3] |
 |:--:|
@@ -46,9 +46,9 @@ Figure 4 shows the basic actions to create an object:
 2. [New Object from Template][new-object-from-template]
 3. [New Multiple Objects][new-multiple-objects]
 
-[new-object]: ../../navman/index.html#new-object
-[new-object-from-template]: ../../navman/index.html#new-object-from-template
-[new-multiple-objects]: ../../navman/index.html#new-multiple-objects
+[new-object]: ../../navigation/navman/index.html#new-object
+[new-object-from-template]: ../../navigation/navman/index.html#new-object-from-template
+[new-multiple-objects]: ../../navigation/navman/index.html#new-multiple-objects
 
 ## Creating a Physical Circuit
 
@@ -82,7 +82,7 @@ The `Building` objects are within a `City` object and each one has a `Rack` obje
 
 Each `Rack` object inside the `Building` object contains the equipment to be connected. Below are simple [rack views][rack-view] of the racks that will be used:
 
-[rack-view]: ../../navman/index.html#rack-view
+[rack-view]: ../../navigation/navman/index.html#rack-view
 
 * The `Rack` object in data center 001 contains an `ODF` object and a `MPLSRouter` object of which one of its ports will be used as the start of the physical circuit Figure 9.
 
@@ -112,7 +112,7 @@ Each `Rack` object inside the `Building` object contains the equipment to be con
 
 Before creating the physical circuit using the [object view][object-view], a connection will be created between data center 001 and building 001.
 
-[object-view]: ../../navman/index.html#object-view
+[object-view]: ../../navigation/navman/index.html#object-view
 
 Figure 12 shows how the creation starts.
 
@@ -189,7 +189,7 @@ Once the initial state of the network that will be used is known, we begin with 
 3. Select one of the ports.
 4. Click the button.
 
-[filters]: ../../filters/index.html
+[filters]: ../../settings/filters/index.html
 
 * Figure 18 shows the selection of the target port.
 
@@ -342,7 +342,7 @@ A logical circuit is a point-to-point connection and is used to represent last m
 
 Before creating the logical circuit, the service to which it will be associated will be created. Figure 29 shows the step by step to create a service using the [Service Manager][serviceman] module.
 
-[serviceman]: ../../serviceman/index.html
+[serviceman]: ../../services/serviceman/index.html
 
 | ![New Service][figure-29] |
 |:--:|
@@ -383,7 +383,7 @@ The difference with MPS is the objects and relationships used [Figure 31][figure
 
 The types of logical connections are the subclasses of `GenericLastMileCircuit` to add more options that adapt to your needs, just create subclasses using the [Data Model Manager][dmman], for example MetroEthernet.
 
-[dmman]: ../../dmman/index.html
+[dmman]: ../../administration/dmman/index.html
 
 | ![Custom GenericLastMileCircuit subclasses][figure-32] |
 |:--:|
@@ -413,7 +413,7 @@ Figure 33 shows the step by step to create a logical connection.
 
 Using the [Navigation][navman] module you can search for the new logical connection the Figure 34 shows the [relationships explorer][relationships] for the created logical connection.
 
-[relationships]: ../../navman/index.html#relationships
+[relationships]: ../../navigation/navman/index.html#relationships
 
 | ![Logical connection relationships][figure-34] |
 |:--:|

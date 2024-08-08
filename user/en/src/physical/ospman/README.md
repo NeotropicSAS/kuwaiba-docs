@@ -216,7 +216,7 @@ The `latitude`, `longitude` and `viewNodes` parameters are set when the query is
 [node-tools]: #node-tools
 [map-tools]: #map-tools
 
-[using-scripted-queries]: ../../queries/index.html#using-scripted-queries
+[using-scripted-queries]: ../../navigation/queries/index.html#using-scripted-queries
 
 | ![Geographical Queries][figure-21] |
 |:--:|
@@ -248,7 +248,7 @@ The `radius` parameter is a positive number in meters of a circle with center in
 8. Click on the [`View Content`][view-content] button.
 9. Click the `Close` button.
 
-[object-options-panel]: ../../navman/index.html#object-options-panel
+[object-options-panel]: ../../navigation/navman/index.html#object-options-panel
 [view-content]: #view-content-tool
 
 | ![1x16 Secondary Splitter details][figure-23] |
@@ -283,7 +283,7 @@ The view content tool helps you navigate the children of devices and physical co
 
 For more details on the physical path view see the [navigation][physical-path-view] module.
 
-[physical-path-view]: ../../navman/index.html#physical-path-view
+[physical-path-view]: ../../navigation/navman/index.html#physical-path-view
 
 | ![Physical tree view][figure-26] |
 |:--:|
@@ -293,17 +293,17 @@ For more details on the physical path view see the [navigation][physical-path-vi
 
 For more details on the physical tree view see the [navigation][physical-tree-view] module.
 
-[physical-tree-view]: ../../navman/index.html#physical-tree-view
+[physical-tree-view]: ../../navigation/navman/index.html#physical-tree-view
 
 ### Filters
 
 > **Note** This is a brief introduction to filters, for more details see the [Filters][filters] module.
 
-[filters]: ../../filters/index.html
+[filters]: ../../settings/filters/index.html
 
 [Figure 24][figure-24] shows the content of a building. The filters that appear in the filter selector are the filters defined for the `Building` class. [Figure 27][figure-27] shows the extensions for the Building class. See the [data model manager][dmman].
 
-[dmman]: ../../dmman/index.html
+[dmman]: ../../administration/dmman/index.html
 
 | ![Extensions for the Building class][figure-27] |
 |:--:|
@@ -378,7 +378,7 @@ The location view have some tools for management to access them, right click on 
 3. [Show Physical Path][physical-path-view].
 4. [Show Physical Tree][physical-tree-view].
 
-[object-properties]: ../../navman/index.html#object-properties
+[object-properties]: ../../navigation/navman/index.html#object-properties
 [manage-port-mirroring]: ../physcon/index.html#manage-port-mirroring
 
 [Figure 35][figure-35] shows the fiber tools, all have been covered in other chapters, the list of links is shown below:
@@ -443,7 +443,7 @@ There are two ways to splice from a port to fiber [Figure 38][figure-38] or from
 
 [Figure 41][figure-41] shows the [relationships explorer][relationships] for fiber 2.
 
-[relationships]: ../../navman/index.html#relationships
+[relationships]: ../../navigation/navman/index.html#relationships
 
 | ![Fiber relationships][figure-41] |
 |:--:|
@@ -457,8 +457,8 @@ Some characteristics of the map can be changed using the [configuration variable
 
 > **Note:** the [default values][settings-configuration-variables-default-values-ospman] ​​are listed in the configuration variables module.
 
-[settings-configuration-variables]: ../../settings/configuration/variables/index.html
-[settings-configuration-variables-default-values-ospman]: ../../settings/configuration/variables/index.html#outside-plant-management
+[settings-configuration-variables]: ../../settings/variables/index.html
+[settings-configuration-variables-default-values-ospman]: ../../settings/variables/index.html#outside-plant-management
 
 ### Map Provider
 

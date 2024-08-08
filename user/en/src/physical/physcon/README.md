@@ -84,9 +84,11 @@ There are three options to create physical connections in the inventory:
 [basic-actions]: #basic-actions
 [advanced-actions]: #advanced-actions
 [views]: #views
-[object-options-panel]: ../../navman/index.html#object-options-panel
+[object-options-panel]: ../../navigation/navman/index.html#object-options-panel
 
-For this example, the tools enabled by this module will be used. Using the [navigation module](../../navman/index.html), a city and two manholes are created, which will store splice box each.
+For this example, the tools enabled by this module will be used. Using the [navigation module][navman], a city and two manholes are created, which will store splice box each.
+
+[navman]: ../../navigation/navman/index.html
 
 | ![New city][figure-7] |
 |:--:|
@@ -154,7 +156,7 @@ Once the port connections are made, we have all the elements of a physical conne
 
 A physical container from the perspective of an FTTH network could be an indoor, outdoor or drop cable, in the [Data Model Manager][dmman] Figure 14 it is represented as a `WireContainer`, for a wireless network a `WirelessContainer` contains a set of radio links.
 
-[dmman]: ../../dmman/index.html
+[dmman]: ../../administration/dmman/index.html
 
 | ![subclasses GenericPhysicalContainer](images/figure-subclasses-generic-physical-container.png) |
 |:--:|
@@ -384,9 +386,9 @@ All views registered by this module were detailed in the navigation module:
 * [Physical Path View][physical-path-view]
 * [Physical Tree View][physical-tree-view]
 
-[object-view]: ../../navman/index.html#object-view
-[rack-view]: ../../navman/index.html#rack-view
-[fiber-splitter-view]: ../../navman/index.html#fiber-splitter-view
-[splice-box-view]: ../../navman/index.html#splice-box-view
-[physical-path-view]: ../../navman/index.html#physical-path-view
-[physical-tree-view]: ../../navman/index.html#physical-tree-view
+[object-view]: ../../navigation/navman/index.html#object-view
+[rack-view]: ../../navigation/navman/index.html#rack-view
+[fiber-splitter-view]: ../../navigation/navman/index.html#fiber-splitter-view
+[splice-box-view]: ../../navigation/navman/index.html#splice-box-view
+[physical-path-view]: ../../navigation/navman/index.html#physical-path-view
+[physical-tree-view]: ../../navigation/navman/index.html#physical-tree-view

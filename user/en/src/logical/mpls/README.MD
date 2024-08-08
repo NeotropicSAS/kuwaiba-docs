@@ -21,7 +21,7 @@ Create MPLS (Multiprotocol Label Switching) topologies and create virtual circui
 3. View Options Panel and [Object Options Panel][object-options-panel].
 
 [mpls-view-tools]: #tools
-[object-options-panel]: ../../navman/index.html#object-options-panel
+[object-options-panel]: ../../navigation/navman/index.html#object-options-panel
 
 ## Tools
 

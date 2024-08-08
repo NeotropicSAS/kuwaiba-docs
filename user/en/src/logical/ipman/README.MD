@@ -129,7 +129,7 @@ The default image changes depending on the selected element, providing detailed 
 
 ## Relate a Network Interface to an IP
 
-In the *IP Address Manager* module, it is possible to relate a network interface to a specific IP address. This functionality is found in the action available for the ports of the [Navigation Tree](../navman/README.md) module (Navigation Tree).
+In the *IP Address Manager* module, it is possible to relate a network interface to a specific IP address. This functionality is found in the action available for the ports of the [Navigation Tree](../../navigation/navman/index.md) module (Navigation Tree).
 |![navigation tree](images/nav-port.png)|
 |:--:|
 | **Figure 20.** Optical Port Navigation Tree |

@@ -10,7 +10,7 @@ The Service Manager allows you to organize all the services in pools. These pool
 
 To start using the Service Manager you must create a pool of customers [Figure 2][figure-2]; depending on the loaded data model you can create pools of any subclass of `GenericCustomer` (see [Data Model Manager][dmman] if you need to create a different kind of customers).
 
-[dmman]: ../dmman/index.html
+[dmman]: ../../administration/dmman/index.html
 
 | ![New customer pool][figure-2] |
 |:--:|
@@ -95,14 +95,14 @@ As mentioned before, if you need a new kind of service that is not listed, just 
 [figure-8]: images/figure-generic-service-subclasses.png
 
 [button-new-service-from-template]: images/button-new-service-from-template.png
-[templates]: ../templateman/index.html
+[templates]: ../../administration/templateman/index.html
 
 After you finish creating and organizing all of your customers and services in pools, you can go to the [Navigation Tree][navman] or to the [IP Address Manager][ipam], and relate objects to a service, as you can see in [Figure 9][figure-9]. Just select the object and select the action `Relate to Service` in the [Object Option Panel][object-options-panel].
 
-[object-options-panel]: ../navman/index.html#object-options-panel
+[object-options-panel]: ../../navigation/navman/index.html#object-options-panel
 
-[navman]: ../navman/index.html
-[ipam]: ../ipman/index.html
+[navman]: ../../navigation/navman/index.html
+[ipam]: ../../logical/ipman/index.html
 
 | ![Relate to service][figure-9] |
 |:--:|

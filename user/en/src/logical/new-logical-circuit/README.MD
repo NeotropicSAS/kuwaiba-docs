@@ -25,8 +25,8 @@ Figure 2 shows the step by step to configure the new logical circuit. For this e
 
 Using the [Navigation][navman] module you can search for the new logical circuit the Figure 7 shows the [relationships explorer][relationships].
 
-[relationships]: ../../navman/index.html#relationships
-[navman]: ../../navman/index.html
+[relationships]: ../../navigation/navman/index.html#relationships
+[navman]: ../../navigation/navman/index.html
 
 [figure-2]: images/figure-new-logical-circuit-start-window.png
 

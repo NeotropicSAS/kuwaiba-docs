@@ -26,7 +26,7 @@ As you go deeper into the tree, classes become increasingly specialized and each
 In this hierarchy, the most relevant and commonly used classes are:
 
 * `InventoryObject`: It is the root of the hierarchy.
-* `ViewableObject`: This is the superclass of all objects that can have views, that is, graphical representations of a selected object that can be launched from the **Views** section of the object panel (the concept will be explained later, in the [Navigation](../../navigation/navman/README.md) module).
+* `ViewableObject`: This is the superclass of all objects that can have views, that is, graphical representations of a selected object that can be launched from the **Views** section of the object panel (the concept will be explained later, in the [Navigation](../../navigation/navman/index.html) module).
 * `GenericCommunicationsElement`: The superclass of all active communication devices, from multiplexers to routers or servers and workstations.
 * `GenericLocation`: The superclass of all geolocated locations such as buildings, facilities, houses, poles or manholes.
 * `GenericPhysicalLink`: It is the superclass of links (connections between ports) and allows subclasses to be created to expand the type of existing connections.
