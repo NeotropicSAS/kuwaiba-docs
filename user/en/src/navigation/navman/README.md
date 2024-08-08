@@ -1,6 +1,6 @@
 # Navigation
 
-This module is the main navigation tool of the application, as it presents the physical objects of the inventory organized in a hierarchical containment structure explained in the [Containment Manager](../administration/containment/index.html) chapter.
+This module is the main navigation tool of the application, as it presents the physical objects of the inventory organized in a hierarchical containment structure explained in the [Containment Manager][containment-manager] chapter.
 
 To access the navigation module in the top bar of the screen, locate the compass symbol shown in Figure 1. Then go to the Navigation section.
 
@@ -106,7 +106,7 @@ There are different types of attributes.
   | :--: |
   | ***Figure 14**. Mandatory attribute.*|
   
-* **List Type Items**. These are attributes whose value must be selected from a specific list of particular object types. For more details see chapter**List Type Manager**.
+* **List Type Items**. These are attributes whose value must be selected from a specific list of particular object types. For more details see chapter [List Type Manager][ltman].
 In Figure 15 you can see, when you select an attribute of a specific list type, it opens an editor containing the list of possible values that can be defined. If you do not want to select any, use the first option from the list (`None`).
   
   | ![List type items](images/list_type_items_att.png) |
@@ -133,19 +133,17 @@ Creates a single object as a child of Root using the standard containment hierar
 
 Creates a defined number of objects at a time using a given [naming pattern][appendix_a].
 
-[appendix_a]: ../appendix_a.md
-
 | ![Create multiple Objects](images/create_multiple_objects_action.png) |
 | :--: |
 | ***Figure 18**. Create Multiple Objects.*|
 
 #### New Object from Template
 
-Creates an object (and possibly a complex containment structure under it) from a previously defined template. See more details in chapter [Template Manager](../templateManager%20/index.html).
+Creates an object (and possibly a complex containment structure under it) from a previously defined template. See more details in chapter [Template Manager][templates].
 
 #### New Special Object
 
-Creates an object in the Special Containment Hierarchy (see [Containment Manager](../administration/containment/index.html)).
+Creates an object in the Special Containment Hierarchy (see [Containment Manager][containment-manager]).
   
 | ![Create Special Object](images/create_special_object_action.png) |
 | :--: |
@@ -161,7 +159,7 @@ Creates several objects of the special containment hierarchy [using a pattern][a
 
 #### New Special Object from Template
 
-Creates a special containment hierarchy object from a Template defined in the [Template Manager](../templateManager%20/index.html).
+Creates a special containment hierarchy object from a Template defined in the [Template Manager][templates].
   
 #### Copy to
 
@@ -239,11 +237,11 @@ Selecting a specific report opens a new HTML window with the result of the repor
 
 #### Copy to Pool
 
-Copy the inventory object to a pool containing elements of the same type as the object to be copied. See more details in [Pools](../../pools/index.html).
+Copy the inventory object to a pool containing elements of the same type as the object to be copied. See more details in [Pools][pools].
 
 #### Move to Pool
 
-Move the inventory object to a pool containing elements of the same type as the object of interest. For more details see [Pools](../../pools/index.html) chapter.
+Move the inventory object to a pool containing elements of the same type as the object of interest. For more details see [Pools][pools] chapter.
   
 #### Add to Folder
 
@@ -293,7 +291,7 @@ An example of the object view is shown in Figure 32, where the selected object i
   | :--:|--|
   | ![download icon](images/icons/download_icon.png)| Save view|
   | ![refresh](images/icons/refresh_view_icon.png)| Update view|
-  | ![refresh](images/icons/connect_icon.png)| Connect two nodes (See [Physical Connections](../physical/physcon/index.html) for more details on how to use it)|
+  | ![refresh](images/icons/connect_icon.png)| Connect two nodes (See [Physical Connections][physical-connections] for more details on how to use it)|
   | ![background](images/icons/background_icon.png)| Add a background image|
   | ![hide labels](images/icons/labels_icon.png)| Hide/show the labels next to the connections|
   | ![labels color](images/icons/labels_color_icon.png)| Change labels color|
@@ -402,7 +400,7 @@ The `endpointA` and endpointB relationships identify the ports where the fiber p
 
 > Applies to objects of the `GenericPort` subclasses
 
-Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management](../physical/ospman/index.html).
+Calculates and plots the longest path from a source port to another port, considering `mirror`, `mirrorMultiple`, `endpointA` and `endpointB` relationships. This view represents hierarchically the components that are part of the route, showing clearly their interconnections and the order in which they are arranged. See more in [Outside Plant Management][ospman].
 
   | ![Physical Path View](images/physical_path.png) |
   | :--: |
@@ -432,7 +430,7 @@ Calculates and plots the longest path from a source port to another port, consid
 
 > Applies to objects of the `GenericPort` subclasses.
 
-Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management](../physical/ospman/index.html).
+Using the `endpointA`, `endpointB`, `mirror` and `mirrorMultiple` relationships from a source port, all paths to other ports are calculated and plotted in the view. In the example illustrated in Figure 50, port `PON-001` of an OLT has been selected. The view shows all physical connections associated with this port (in this case, a single connection) and the devices that are part of these routes. See more in [Outside Plant Management][ospman].
   
   | ![Move Device](images/physical_tree_view.png) |
   | :--: |
@@ -453,7 +451,6 @@ This component, as its name suggests, explores the structures of a model, includ
 Special children are elements that, while following the concept of containment hierarchy, are used in domain-specific models. This gives them a particular behavior depending on the situation. They cannot be treated as simple objects in the navigation tree since, for example, their removal may require additional tasks beyond simply deleting them from the database, because they are part of a complex workflow. These children respect the special containment hierarchy detailed in the [Special Containment Hierarchy][special-containment-hierarchy] chapter.
 As shown in Figure 52, selecting an object displays a pop-up window with its special children. If any of these special children are selected, its own special children, if any, will be displayed. When selecting any special child, the corresponding object information appears in the Object Options Panel on the right side of the screen.
 
-[special-containment-hierarchy]: ../administration/containment/index.html#special-containment-hierarchy
 
   | ![Explorer Special Children](images/explorer_special_children.png) |
   | :--: |
@@ -473,12 +470,28 @@ On the right side of Figure 53 is the Object Options Panel, which displays infor
 
 It is a sequence of records that documents changes in inventory objects. For more details, see chapter [Audit Trail][auditTrail].
 
-[auditTrail]: ../auditTrail/index.html
+[auditTrail]: ../../administration/audit-trail/index.html
 
-[reports]: ../reports/index.html
+[reports]: ../../other/reports/index.html
 
-[validators]: ../validators/index.html
+[validators]: ../../settings/validators/index.html
 
 [favorites]: ../favorites/index.html
 
-[filters]: ../filters/index.html
+[filters]: ../../settings/filters/index.html
+
+[special-containment-hierarchy]: ../../administration/containment/index.html#special-containment-hierarchy
+
+[containment-manager]: ../../administration/containment/index.html
+
+[ltman]: ../../administration/ltman/index.html
+
+[appendix_a]: ../../appendixes/appendix_a.md
+
+[templates]: ../../administration/templateman/index.html
+
+[pools]: ../pools/index.html
+
+[physical-connections]: ../../physical/physcon/index.html
+
+[ospman]: ../../physical/ospman/index.html

@@ -34,6 +34,7 @@
 - [New Logical Circuit](logical/new-logical-circuit/README.MD)
 - [MPLS Networks](logical/mpls/README.MD)
 - [SDH Networks](logical/sdh/README.MD)
+- [Software Manager](logical/softman/README.md)
 
 # Services
 

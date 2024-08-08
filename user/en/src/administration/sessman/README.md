@@ -20,4 +20,4 @@ When accessing the module, an interface like the one shown in Figure 2 appears, 
 * **Login Time.** Displays the date and time the session was started.
 * **Actions.** This column provides options for managing the session. In the image, a button labeled `Terminate Session` is shown, which allows the administrator to terminate the active session of the corresponding user.
 
-It is not possible for a user to end his own session using the "Session Manager" module. Instead, the user must logout by clicking the `Logout` button.
+It is not possible for a user to end his own session using the `Session Manager` module. Instead, the user must logout by clicking the `Logout` button.

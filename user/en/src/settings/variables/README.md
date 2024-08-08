@@ -90,3 +90,11 @@ The default values ​​of the configuration variables used by the [Outside Pla
   * `module.ospman.fillColorForSelectedNodeLabels` *orange*
   * `module.ospman.fontSizeForLabels` *12px*
   * `module.ospman.minZoomForLabels` *12*
+
+### Synchronization Framework
+
+The following is the default value of the configuration variable related to the [Synchronization Framework][sync] module:
+
+* `sync.bgp.localAsn` *16591*
+
+[sync]: ../../other/sync/index.html
