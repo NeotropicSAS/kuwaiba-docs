@@ -40,8 +40,6 @@ To start, you must create a **topology view using** the ![Btn New Topology](imag
 |:--:|
 | ***Figure 6.** Window create topology view* |
 
-Al crear una vista puede ver y editar sus propiedades en el panel de propiedades como se ve en la Figura 7.
-
 When you create a view, you can see and edit its properties in the properties panel, as shown in Figure 7.
 
 |![View Properties](images/topology_view_properties.png)|
@@ -186,7 +184,7 @@ The![Btn View](images/btn_view.png) button allows you to show or hide a thumbnai
 
 |![BIrd View](images/topology_bird_view.png)|
 |:--:|
-| ***Figure 28.** Grid* |
+| ***Figure 28.** Thumbnail* |
 
 You can assign a background image to the topology using the [Create Topology Window](images/btn_background.png) button, which will display the window seen in Figure 29. This window allows you to clear the current background image and upload a new one.
 
