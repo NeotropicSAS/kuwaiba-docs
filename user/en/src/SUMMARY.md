@@ -49,6 +49,7 @@
 - [Validators](settings/validators/README.md)
 - [Filters](settings/filters/README.md)
 - [Configuration Variables](settings/variables/README.md)
+- [Proxy Management](settings/proxies/README.md)
 
 # Other
 - [Synchronization Framework](other/sync/README.md)
