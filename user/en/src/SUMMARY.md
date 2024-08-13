@@ -39,6 +39,7 @@
 # Services
 
 - [Service Manager](services/serviceman/README.md)
+- [Contract Manager](services/contractman/README.md)
 
 # Planning
 
