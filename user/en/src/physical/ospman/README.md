@@ -184,22 +184,22 @@ Figure 18 shows the map tools window that appears when you right click on map.
 
 Figure 19 shows the tools to manage the OSP views.
 
-| Tool | Description |
-| -- | -- |
-| ![Button open properties panel](images/btn-open-properties-panel.png) | Open properties panel |
-| ![Button open view](images/btn-open-view.png) | Open an existing OSP View |
-| ![Button create view](images/btn-create-view.png) | Create an OSP View |
-| ![Button delete view](images/btn-delete-view.png) | Delete OSP View |
-| ![Button save view](images/btn-save-view.png) | Save OSP View |
-| ![Button select](images/btn-select.png) | Select a node or connection |
-| ![Button add node](images/btn-add-node.png) | Add node |
-| ![Button add connections ](images/btn-add-connections.png) | Add connections between two nodes using the existing containers |
-| ![Button connect](images/btn-connect.png) | Connect two nodes using a container |
-| ![Button run container](images/btn-run-container.png) | Run a container through a single or multiple containers |
-| ![Button run link](images/btn-run-link.png) | Run a link through a single or multiple containers |
-| ![Button search](images/btn-search.png) | Searches for a node or connection within the view |
-| ![Button filter](images/btn-filter.png) | Filter the nodes by class |
-| ![Button measure distance](images/btn-measuer-distance.png) | Measure distance |
+| Tool | Description | Keyboard Shortcut |
+| :--: | -- | -- |
+| ![Button open properties panel](images/btn-open-properties-panel.png) | Open properties panel |  |
+| ![Button open view](images/btn-open-view.png) | Open an existing OSP View | Alt-O |
+| ![Button create view](images/btn-create-view.png) | Create an OSP View | Alt-N |
+| ![Button delete view](images/btn-delete-view.png) | Delete OSP View | Alt-D |
+| ![Button save view](images/btn-save-view.png) | Save OSP View | Alt-U |
+| ![Button select](images/btn-select.png) | Select a node or connection | Alt-H |
+| ![Button add node](images/btn-add-node.png) | Add node | Alt-M |
+| ![Button add connections ](images/btn-add-connections.png) | Add connections between two nodes using the existing containers |  |
+| ![Button connect](images/btn-connect.png) | Connect two nodes using a container | Alt-E |
+| ![Button run container](images/btn-run-container.png) | Run a container through a single or multiple containers | Alt-C |
+| ![Button run link](images/btn-run-link.png) | Run a link through a single or multiple containers | Alt-L |
+| ![Button search](images/btn-search.png) | Searches for a node or connection within the view | Alt-S |
+| ![Button filter](images/btn-filter.png) | Filter the nodes by class | Alt-F |
+| ![Button measure distance](images/btn-measuer-distance.png) | Measure distance |  |
 
 ## Geographical Queries
 
