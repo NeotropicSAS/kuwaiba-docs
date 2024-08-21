@@ -21,6 +21,7 @@
 - [Queries](navigation/queries/README.md)
 - [Pools](navigation/pools/README.MD)
 - [Favorites](navigation/favorites/README.md)
+- [WareHouse Manager](navigation/whman/README.md)
 
 # Physical
 
@@ -54,6 +55,7 @@
 - [Synchronization Framework](other/sync/README.md)
 - [Reports](other/reports/README.md)
 - [Layout Editor](other/layman/README.md)
+- [Contact Manager](other/contactman/README.md)
 
 # Appendixes
 

@@ -1,42 +1,49 @@
-# Scheduling 
+# Job Scheduler
 
-The scheduling module allows users to schedule tasks that have been previously registered in Kuwaiba through the Task Manager module (refer to the documentation). Scheduling allows specifying the time period during which tasks should be executed.
+The scheduling module allows users to schedule tasks that have been previously registered in Kuwaiba through the Task Manager module (refer to the [Task manager](../taskman/README.md) documentation). Scheduling module allows you to schedule tasks precisely using cron expressions. You can configure tasks to run every n seconds, minutes, or hours, or at a specific day and time. For example, you can execute a task every 2 hours. It's also possible to schedule tasks to run on a specific day and time, such as August 15th at 12:00 PM, or on the 1st of every month at 6:00 AM. Additionally, you can set tasks to execute on a specific day of the week, like every Monday at 8:00 AM. This module offers flexibility in scheduling tasks as needed.
 
-The scheduling module belongs to the **Settings** category as shown in Figure 1.
+Figure 1 shows the structure of the module, where all jobs are organized into a *pool*. *Pools* are groupings of similar objects in this case, jobs and can contain one or more elements. The jobs are related to one or more users using the *HAS_USER* relationship. Similarly, a job can only be related to a single task through the *HAS_TASK* relationship, which indicates the task that the job will execute when its schedule is met.
+
+| ![Scheduling Module](images/schedule_structure.png) |
+|:--:|
+| ***Figure 1.** Scheduling module structure* |
+
+
+The scheduling module belongs to the **Administration** category as shown in Figure 2.
 
 | ![Scheduling Module](images/scheduling_module.png) |
 |:--:|
-| ***Figure 1.** Scheduling module* |
+| ***Figure 2.** Scheduling module* |
 
-## Scheduling Job Pool
+## Scheduled Job Pool
 
- Once the scheduling module is open, you need to create a job pool, which will allow you to create and manage jobs in an organized manner. To do this, locate the pool management button represented by a gear icon![Button Manage Pools](images/btn_mange_pools.png)as shown in Figure 2.
+ Once the scheduling module is open, you need to create a job pool, which will allow you to create and manage jobs in an organized manner. To do this, locate the pool management button represented by a gear icon![Button Manage Pools](images/btn_mange_pools.png)as shown in Figure 3.
 
 | ![Manage Pools](images/scheduling_manage_pool.png) |
 |:--:|
-| ***Figure 2.** Manage pools button* |
+| ***Figure 3.** Manage pools button* |
 
-Once clicked, the pool management window will open, as shown in Figure 3.
+Once clicked, the pool management window will open, as shown in Figure 4.
 
 | ![Manage Pools Window](images/manage_pools.png) |
 |:--:|
-| ***Figure 3.** Manage pools window* |
+| ***Figure 4.** Manage pools window* |
 
-In this window, you can search, create, and delete job pools. Next, create a new job pool using the button![Button Create Pools](images/btn_create_pool.png) seen in Figure 3. The pool creation window shown in Figure 4 will open, where you must enter the name and description and click the OK button.
+In this window, you can search, create, and delete job pools. Next, create a new job pool using the button![Button Create Pools](images/btn_create_pool.png) seen in Figure 4. The pool creation window shown in Figure 5 will open, where you must enter the name and description and click the OK button.
 
 | ![Pool Creation Window](images/dialog_create_pool.png) |
 |:--:|
-| ***Figure 4.** Pool creation window* |
+| ***Figure 5.** Pool creation window* |
 
 Al crear el pool de job, se pueden visualizar las jobs que tiene asignados, eliminar el pool usando el botón ![Button Delete Pool](images/btn_delete_pool.png) y editar sus propiedades utilizando la hoja de propiedades de la Figura 5.
 
-When creating the job pool, you can view the jobs assigned to it, delete the pool using the button![Button Delete Pool](images/btn_delete_pool.png)and edit its properties using the properties sheet shown in Figure 5.
+When creating the job pool, you can view the jobs assigned to it, delete the pool using the button![Button Delete Pool](images/btn_delete_pool.png)and edit its properties using the properties sheet shown in Figure 6.
 
 | ![Pool Property Sheet](images/property_sheet_pool.png) |
 |:--:|
-| ***Figure 5.** Pool property sheet* |
+| ***Figure 6.** Pool property sheet* |
 
-## Scheduling Job
+## Scheduled Job
 
 A job consists of the following properties: 
 
@@ -51,17 +58,17 @@ A job consists of the following properties:
 | **Enable**         | Flag to enable or disable the execution of the job |
 | **LogResults**    | Flag to enable or disable logging of execution results in the console |
 
-Once the job pool is created, the button to add jobs![Button Create Job](images/btn_create_pool.png)will be enabled in the main menu of the module, as seen in Figure 6. 
+Once the job pool is created, the button to add jobs![Button Create Job](images/btn_create_pool.png)will be enabled in the main menu of the module, as seen in Figure 7. 
 
 | ![Button Create Jobs](images/scheduling_create_job.png) |
 |:--:|
-| ***Figure 6.** Create jobs button* |
+| ***Figure 7.** Create jobs button* |
 
-Pressing it will open the job creation window shown in Figure 7.
+Pressing it will open the job creation window shown in Figure 8.
 
 | ![Window Create Jobs](images/dialog_create_job.png) |
 |:--:|
-| ***Figure 7.** Jobs creation window* |
+| ***Figure 8.** Jobs creation window* |
 
 To create the job, follow these instructions:
 
@@ -80,44 +87,44 @@ To create the job, follow these instructions:
 >- **Weekly**: Enables weekly execution of the job. You must select the desired day of the week and time.
 >- **Monthly**: Enables monthly execution of the job. You must select the desired day of the month and time. (If you select the 30th of each month, execution will be skipped in months with fewer than 30 days).
 
-If all mandatory properties marked with * are filled in correctly, the *OK* button in the job creation window from Figure 7 will be enabled.
+If all mandatory properties marked with * are filled in correctly, the *OK* button in the job creation window from Figure 8 will be enabled.
 
 > **Note**
 > Before creating or scheduling a job, ensure that the **scheduler** user is created in the application. If not, create it in group **system** with the name **scheduler** and type **System**. For more details on how to create users, refer to the [User Manger](../userman/README.md), which explains this in detail.
 
-When a new job is created, it will be scheduled and queued to be executed according to the assigned execution interval. It can be viewed in the main window of the module as seen in Figure 8. Upon creating a job, it will **automatically be scheduled** every time the application starts. If for any reason you do not want it to be executed, you can disable its execution by setting the **Enable** property to **False** or by deleting the job.
+When a new job is created, it will be scheduled and queued to be executed according to the assigned execution interval. It can be viewed in the main window of the module as seen in Figure 9. Upon creating a job, it will **automatically be scheduled** every time the application starts. If for any reason you do not want it to be executed, you can disable its execution by setting the **Enable** property to **False** or by deleting the job.
 
-Once the job is executed, the result of its execution will be logged in the *general events* of the AuditTrail using the name **scheduler**. You can refer to [AuditTrail](../audit-trail/README.mdauditTrail/README.md) for more details.
+Once the job is executed, the result of its execution will be logged in the *general events* of the AuditTrail using the user **scheduler**. You can refer to [AuditTrail](../audit-trail/README.mdauditTrail/README.md) for more details.
 
 |![Scheduling](images/scheduled_job.png) |
 |:--:|
-| ***Figure 8.** Jobs scheduled* |
+| ***Figure 9.** Jobs scheduled* |
 
-When left-clicking on a job, the property sheet shown in Figure 9 will appear. This property sheet allows you to edit the properties of the job after it has been created.
+When left-clicking on a job, the property sheet shown in Figure 10 will appear. This property sheet allows you to edit the properties of the job after it has been created.
 
 |![Scheduling](images/job_property_sheet.png) |
 |:--:|
-| ***Figure 9.** Job property sheet* |
+| ***Figure 10.** Job property sheet* |
 
 All properties of a job seen previously can be edited by double-clicking the desired property on the property sheet.
 
-To edit the **cronExpression** property, double-click on it. This will prompt the cronExpression editing popup window shown in Figure 10, which behaves similarly to when creating and assigning the execution of a new job. Once you've chosen the new job execution, click *OK* to edit, or *Cancel* if you don't wish to edit this property.
+To edit the **cronExpression** property, double-click on it. This will prompt the cronExpression editing popup window shown in Figure 11, which behaves similarly to when creating and assigning the execution of a new job. Once you've chosen the new job execution, click *OK* to edit, or *Cancel* if you don't wish to edit this property.
 
 |![Edit CronExpression](images/edit_cron.png) |
 |:--:|
-| ***Figure 10.** Edit cronExpression property window* |
+| ***Figure 11.** Edit cronExpression property window* |
 
-Similarly, to edit the users assigned to the job, double-click on the **users** property. This will display the selection list of available users in Kuwaiba, as shown in Figure 11. Add or remove the users you want to assign or unassign from the job, then click *OK* to edit or *Cancel* if you don't wish to edit this property.
+Similarly, to edit the users assigned to the job, double-click on the **users** property. This will display the selection list of available users in Kuwaiba, as shown in Figure 12. Add or remove the users you want to assign or unassign from the job, then click *OK* to edit or *Cancel* if you don't wish to edit this property.
 
 |![Edit Users](images/edit_users.png) |
 |:--:|
-| ***Figure 11.** Edit users property window* |
+| ***Figure 12.** Edit users property window* |
 
-Finally, to edit the task that the job should execute, double-click on the **tasks** property. This will open the task editing window shown in Figure 12, where you can choose any task registered in the Task Manager. Once you've selected the task, click *OK* to edit or *Cancel* if you don't wish to edit this property.
+Finally, to edit the task that the job should execute, double-click on the **tasks** property. This will open the task editing window shown in Figure 13, where you can choose any task registered in the Task Manager. Once you've selected the task, click *OK* to edit or *Cancel* if you don't wish to edit this property.
 
 |![Edit Tasks](images/edit_tasks.png) |
 |:--:|
-| ***Figure 12.** Edit tasks property window* |
+| ***Figure 13.** Edit tasks property window* |
 
 Jobs have four possible states, which inform the user about the execution status of the jobs that have been scheduled. The status can be viewed in the central part of the main window of the module. The available states are:
 
@@ -130,8 +137,8 @@ Jobs have four possible states, which inform the user about the execution status
 > - Error: Indicates that an error occurred in the last execution of the job.
 ![fail](images/job_state_fail.png)
 
-Finally, it's possible to view the list of jobs associated with a pool or all created jobs using the pool selector located on the left side of the main window. It's also possible to filter the results by job name. Additionally, this list allows you to delete a job using the button![Button Delete Job](images/btn_delete_pool.png)as shown in Figure 13.
+Finally, it's possible to view the list of jobs associated with a pool or all created jobs using the pool selector located on the left side of the main window. It's also possible to filter the results by job name. Additionally, this list allows you to delete a job using the button![Button Delete Job](images/btn_delete_pool.png)as shown in Figure 14.
 
 |![List Jobs](images/list_of_jobs.png) |
 |:--:|
-| ***Figure 13.** List of jobs* |
+| ***Figure 14.** List of jobs* |
