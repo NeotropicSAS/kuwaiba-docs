@@ -43,7 +43,7 @@ To modify the properties of the new item, click on its name. Its attributes will
 |:--:|
 | **Figure 8.** New item properties |
 
-Basic actions, such as delete to delete the selected item, advanced and explorers are described in the chapter [Object Dashboard](./dashboards/object/README.md). However, the actions shown in the image below are specific to this module and are described below.
+Basic actions, such as delete to delete the selected item, advanced and explorers are described in the chapter [Object Options Panel](../../navigation/navman/index.html#object-options-panel). However, the actions shown in the image below are specific to this module and are described below.
 |![new pool dialog](images/item-basic-options.png)|
 |:--:|
 | **Figure 9.** New item created |

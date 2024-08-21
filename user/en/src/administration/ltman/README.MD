@@ -1,6 +1,12 @@
 # List Type Manager
 
-Most of the attributes are primitive types (String, Integer, Booleans, etc), however, there are some more complex that are actually another object in the database. This is the case of attributes such as vendor, which points to an object holding the information about the vendor of that equipment (support lines, account manager, etc) or state, that refers to the current operational state of the equipment (Working, Not Working, Stored, etc) and the state itself is an object, because it may hold information about what are the next allowed states, for example. Many objects in the database will have the same vendor, and many other will have the same state. In short, list types are those kind of attributes that point to an element in a limited set of objects. In terms of relational databases, you can see it as a many-to-one kind of relationship. To manage the existing list types and its instances, use the Data Model Manager and the List Type Manager.
+Most of the attributes are primitive types (`String`, `Integer`, `Booleans`, etc), however, there are some more complex that are actually another object in the database. This is the case of attributes such as **vendor**, which points to an object holding the information about the vendor of that equipment (support lines, account manager, etc) or state, that refers to the current operational state of the equipment (Working, Not Working, Stored, etc) and the state itself is an object, because it may hold information about what are the next allowed states.
+
+Many objects in the database will have the same vendor, and many other will have the same state. In short, list types are those kind of attributes that point to an element in a limited set of objects. In terms of relational databases, you can see it as a many-to-one kind of relationship.
+
+To manage the existing list types and its instances, use the [Data Model Manager][dmman] and the List Type Manager.
+
+[dmman]: ../dmman/index.html
 
 To access the module, click on the administration ![Administration Menu](images/menu-administration.png) category and select the List Type Manager Figure 1.
 
@@ -12,7 +18,7 @@ There are two relevant concepts in this module [List Type](./#list-type) and [Li
 
 ## List Type
 
-A list type is a subclass of `GenericObjectList` or its subclasses and is managed using the Data Model Manager.
+A list type is a subclass of `GenericObjectList` or its subclasses and is managed using the [Data Model Manager][dmman].
 
 ### List Type Example
 
@@ -35,7 +41,7 @@ A list type is a subclass of `GenericObjectList` or its subclasses and is manage
 
 ## List Type Item
 
-A list type item is an instance of a class of list type.
+A list type item is one of the possible values ​​that can be selected from the defined set, for example a list of models of a device, in terms of inventory is an instance of a class of list type.
 
 ### List Type Item Example
 
@@ -79,7 +85,9 @@ All objects that have a List Type attribute set use a List Type Item.
 
 ##### List Type Item Uses Example
 
-* Using the pools module create a pool Figure 6.
+* Using the [pools module][pools] create a pool Figure 6.
+
+[pools]: ../../navigation/pools/index.html
 
 | ![MyOwnClass Pool](images/figure-my-own-class-pool.png) |
 |:--:|

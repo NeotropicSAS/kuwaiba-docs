@@ -26,7 +26,7 @@ To create an SDH topology, go to the menu option [Figure 2][figure-2].
 
 This will open an empty canvas similar to the [Topology Designer][topology].
 
-[topology]: ../../topology/index.html
+[topology]: ../../planning/topoman/index.html
 
 | ![SDH module toolbar and canvas][figure-3] |
 |:--:|
