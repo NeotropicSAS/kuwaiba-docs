@@ -1,4 +1,4 @@
-# WareHouse Manager
+# Warehouse Manager
 The warehouse module allows for the management and organization of equipment and items that are not currently in use within the network. This module not only enables the representation of physical inventory objects but also their states, such as equipment under maintenance, awaiting installation, or in transit.
 
 Figure 1 shows the structure of the module, where all warehouses are organized into a *pool*. *Pools* are groupings of similar objects in this case, warehouses and can contain one or more elements. The warehouses, which are inventory objects, are related to one or more pools using the *CHILD_OF_SPECIAL* relationship. This allows for the grouping of similar items within the warehouse, such as bags of screws, loose screws, etc. The creation of pools facilitates the organization and management of inventory by allowing items to be grouped and sorted according to specific criteria, such as brand, type, or any other relevant attribute.
@@ -11,7 +11,7 @@ This module is part of the *Navigation* category, as shown in Figure 2.
 
 |![WhereHouse Manager](images/whm-module.png)|
 |:--:|
-| ***Figure 2.** WareHouse manager* |
+| ***Figure 2.** Warehouse manager* |
 
 Once opened we will see the main window of the module, as shown in Figure 3. From here we can see the warehouses currently created in the application. 
 

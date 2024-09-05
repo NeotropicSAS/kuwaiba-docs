@@ -21,7 +21,7 @@
 - [Queries](navigation/queries/README.md)
 - [Pools](navigation/pools/README.MD)
 - [Favorites](navigation/favorites/README.md)
-- [WareHouse Manager](navigation/whman/README.md)
+- [Warehouse Manager](navigation/whman/README.md)
 
 # Physical
 
