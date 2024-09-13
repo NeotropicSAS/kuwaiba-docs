@@ -8,3 +8,4 @@ title = "Kuwaiba Open Network Inventory Tutorials"
 [output.html]
 git-repository-url = "https://github.com/NeotropicSAS/kuwaiba-docs/tree/main/tutorials"
 edit-url-template = "https://github.com/NeotropicSAS/kuwaiba-docs/edit/main/tutorials/{path}"
+site-url = "https://www.kuwaiba.org/docs/tutorials/"
