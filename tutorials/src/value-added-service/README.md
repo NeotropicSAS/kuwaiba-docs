@@ -1,96 +1,135 @@
-# Getting Started with Kuwaiba
+# Getting Started with Kuwaiba 
 
-This is a very basic tutorial. When you are faced with a new tool, perhaps the most direct way to understand how it works is by getting hands-on and creating something. This tutorial will help you model a basic short messaging system using Kuwaiba.
+This is a very basic tutorial. When faced with a new tool, perhaps the most direct way to understand how it works is by getting hands-on and creating something. This tutorial will help you model a basic short messaging system using Kuwaiba.
 
-However, I recommend doing some preliminary work to ensure that your idea is effectively translated into the tool. The first thing we will do is list the key elements of your model. In my case, I will work on a classic VAS (Value-Added Service) system: a short messaging system connected to the core network via SIGTRAN and to the BSS (Business Support Systems) via APIs. I have chosen this system because it represents the basic functionality of many value-added services and other telematics-oriented services.
+However, some preliminary work is recommended to ensure that your idea is effectively translated into the tool. The first step is to list the key elements of your model. In this case, we will work on a classic VAS (Value-Added Service) system: a short messaging system connected to the core network via SIGTRAN and to the BSS (Business Support Systems) via APIs. This system was chosen because it represents the basic functionality of many value-added services and other telematics-oriented services.
 
-## Components
+## What is a VAS (Value-Added Service)?
 
-### Servers
+**Value-Added Services (VAS)** in telecommunications are additional services offered beyond the basic voice or messaging features. Examples include SMS, mobile payments, or entertainment services like games and multimedia. VAS enhance user experience by providing extra features, driving customer satisfaction and new revenue streams for providers.
 
-**Physical Equipment**: These will host the services.
+### Key Components of a VAS System
 
-### Services
+- **Application Platform**: Hosts applications like messaging, multimedia, or gaming.
+- **Communication Interfaces**: Connect VAS to the core telecom network, BSS, and OSS.
+- **Billing Systems and CDR**: Manage billing records for transactions.
+- **Network Gateways**: Enable users to access the VAS services.
 
-We will create four services:
+## An SMC Center in Kuwaiba 
 
-1. **Short Message Center (SMC)**: Responsible for receiving, processing, routing, and storing text messages in memory for the cellular network (SMS messages of 160 characters as per the SMPP 3.4 protocol).  
-2. **Billing Server**: Responsible for generating Call Detail Records (CDRs).  
-3. **Reporting Server**: Handles the creation of various reports.  
-4. **Core Network Communication Server**: This service manages the relationship with a Signaling Transfer Point (STP) in the core network using the SIGTRAN protocol to handle communication within a 3G/4G/5G network.
+Let's create a diagram that relates these elements (Figure 1). This will help improve the model and potentially include elements that were not initially considered but are necessary (such as a rack, a datacenter, or perhaps electrical equipment). The level of detail can be adjusted as needed, but for now, it will be kept basic.
 
-### Additional Equipment
-
-To make this work, we will need other equipment such as databases, networking gear, fiber optics, and UTP cables.
-
-Now, let's create a diagram that relates these elements. This will help us improve our model and possibly include elements that were not initially present but are necessary (such as a rack, a datacenter, or perhaps electrical equipment). This can take you to the level of detail you want, but for now, it will be something basic.
-
-| ![Diagrama primario](images/basic_diagram.jpg) |
+| ![high level diagram](images/basic_diagram.jpg) |
 |:--:|
 | ***Figure 1: Basic Diagram of Components*** |
 
-Now we are going to start transferring this graphical model to Kuwaiba. As a first step, we will locate our racks (A-B) inside a room located in a building (Datacenter A) in an imaginary city called Fruncia.
+Follow the steps below:
 
-To do this, we will use the "navigation" module:
+1. Use the Data Model Manager by selecting **Administration -> Data Model Manager** from the options menu. Although there is a preloaded model for this case, some additional classes and attributes will need to be added.
 
-| ![navigation module](images/Navigation01.jpg) |
+2. Create containments based on the provided diagram (**Administration->Containment Manager**): a datacenter contains racks, a rack contains servers, and a server contains Ethernet interfaces, among others.
+
+3. Use **Navigation -> Navigation** to create the necessary devices.
+
+4. Utilize the Software Manager to establish relationships between the servers and the software licenses for the VAS platforms.
+
+Begin by reviewing the diagram to confirm if all elements are present in the default structure. Evaluate whether their attributes can be used or if new classes need to be created from scratch, for example:
+
+These devices are already in Kuwaiba (Figure 2):
+
+| ![SMC Server](images/DataModelManager01.jpg) |
 |:--:|
-| ***Figure 2: Navigation Module*** |
+| ***Figure 2: SMC Server*** |
 
-Let’s start from the root by clicking on "Go to root", which will display some "countries" or "continents" that were created earlier. At this point, we could create an imaginary continent or include Europe or any starting point by clicking on "root actions/new Object".
+In addition to the servers and racks, there are also other physical devices such as switches, cables, software licenses, services, rooms, and buildings. Kuwaiba provides all the tools needed to create any required components for the model. Navigate through the tree from **InventoryObject -> AdministrativeItem -> GenericService**. Create a new class by clicking the (+) sign (see Figure 4). Add the class VASServices, and then add three services using the same method (see Figure 5).
 
-In our case, we will create Fruncia within America. So, we will click on America:
-
-| ![navigation from root](images/Navigation02.jpg) |
+| ![VAS Service](images/VASService_Creation.jpg) |
 |:--:|
-| ***Figure 3: Navigation from Root to America*** |
+| ***Figure 4: VAS Service Creation*** |
 
-Then, we will click on the three dots in front of America and create a new object called Fruncia. 
-
-Next, we will look for the three dots for the Fruncia object. A dialog will appear asking what kind of class we will create. We will choose the appropriate type for each case, such as a country. We will do the same by creating a building and then a datacenter:
-
-| ![creating objects of class](images/Navigation03.jpg) |
+| ![all services](images/VASServices.jpg) |
 |:--:|
-| ***Figure 4: Creating Objects of Class*** |
+| ***Figure 5: All Services Overview*** |
 
-This means we are creating a structure where a continent contains a country, that country contains cities and buildings, and those buildings contain datacenters.
+We will also create a class (**GenericNSSGSMElement**) for NSS equipment that would house any 3G, 4G, or 5G equipment from the GSM Core. Navigate the class tree as follows: **InventoryObject -> ViewableObject -> ConfigurationItem -> GenericCommunicationsElement**.
 
-Of course, I skipped many details (remember that this is a basic tutorial), but we could have a very detailed structure, with all kinds of details... region, district, neighborhood, floor, etc.
-
-| ![navigation while creating objects](images/Navigation04.jpg) |
+| ![NSSElement](images/NSSELEMNT.jpg) |
 |:--:|
-| ***Figure 5: Navigation While Creating Objects*** |
+| ***Figure 6: Generic NSS GSM Element*** |
 
-| ![more objects](images/Navigation05.jpg) |
+*Note: Icons were added to slightly customize the new classes.*
+
+Now, each class has attributes. Kuwaiba offers the possibility to create more complex attributes. Although the "Software License" class exists, use the **Administration->List Type Manager** tool to create a VAS product of type SMC.
+
+| ![SWType](images/SMCSoftwareType.jpg) |
 |:--:|
-| ***Figure 6: Creating More Objects*** |
+| ***Figure 7: Software type*** |
 
-| ![more objects](images/Navigation05.1.jpg) |
+| ![SWType](images/SMCSoftwareType2.jpg) |
 |:--:|
-| ***Figure 7: More Objects Created*** |
+| ***Figure 8: Software type*** |
 
-| ![more objects](images/Navigation05.2.jpg) |
+Next, use **Logical-->Software Manager** to create a special license pool for Fruncia Telecom. Proceed as follows: first, click on "Manage Licenses" and then on "New License Pool" (Figure 9). The license is then added to the SMC product that was previously created (Figure 10).
+
+| ![SWType](images/LicensePool.jpg) |
 |:--:|
-| ***Figure 8: Continuing to Create Objects*** |
+| ***Figure 9: License Pool 1*** |
 
-| ![more objects](images/Navigation08.jpg) |
+| ![SWType](images/SMCLicense2.jpg) |
 |:--:|
-| ***Figure 9: Additional Object Creation*** |
+| ***Figure 10: License Pool 2*** |
 
-I created several racks, thinking of a real example of a similar distribution, where in a single datacenter there were core equipment, networking equipment, VAS equipment, and OSS/BSS, all on different rows of racks, connected by 24-port L2 switches. In this case, we will have one rack with three servers connected to a switch, which is then connected to another switch in a different rack where the BSS and Core racks are located.
-
-| ![Racks](images/Navigation09.jpg) |
+| ![SWType](images/SMCLicense3.jpg) |
 |:--:|
-| ***Figure 10: Racks in Datacenter01*** |
+| ***Figure 11: License Pool 3*** |
 
-Now, what we are going to do is place the servers in each of the racks. However, we need to take a preliminary step because the servers in the tool, by default, may contain optical ports, and I require that my design includes electrical ports. Therefore, I need to use the Containment Manager to modify the containment hierarchy of the servers.
+## Using Container Management
 
-| ![Containment Manager](images/Contaimentmanager1.jpg) |
+Using **Administration->Containment Manager**, it is necessary to create any missing containment relationships. Many are already present, such as a city being contained within a country. In this case, additional relationships may need to be established, for example, Ethernet ports will be added to the servers, and STPs.
+
+| ![Container manager 1](images/Contaimentmanager1.jpg) |
 |:--:|
-| ***Figure 11: Containment Manager Interface*** |
+| ***Figure 12: Container Manager*** |
 
-To do this, I will search for the Server class and, using the search function, I will add electrical ports as children, as shown in the following image:
-
-| ![Add Electrical Ports to Server Class](images/Contaimentmanager2.jpg) |
+| ![STP ETH](images/STPETH.jpg) |
 |:--:|
-| ***Figure 12: Adding Electrical Ports to Server Class*** |
+| ***Figure 13: STP Ethernet*** |
+
+## Creating Devices
+
+Now, use the **Navigator** to create a basic structure with a country in America named **Fruncia**, a city (**Fruncia City**), a **datacenter** within the city, two **Rooms** (A and B), and a couple of **racks** in each room to contain the servers and networking equipment. For further details on how to create this type of structure, refer to the manual [XXXXX].
+
+| ![Country-City-Datacenter-Rooms](images/Country-City-Datacenter-Rooms.jpg) |
+|:--:|
+| ***Figure 14: Country-City-Datacenter-Rooms*** |
+
+Next, add servers and switches to each rack according to the base diagram. It's important to consider the object properties of the rack and servers to ensure proper visualization. The **RackUnits** have been set to 32, with the servers occupying two units, 10 units for the equipment interfacing between the applications and the GSM core, and 4 units for the disk array. The position of each server must also be specified.
+
+| ![RackVAS](images/RackVAS.jpg) |
+|:--:|
+| ***Figure 15: Rack Details*** |
+
+| ![SMCServer](images/SMCServer.jpg) |
+|:--:|
+| ***Figure 16: Server Details*** |
+
+Now, link the created services with the corresponding servers. In **Figure 17**, by navigating and reviewing the **SMS service**, it is linked to the **SMC server**.
+
+| ![SMSServiceToServer](images/SMSServiceToServer.jpg) |
+|:--:|
+| ***Figure 17: Linking SMS Service to SMC Server 1*** |
+
+| ![SMSServiceToServer2](images/SMSServiceToServer2.jpg) |
+|:--:|
+| ***Figure 18: SMS Service Linked to SMC Server 2*** |
+
+Finally, link the licenses to the SMC server by using the advanced options of the SMCServer object.
+
+| ![License relation](images/RelatetoLicense.jpg) |
+|:--:|
+| ***Figure 19: Linking SMS License to SMC Server 1*** |
+
+| ![License relation](images/RelatetoLicense2.jpg) |
+|:--:|
+| ***Figure 20: Linking SMS License to SMC Server 2*** |
+
