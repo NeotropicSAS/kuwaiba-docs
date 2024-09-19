@@ -15,7 +15,7 @@ This book contains a set of tutorials showcasing several use cases where Kuwaiba
 This example takes three sites with DWDM multiplexers created from scratch and from a template, and connect them in a ring topology using the [Object View](https://kuwaiba.org/docs/manuals/user/navigation/navman/index.html#object-view) and the [Outside Plant Manager](https://kuwaiba.org/docs/manuals/user/physical/ospman/) module.
 
 ### VAS Platforms
-This example show a way to model a set of mobile [VAS platforms](https://en.wikipedia.org/wiki/Value-added_service). It is a basic example for someone starting their journey with **Kuwaiba** and who is wondering how to model applications and services.
+This example showcases a way to model mobile [VAS platforms](https://en.wikipedia.org/wiki/Value-added_service). This is a beginner level example for users who wonder how to model applications and services.
 
 ## Platform Operation
 ### Bulk Upload

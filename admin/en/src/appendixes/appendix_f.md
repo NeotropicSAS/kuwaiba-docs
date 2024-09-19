@@ -1,8 +1,8 @@
-# Appendix F. Configure Attachment Size
+# Appendix F. Configuring the Max Attachment Size
 
-An attachment is a file directly associated with an inventory object or list-type items linked to the object. These files can be documents, images, or relevant settings, and can be viewed, added, deleted, or downloaded for easy management and access.
+An attachment is a file directly associated with an inventory object or a list-type item (which in turn will be linked to several objects e.g. a router installation manual file attached to a list type item representing its model will be available to all routers of said model). These files can be documents, images or relevant settings, and can be downloaded, added or deleted at any moment.
 
-To ensure efficient management of these attachments, it is essential to configure the maximum size allowed.
+To ensure that the storage endpoint used to store the files won't be abused or overwhelmed, the attachments size limit is capped and configurable.
 
 > **Note**
 >
@@ -11,17 +11,13 @@ To ensure efficient management of these attachments, it is essential to configur
 
 Open your application.properties file and modify the following lines:
 
-1. Maximum File Size:
-   
-   This property sets the maximum size for individual files that can be uploaded.
+1. Set the max file size at application server level. This property sets the maximum size for individual files that can be uploaded.
 
     ``` bash
        spring.servlet.multipart.max-file-size=10MB
     ```
 
-2. Maximum Request Size:
-   
-   This property sets the maximum size for the entire multipart request.
+2. Set the max (HTTP) request size at application server level. This property sets the maximum size for the entire multipart request.
 
     ``` bash
        spring.servlet.multipart.max-request-size=10MB
@@ -29,16 +25,13 @@ Open your application.properties file and modify the following lines:
 
     > **Note**
     >
-    > `Maximun File Size` and `Maximun Request Size` should be configured in accordance with the `Maximun Attachment Size`.
+    > **Maximum File Size** and **Maximum Request Size** should be configured in accordance with the **Maximum Attachment Size**, as explained in the next step.
     >
     
 
-3. Maximum Attachment Size:
-   
-   This property sets the maximum allowed size for attachments within the system.
+3. Set the max file size at application level. This property sets the maximum allowed size for attachments within the application. This restriction will apply to all **Persistence API** calls related to attachment handling, regardless if they are consumed through the northbound interfaces or automation procedures (such as tasks in the Task Manager).
 
     ``` bash
        bem.max-attachment-size=10
     ```
-By adjusting these limits, the system can adapt to the specific needs of the inventory objects being managed, allowing for the storage and access of relevant attachments without exceeding the system’s capabilities.
 

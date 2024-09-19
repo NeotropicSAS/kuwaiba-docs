@@ -3,10 +3,10 @@
 
 # Inventory Modeling
 ## Physical Layer
-- [DWDM Ring](dwdm-ring/README.md)
+- [DWDM Ring](modeling/dwdm-ring/README.md)
 
 ## Application Layer
-- [Mobile VAS Platforms](value-added-service/README.md)
+- [Mobile VAS Platforms](modeling/value-added-service/README.md)
 
 # Platform Operation
 - [Bulk Upload](operation/bulk-upload/README.md)
