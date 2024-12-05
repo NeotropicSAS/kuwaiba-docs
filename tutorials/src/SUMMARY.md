@@ -8,6 +8,9 @@
 ## Application Layer
 - [Mobile VAS Platforms](value-added-service/README.md)
 
+## Physical Layer + Application Layer
+- [Mobile VAS Platforms](5G-internet-of-things/README.md)
+
 # Platform Operation
 - [Bulk Upload](operation/bulk-upload/README.md)
 

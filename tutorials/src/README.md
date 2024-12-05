@@ -17,6 +17,9 @@ This example takes three sites with DWDM multiplexers created from scratch and f
 ### VAS Platforms
 This example show a way to model a set of mobile [VAS platforms](https://en.wikipedia.org/wiki/Value-added_service). It is a basic example for someone starting their journey with **Kuwaiba** and who is wondering how to model applications and services.
 
+### 5G and IOT Application
+This guide provides a step-by-step tutorial on modeling 5G networks for IoT applications using the Kuwaiba tool. It demonstrates how to structure and manage network resources (RFS) supporting smart traffic lights and mobile internet services. The manual highlights flexible approaches to visualize and optimize 5G network topologies.
+
 ## Platform Operation
 ### Bulk Upload
 This tutorial describes how to run one of the data on-boarding examples available in the code repository, and sketches the basics of data ingesting in Kuwaiba.
