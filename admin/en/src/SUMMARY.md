@@ -6,3 +6,4 @@
 - [Appendix C. Using a Reverse Proxy](appendixes/appendix_c.md)
 - [Appendix D. Accessing the Database](appendixes/appendix_d.md)
 - [Appendix E. Generating and configuring a self-signed SSL certificate](appendixes/appendix_e.md)
+- [Appendix F. Configure Attachment Size](appendixes/appendix_f.md)

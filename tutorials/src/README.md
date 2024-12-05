@@ -15,7 +15,7 @@ This book contains a set of tutorials showcasing several use cases where Kuwaiba
 This example takes three sites with DWDM multiplexers created from scratch and from a template, and connect them in a ring topology using the [Object View](https://kuwaiba.org/docs/manuals/user/navigation/navman/index.html#object-view) and the [Outside Plant Manager](https://kuwaiba.org/docs/manuals/user/physical/ospman/) module.
 
 ### VAS Platforms
-This example show a way to model a set of mobile [VAS platforms](https://en.wikipedia.org/wiki/Value-added_service). It is a basic example for someone starting their journey with **Kuwaiba** and who is wondering how to model applications and services.
+This example showcases a way to model mobile [VAS platforms](https://en.wikipedia.org/wiki/Value-added_service). This is a beginner level example for users who wonder how to model applications and services.
 
 ### 5G and IOT Application
 This guide provides a step-by-step tutorial on modeling 5G networks for IoT applications using the Kuwaiba tool. It demonstrates how to structure and manage network resources (RFS) supporting smart traffic lights and mobile internet services. The manual highlights flexible approaches to visualize and optimize 5G network topologies.
