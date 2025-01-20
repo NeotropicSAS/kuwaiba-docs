@@ -4,7 +4,8 @@ Neo4j migration is the process of migrating an existing single deployment to a n
 
 ## Upgrading Database from Neo4j 3.5.x to 4.4.x
 
-The migration process of Neo4j from version 3.x.x to 4.4.x is possible through two methods:
+The database version 3.5.5 is used by [Kuwaiba 2.1.1](../intro/README.md). If you wish to upgrade the database to migrate to newer versions of Kuwaiba, you must follow the Neo4j migration process from version 3.x.x to 4.4.x. This process can be performed using two methods:
+
 
 * **Direct migration (Neo4j Enterprise Edition)**
 
