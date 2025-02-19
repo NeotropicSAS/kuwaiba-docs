@@ -58,7 +58,7 @@ Enter the name or type of the elements you want to add to the view. The inventor
 |:--:|
 | ***Figure 9.** Search elements* |
 
-Click on![Add Nodes](images/btn_add_node_to_view.png)to add the element to the canvas, as shown in Figure 10.
+Click on ![Add Nodes](images/btn_add_node_to_view.png) to add the element to the canvas, as shown in Figure 10.
 
 |![New Element](images/topology_added_element.png)|
 |:--:|
@@ -94,9 +94,9 @@ Once all inventory elements are added, we position them on the canvas as seen in
 |:--:|
 | ***Figure 15.** Inventory elements* |
 
-If you want to remove any element from the topology, select the element and click on the![Btn Remove](images/btn_remove_element.png)button to remove it from the canvas.
+If you want to remove any element from the topology, select the element and click on the ![Btn Remove](images/btn_remove_element.png) button to remove it from the canvas.
 
-Next, to represent the central office in the diagram, we use the shapes provided by the module, as shown in Figure 16. There are options such as clouds, ellipses, and rectangles that are useful for representing network elements. For our case, we add a rectangle using![Add Rectangle](images/btn_add_rectangle.png), as seen in Figure 17.
+Next, to represent the central office in the diagram, we use the shapes provided by the module, as shown in Figure 16. There are options such as clouds, ellipses, and rectangles that are useful for representing network elements. For our case, we add a rectangle using ![Add Rectangle](images/btn_add_rectangle.png) , as seen in Figure 17.
 
 |![Add Shapes](images/btn_add_shapes.png)|
 |:--:|
@@ -118,7 +118,7 @@ In addition to this, you can see guides appear to change the dimensions of the s
 |:--:|
 | ***Figure 19.** Change shape size* |
 
-To continue, we proceed to make connections between the elements. To do this, hold down and drag the cursor from the desired element's ![Btn Add Wire](images/btn_add_wire.png) icon. You will see a guide appear to make connections, as shown in Figure 20.
+To continue, we proceed to make connections between the elements. To do this, hold down and drag the cursor from the desired element's  ![Btn Add Wire](images/btn_add_wire.png)  icon. You will see a guide appear to make connections, as shown in Figure 20.
 
 |![Connection Guide](images/topology_add_wire.png)|
 |:--:|
