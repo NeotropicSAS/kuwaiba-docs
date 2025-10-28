@@ -43,7 +43,7 @@ The created project is added to the list of projects shown in Figure 2. Selectin
 * **name.** Project name.
 * **startDate.** Project start date. Default is `Wed 31 Dec 1969`.
 * **status.** Project status. This attribute is a list type attribute (for more information see chapter [List Type Manager][list_type_manager]).
-* **notes.** Additional information that the user adds about the project.
+* **Note.** Additional information that the user adds about the project.
 * **projectManager.** Person in charge of the project.
 * **creationDate.** Date of creation of the project.
 
@@ -80,7 +80,7 @@ In the upper right part of Figure 8, there are 6 buttons, which are detailed bel
   * **activityType.** Type of activity.
   * **sequecing.** Activity number.
   * **status.** Activity status.
-  * **notes.** Notes on the activity.
+  * **Note.** Note on the activity.
   * **startDate.** Start date of activity.
   * **endDate.** Date of completion of the activity.
   * **lastUpdate.** Date of last activity update

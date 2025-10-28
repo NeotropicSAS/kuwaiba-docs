@@ -37,7 +37,7 @@ The module presents us with information divided into several columns, among whic
 > - **Property** When the event type is Object-related events, this field presents the name of the modified property of the object. Otherwise, it will be empty.
 > - **Old Value** When the event type is Object-related events, this field presents the old value previously set in the modified property of the object. Otherwise, it will be empty.
 > - **New Value** When the event type is Object-related events, this field presents the new value assigned to the modified property of the object. Otherwise, it will be empty.
-> - **Notes** Field that contains additional notes about the action, if any.
+> - **Note** Field that contains additional Note about the action, if any.
 
 ### Filters
 
@@ -81,7 +81,7 @@ When using, the Object-related window, shown in Figure 9, will appear.
 |:--:|
 | ***Figure 9.** Object-related window* |
 
-The information presented is the same as in **General events** except for the absence of the *Notes* field. Additionally, it includes the ![Object To Create Objects From Template Window](images/btn_information.png) button, not present in **General events** which allows viewing more information about the selected object, as shown in Figure 10.
+The information presented is the same as in **General events** except for the absence of the *Note* field. Additionally, it includes the ![Object To Create Objects From Template Window](images/btn_information.png) button, not present in **General events** which allows viewing more information about the selected object, as shown in Figure 10.
 
 | ![Information Window](images/information_object.png) |
 |:--:|

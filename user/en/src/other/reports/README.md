@@ -1,9 +1,9 @@
 # Reports
 
 In Kuwaiba, reports are HTML documents designed to provide detailed information about the objects that are part of the inventory. Their purpose is to inform and follow up on specific situations.
-As of version 1.1, users can create their own reports using groovy scripts[^groovy], usually in three steps:
+As of version 1.1, users can create their own reports using [groovy](http://www.groovy-lang.org/) scripts, usually in three steps:
 
-   1. **Retrieve the data:** Either by performing a query directly on the database or by using the high-level API provided by Kuwaiba. In the first case, the user will have to handle the raw nodes and relationships contained in the graph database and will most likely have to use Cypher[^cypher]. In the second case, he will have to use the documented Java API[^api_kuwaiba].
+   1. **Retrieve the data:** Either by performing a query directly on the database or by using the high-level API provided by Kuwaiba. In the first case, the user will have to handle the raw nodes and relationships contained in the graph database and will most likely have to use [Cypher](https://neo4j.com/docs/cypher-manual/3.5/introduction/). In the second case, he will have to use the documented [Java API](https://kuwaiba.org/docs/dev/javadoc/current/).
    2. **Information processing:** Consists of taking the data retrieved in step 1 and performing calculations, filtering and other processing to convert it into meaningful information.
    3. **Formatting and visualization:** This consists of creating a structure of tables, labels and/or graphs to present the information in a way that is clear and easy to read.
 
@@ -14,10 +14,6 @@ To access the reports module, locate in the menu presented at the top of the scr
 | ***Figure 1**. Access to reporting module.* |
 
 There are two types of reports: class level reports and inventory level reports. Both are explained in the following subsections.
-
-[^groovy]: Groovy Language: http://www.groovy-lang.org/
-[^cypher]: Neo4J’s Graph Query Language: https://neo4j.com/docs/cypher-manual/3.5/introduction/
-[^api_kuwaiba]: Kuwaiba Persistence API: https://kuwaiba.org/docs/dev/javadoc/current/
 
 ## Class Level Reports
 
@@ -44,8 +40,8 @@ To create a new report, select the ![create report](images/icons/create_class_le
 | ***Figure 5**. Create class level report.* |
 
 > **Note.** If you have previously filtered the reports by class before creating a new one, when you open the creation window, the Class Name field will default to the class that was selected in the filter.
-> 
-> **Important.** In the Type field of Figure 5, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently 
+>
+> **Important.** In the Type field of Figure 5, when displaying the list of possible types, `CSV`, `PDF`, among others, appear. These formats are not yet natively supported, but you can export to PDF an HTML report from your browser, and it's also possible to generate raw text instead of an HTML document if you need  a CSV format. Likewise, you can copy the tables in your HTML report and paste them on an Excel sheet almost transparently
 
 To view and modify the contents of a specific report, select it. The contents of the report are displayed on the right side of the screen, as shown in Figure 6.
 
@@ -149,131 +145,469 @@ In the upper right part of Figure 15, there are four buttons, detailed below.
 Creating complex scripts requires some knowledge about the Persistence API and the database structure. It’s out of the scope of this document to deeply explore these topics, but this section will give you a starting point. More documentation and examples will be published in the coming releases; for now, use the reports provided in the directory scripts in the client installation bundle as reference.
 
 * Kuwaiba uses Groovy as scripting language. Its syntax is very similar to Java’s, but it’s optionally typed. We recommend you to use an external editor that supports Groovy syntax recognition such as Notepad++ (Windows) or GEdit (Linux/MacOS) to write your scripts, then copy the text to the corresponding field in the report properties.
-* All scripts must return an HTMLReport object. This class and the others that are used to build the report are located in the package `org.neotropic.kuwaiba.modules.optional.reports.html`[^reportRef]. There are wrappers for the most common HTML tags, and constructing a report consists of nesting instances of these classes in the right order.
+* All scripts must return an HTMLReport object. This class and the others that are used to build the report are located in the package [org.neotropic.kuwaiba.modules.optional.reports.html](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/modules/optional/reports/html/package-summary.html). There are wrappers for the most common HTML tags, and constructing a report consists of nesting instances of these classes in the right order.
 * The following variables are injected in the script and can be used at any moment:
 
-    | Variable Name | Type | Notes |
+    | Variable Name | Type | Note |
     | --------------|------|-------|
     | instanceNode | Neo4jNode |   Only applicable to class level reports. It’s the node in the database that holds the information of the object that triggered the report. |
     | graphDb | Neo4j GraphDatabase | The reference to the connection handler. This gives complete access to the database. Use with caution.
-    | className | String | Only applicable to class level reports. The class of the object that triggered the report. | 
+    | className | String | Only applicable to class level reports. The class of the object that triggered the report. |
     | objectId | Long | Only applicable to class level reports. The id of the object that triggered the report. |
     | parameters | HashMap[String, String] | Only applicable to inventory level reports. The list of parameters provided during the execution of the report. |
 
 * There are some built-in reports that could serve as reference on how to retrieve and manipulate the information from the database. They are a temporary solution and will be converted to actual scripts in future releases, but they can help you get started on how to use the Persistence API.
 * Sample Reports can be found in <https://sourceforge.net/p/kuwaiba/code/HEAD/tree/server/trunk/scripts/reports/>, where report-related scripts have the prefix `RP` in their name.
 
-[^reportRef]: Reports: https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/modules/optional/reports/html/package-summary.html
+## Basic Concepts
 
-Reports are built using modules that are displayed as they are added, to visualizate the tag in the report, is necessary add to report: ```report.getComponents().add(nameComponent)```.
+To create a report, it's important to understand how they work. Reports are built modularly by adding HTML tags, each of which displays information and applies its own logic
 
-Name report is defined :
+To build a report, the first step is to create  the instance
 
  ```Java
-def report = new HTMLReport(String.format("NAME OF REPORT","", "1.1"))
+    def report = new HTMLReport(String.format("Report's name","", "1.0"))
   ```
 
-The modules are represented by 3 HTML tags Text, Tables and Charts to show information.
-
-* **Text:** The HTML text is tag that can contain any text information and is create using:
-
-  ```Java
-  def messeage = new HTMLMessage(cssattributes, null, text)
-  ```
-
-  Where *cssattributes* is a string, contains the css attributes separate with ; and *text* is the variable contains the text
-
-  If you want to use a variable in the text, is necesarry use:
-
-  ```Java
-   def messahe = new HTMLMessage(cssattributes, null, String.format("example: %s", instanceNode.getProperty("name")))
-
-  ```
-
-* **Table:** Show information as table with row and columns,to create a table is necessary declarate :
+Next step is choose an HTML tag to display information, the options are:
   
+* **Text:** Text is an HTML tag where is possible show a information, error or warning message. To create a message is:
+
+  ```Java
+  def message = new HTMLMessage(cssAttributes, null, text)
+  ```
+
+  If want to add a variable in message use String.format(), for example:
+
+  ```Java
+  def message = new HTMLMessage(cssAttributes, null, String.format("put your text %s",variable))
+  ```
+
+  **Where:** cssAttributes represents the ccs styles applied to the text separated by semicolons(;), for example:
+
+  ```Java
+  def cssAttributes = "color:black; font-weight: normal; font-size: 2em "
+  ```
+
+* **Table:** Table is an HTML tag where is possible show a information in format table with rows and columns. To create a table is
+
   ```Java
   def table = new HTMLMTable()
   ```
 
-  To aggregate table's value is used the method:  ```generalInfoTable.getRows().add()```, but two possibility exist, when number of row is know ( Add the columns and row values at same time):
-  
+  To add values to  table use the method ```table.getRows().add()```, but are two possibilities when the number of rows is known: the table is created by defining the name of the columns and the value of the row at the same time.
+
+   In the case when the number of rows is known, the table is created by defining the name of the columns and the value of the row at the same time. For example:
+
   ```Java
-    generalInfoTable.getRows().add(
-    new HTMLRow(null, null, 
+  generalInfoTable.getRows().add(
+    new HTMLRow(cssAtribute, null, 
         [
-            new HTMLColumn(cssAtribute, null, value),
+            new HTMLColumn(cssAtribute, null, text),
             new HTMLColumn(value)
         ] as HTMLColumn[]));
   ```
 
-  **Note:**
-  The first line correspond to column's title and second the value , *cssattributes* is a string, contains the css attributes separate with ; and *text* is the variable contains the text.
-  
-  When is not know the number of rows, define the title's column:
+  >Note:  
+  >* The first new HTMLColumn represent the name of column and new HTMLColumn is the value
+  >* It is mandatory to cast the content to HTMLColumn
+  >* cssAttributes represents the ccs styles applied
+
+   When the number of rows is not known, first define the name of the columns:
 
   ```Java
-    table = new HTMLTable(null, null, ["COLUMN1","COLUMN2", "COLUMN3"] as String[])
+  table = new HTMLTable(null, null, ["COLUMN1","COLUMN2", "COLUMN3"] as String[])
   ```
+  
+    >Note:  
+  >* It is mandatory to cast the content to String
 
-  And add the row's value :
+   After, add row's value:
 
-   ```Java
-    table.getRows().add(
+  ```Java
+  table.getRows().add(
     new HTMLRow(null, null, 
         [
-            new HTMLColumn(cssattributes,null,value) 
+          new HTMLColumn(cssattributes,null,value) 
         ] as HTMLColumn[]));
   ```
+
+  >Note:  
+  > * The first new HTMLColumn represent the name of column and new HTMLColumn is the value
+  > * It is mandatory to cast the content to HTMLColumn
+  > * cssAttributes represents the ccs styles applied
   
-  **Note:**
-    This method add a single row and the lines correspond a column header, *cssattributes* is a string, contains the css attributes separate with ; and *text* is the variable contains the text.
-
-* **Charts:** Show the information in 3 possible type's charts Pie,Column and line. Each one is created from a datable where is storage data and all charts is generated by a component GChartsFactory (```def chartsFactory = new GChartsFactory(report)```).
-
-  To create datatable:
+ **Charts:** Charts are an HTML element that allow you to visualize data using pie, line, or column graphs. These charts are created from the data stored in a data table, so it's essential to create the table first.
 
   ```Java
-    def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["COLUMN1", "COLUMN2"] as String[])
+  def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["COLUMN1", "COLUMN2"] as String[])
   ```
 
-   To add data to the table, use:
-
-  ```Java
-   dataTable.addRow(["COLUMN",value] as String[])
-  ```
-
-  Finally, to create the chart,:
+  >Note:  
+  > It is mandatory to cast the content to DataType
   
+  To add values to the datatable, the column correspond the name of the column and value is the number:
+
   ```Java
-    def htmlDivPieChart = chartsFactory.createHTMLDivWrapperChart(ChartType.PIECHART, "divPieChart", name , dataTable);
+  dataTable.addRow(["COLUMN",value] as String[])
   ```
 
-  Is possible use types of chart: ChartType.PIECHART, ChartType.COLUMNCHART and ChartType.LINECHART.
+>Note:  
+  > It is mandatory to cast the content to String
+  
+To create the chart, it is necessary use the GChartsFactory
+  
+```Java
+def chartsFactory = new GChartsFactory(report)
+def htmlDivPieChart = chartsFactory.createHTMLDivWrapperChart(ChartType.PIECHART, "divPieChart", name , dataTable);
+```
 
-  **Note**
-  * It posiblle change the sytles of htmlDivPieChart using : ```htmlDivPieChart.setStyle("cssStyle")```
+>Note:  
+  >
+  > * It posible change the styles of htmlDivPieChart using : ```htmlDivPieChart.setStyle("cssStyle")```.
+  > * Is possible use types of chart: ChartType.PIECHART, ChartType.COLUMNCHART and ChartType.LINECHART.
 
-Some way to collect the infomation of inventory is using the following methods belong Persistence API:
+Finally step is add the HMTL tag's to report and return it:
 
-| Metohd  | Descpition | Return  |
+```Java
+report.getComponents().add(HMTLTag)
+return report
+```
+
+After choosing the HTML tag to display a text, you must query the inventory information to display. There are two ways to query the information: use Cypher to query directly in Ne4oj or use the [Persistence API]([BusinessObjectLight]([[https://](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessEntityManager.html)]) ).
+
+The [Persistence API]([BusinessObjectLight]([[https://](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessEntityManager.html)]) )  is extensive and contains many methods; however, the most commonly used ones are listed below.
+
+| Methods  | Description | Return  |
 |----------|-----------|--------|
 | getAttributeValueAsString( classObject, IdObject, NameAttributes )      | Returns the value of atrribute     | String  |
-| getSpecialAttribute( classObject, IdObject , nameRelantionship )     | Returns the searched relationship   | Business Object Light |
-| getObject​( classObject, IdObject )    | Returns the searched object      | Business Object Light |
-| getParent( classObject, IdObject)    | Returns the parent's object      | Business Object Light |
-| getObjectChildren​( classObject, IdObject, -1)    | Returns the children of object      | Business Object Light |
-| getObjectsOfClassLight(classToFind, null, -1, -1)    | Returns all objects belong a class      | Business Object Light |
+| getSpecialAttribute( classObject, IdObject , nameRelantionship )     | Returns the searched relationship   |  [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getObject​( classObject, IdObject )    | Returns the searched object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getParent( classObject, IdObject)    | Returns the parent's object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getObjectChildren​( classObject, IdObject, -1)    | Returns the children of object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getObjectsOfClassLight(classToFind, null, -1, -1)    | Returns all objects belong a class      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
 
-**Note:**
+  >Note:  
+  >
+  > * Business Object refers a object with all attributes meanwhile Business Object Light refers a object with only attributes: class name, object id and nam
+  > * If the object is a Business Object, it is possible to get any of its attributes:
+  >
+  >```Java
+  > object.getAttributes().get(attributeName)
+  >```
+>
+  > * If the object is a Business Object Light, only get the following attributes:
+  >
+  >  ```Java
+  > objectLight.getName()
+  > objectLight.getClassName()
+  > objectLight.getId()
+  > ```
 
-* Business Object refers a object with all attributes meanwhile Business Object Light refers a object with only attributes: class name, object id and name
+## Learning By Example
 
-* If  object is a Business object is posiblle get any attributes :
+### Case 1
 
-  ```Java
-   object.getAttributes().get(attributeName)
+Example showing in a table the cities in the inventory and to which state they belong
 
-  ```
+1. Create the inventory report in the module of report as show in **Figure 14**
 
-* To set style of the report must be include: ```report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())```. In this case is set a default styles
+2. Import the module
+
+```Java
+import org.neotropic.kuwaiba.modules.optional.reports.html.*
+```
+
+3. Define the name and CSS style of report
+
+```Java
+def report = new HTMLReport("Cities in inventory" , "Neotropic SAS", "1.0")
+report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())
+```
+
+4. Use the method getObjectsOfClassLight to search the all cities in the Inventory and save in a variable
+
+```Java
+def cities = bem.getObjectsOfClassLight("City", null, -1, -1)
+```
+
+5. Create the table with the column name
+
+```Java
+def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
+```
+
+6. Go through all the cities in the array and query each one for her parent
+
+```Java
+cities.each { city -> 
+    def counrty = bem.getParent( city.getClassName(), city.getId()))
+```
+
+7. Add to table the data
+
+```Java
+citiesTable.getRows().add(new HTMLRow([
+        new HTMLColumn( city.getName()),
+        new HTMLColumn(counrty),
+      
+ 
+    ] as HTMLColumn[]))
+}
+```
+
+8. Add the table to report and return it 
+
+```Java
+report.getComponents().add(citiesTable)
+return report
+```
+
+9.The report must look like this
+
+```Java
+import org.neotropic.kuwaiba.modules.optional.reports.html.*
+
+def report = new HTMLReport("City in inventory" , "Neotropic SAS", "1.0")
+report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())
+
+def cities = bem.getObjectsOfClassLight("City", null, -1, -1)
+def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
+
+cities.each { city -> 
+    def state = bem.getParent( city.getClassName(), city.getId())
+
+    citiesTable.getRows().add(new HTMLRow([
+        new HTMLColumn( city.getName()),
+        new HTMLColumn(state),
+    ] as HTMLColumn[]))
+}
+
+report.getComponents().add(citiesTable)
+return report
+```
+
+10. The result of the report will be
+
+| ![reports by class](images/result_report.png) |
+| :--: |
+| ***Figure 17**. Report Result*|
+
+### Case 2
+
+For this example, a title is added to case 1
+
+1. Create a message
+
+```Java
+def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; ", null, String.format("Cities in Inventory"))
+```
+
+>Note:  
+  >In this case the css style are set as string
+
+2. Create a div containing the title
+
+```Java
+def divTitle = new HTMLDiv("div",title)
+```
+
+>Note:  
+  >It is possible to set css styles to the div,
+  >```Java
+  >divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
+  >```
+
+3. Add div to report
+
+```Java
+report.getComponents().add(divTitle)
+```
+
+4. The report must look like this
+
+```Java
+
+import org.neotropic.kuwaiba.modules.optional.reports.html.*
+
+def report = new HTMLReport("Cities in Inventory" , "Neotropic SAS", "1.0")
+report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())
+
+def cities = bem.getObjectsOfClassLight("City", null, -1, -1)
+def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
+
+cities.each { city -> 
+    def state = bem.getParent( city.getClassName(), city.getId())
+
+    citiesTable.getRows().add(new HTMLRow([
+        new HTMLColumn( city.getName()),
+        new HTMLColumn(state),
+    ] as HTMLColumn[]))
+}
+def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; ", null, String.format("Cities in Inventory"))
+def divTitle = new HTMLDiv("div",title)
+divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
+
+report.getComponents().add(divTitle)
+report.getComponents().add(citiesTable)
+return report
+```
+
+5. The result of the report will be
+
+| ![reports by class](images/title_report.png) |
+| :--: |
+| ***Figure 18**. Title Report Result*|
+
+### Case 3
+
+For this case, a bar chart is added to case 2 where the number of cities per state is displayed.
+
+1. Add the imports
+   
+```Java
+import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable
+import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable.DataType
+import org.neotropic.kuwaiba.modules.optional.reports.plugins.gcharts.GChartsFactory
+import org.neotropic.kuwaiba.modules.optional.reports.plugins.gcharts.GChartsFactory.ChartType
+```
+
+2. Create the dataTable
+
+```Java
+def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["State", "Cities Number"] as String[])
+```
+
+3. Define the variables where the number of cities per state is stored
+
+```Java
+def quindio=0
+def antioquia=0
+def valleCauca=0
+def cundinamarca=0
+```
+
+4. Implement the logic to check how many cities there are per state
+
+```Java
+ switch(state.getName()) {
+        case "Antioquia":
+            antioquia++
+            break
+        case "Quindío":
+            quindio++
+            break
+        case "Cundinamarca":
+            cundinamarca++
+            break
+         case "Valle del Cauca":
+            valleCauca++
+            break
+        default:
+            break
+    }
+```
+
+5. Add the value rows to dataTable
+
+```Java
+dataTable.addRow(["Antioquia",antioquia] as String[]) 
+dataTable.addRow(["Quindio",quindio] as String[]) 
+dataTable.addRow(["Cundinamarca",cundinamarca] as String[]) 
+dataTable.addRow(["Valle del Cauca",valleCauca] as String[]) 
+```
+
+6. Create the chartsFactory
+
+```Java
+def chartsFactory = new GChartsFactory(report)
+```
+
+7. Generate the column chart 
+
+```Java
+def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Column Chart Cities Per State", dataTable);
+```
+
+8. Add the chart to report
+
+```Java
+report.getComponents().add(htmlDivColumnChart)
+```
+
+9. The code of report is:
+
+```Java
+
+import org.neotropic.kuwaiba.modules.optional.reports.html.*
+import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable
+import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable.DataType
+import org.neotropic.kuwaiba.modules.optional.reports.plugins.gcharts.GChartsFactory
+import org.neotropic.kuwaiba.modules.optional.reports.plugins.gcharts.GChartsFactory.ChartType;
+
+def report = new HTMLReport("Cities in Inventory" , "Neotropic SAS", "1.0")
+report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())
+
+def cities = bem.getObjectsOfClassLight("City", null, -1, -1)
+def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
+
+def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["State", "Cities Number"] as String[])
+
+def quindio=0
+def antioquia=0
+def valleCauca=0
+def cundinamarca=0
+
+cities.each { city -> 
+    def state = bem.getParent( city.getClassName(), city.getId())
+
+    switch(state.getName()) {
+        case "Antioquia":
+            antioquia++
+            break
+        case "Quindío":
+            quindio++
+            break
+        case "Cundinamarca":
+            cundinamarca++
+            break
+         case "Valle del Cauca":
+            valleCauca++
+            break
+        default:
+            break
+    }
+
+
+    citiesTable.getRows().add(new HTMLRow([
+        new HTMLColumn( city.getName()),
+        new HTMLColumn(state),
+    ] as HTMLColumn[]))
+}
+
+dataTable.addRow(["Antioquia",antioquia] as String[]) 
+dataTable.addRow(["Quindio",quindio] as String[]) 
+dataTable.addRow(["Cundinamarca",cundinamarca] as String[]) 
+dataTable.addRow(["Valle del Cauca",valleCauca] as String[]) 
+
+def chartsFactory = new GChartsFactory(report)
+def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Column chart Cities Per State", dataTable);
+
+def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; ", null, String.format("Cities in Inventory"))
+def divTitle = new HTMLDiv("div",title)
+divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
+
+report.getComponents().add(divTitle)
+report.getComponents().add(citiesTable)
+report.getComponents().add(htmlDivColumnChart)
+
+
+
+return report
+```
+
+10. The result is
+
+| ![reports by class](images/column_chart.png) |
+| :--: |
+| ***Figure 19**. Report With Column Chart*|

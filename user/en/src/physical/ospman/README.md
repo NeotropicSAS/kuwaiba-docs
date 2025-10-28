@@ -468,7 +468,7 @@ By default the map is displayed using [OpenLayers](https://openlayers.org/) and 
 * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.bmaps.BmapsProvider`
 * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.google.GoogleMapsMapProvider`
 
-> **Notes**
+> **Note**
 >
 > * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.google.GoogleMapsMapProvider` require the value of the configuration variable `general.maps.apiKey` to be set.
 > * `com.neotropic.kuwaiba.modules.commercial.ospman.providers.ol.bmaps.BmapsProvider` require the value of the configuration variables `general.maps.apiKey` and `general.maps.provider.bmaps.imagerySet` the possible values ​​of the last one are:

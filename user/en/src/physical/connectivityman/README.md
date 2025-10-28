@@ -391,7 +391,7 @@ The types of logical connections are the subclasses of `GenericLastMileCircuit` 
 
 [figure-32]: images/figure-generic-last-mile-circuit-subclases.png
 
-> **Notes**
+> **Note**
 >
 > * Logical connections were designed for last mile services, however currently they are used interchangeably to represent logical circuits.
 > * It is possible that the model will be simplified in the future, it is recommended to use `Circuit` to facilitate the migration.
