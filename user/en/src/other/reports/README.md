@@ -201,14 +201,14 @@ Next step is choose an HTML tag to display information, the options are:
 
   ```Java
   generalInfoTable.getRows().add(
-    new HTMLRow(cssAtribute, null, 
+    new HTMLRow(cssAttribute, null, 
         [
-            new HTMLColumn(cssAtribute, null, text),
+            new HTMLColumn(cssAttribute, null, text),
             new HTMLColumn(value)
         ] as HTMLColumn[]));
   ```
 
-  >Note:  
+  >**Note**  
   >* The first new HTMLColumn represent the name of column and new HTMLColumn is the value
   >* It is mandatory to cast the content to HTMLColumn
   >* cssAttributes represents the ccs styles applied
@@ -216,7 +216,7 @@ Next step is choose an HTML tag to display information, the options are:
    When the number of rows is not known, first define the name of the columns:
 
   ```Java
-  table = new HTMLTable(null, null, ["COLUMN1","COLUMN2", "COLUMN3"] as String[])
+  table = new HTMLTable(null, null, ["COLUMN1", "COLUMN2", "COLUMN3"] as String[])
   ```
   
     >Note:  
@@ -232,7 +232,7 @@ Next step is choose an HTML tag to display information, the options are:
         ] as HTMLColumn[]));
   ```
 
-  >Note:  
+  >**Note**  
   > * The first new HTMLColumn represent the name of column and new HTMLColumn is the value
   > * It is mandatory to cast the content to HTMLColumn
   > * cssAttributes represents the ccs styles applied
@@ -249,10 +249,10 @@ Next step is choose an HTML tag to display information, the options are:
   To add values to the datatable, the column correspond the name of the column and value is the number:
 
   ```Java
-  dataTable.addRow(["COLUMN",value] as String[])
+  dataTable.addRow(["COLUMN", value] as String[])
   ```
 
->Note:  
+>**Note**  
   > It is mandatory to cast the content to String
   
 To create the chart, it is necessary use the GChartsFactory
@@ -262,7 +262,7 @@ def chartsFactory = new GChartsFactory(report)
 def htmlDivPieChart = chartsFactory.createHTMLDivWrapperChart(ChartType.PIECHART, "divPieChart", name , dataTable);
 ```
 
->Note:  
+>**Notes**  
   >
   > * It posible change the styles of htmlDivPieChart using : ```htmlDivPieChart.setStyle("cssStyle")```.
   > * Is possible use types of chart: ChartType.PIECHART, ChartType.COLUMNCHART and ChartType.LINECHART.
@@ -280,11 +280,11 @@ The [Persistence API]([BusinessObjectLight]([[https://](https://kuwaiba.org/docs
 
 | Methods  | Description | Return  |
 |----------|-----------|--------|
-| getAttributeValueAsString( classObject, IdObject, NameAttributes )      | Returns the value of atrribute     | String  |
-| getSpecialAttribute( classObject, IdObject , nameRelantionship )     | Returns the searched relationship   |  [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
-| getObject​( classObject, IdObject )    | Returns the searched object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
-| getParent( classObject, IdObject)    | Returns the parent's object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
-| getObjectChildren​( classObject, IdObject, -1)    | Returns the children of object      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getAttributeValueAsString( classObject, IdObject, NameAttributes )      | Returns the value as string of an attribute     | String  |
+| getSpecialAttribute( classObject, IdObject , nameRelantionship )     | Returns relationship of given object   | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html)   |
+| getObject​( classObject, IdObject )    | Returns the given object     | [BusinessObject](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObject.html) |
+| getParent( classObject, IdObject)    | Returns the object's  parent     | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
+| getObjectChildren​( classObject, IdObject, -1)    | Returns the children of given object     | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
 | getObjectsOfClassLight(classToFind, null, -1, -1)    | Returns all objects belong a class      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
 
   >Note:  
@@ -298,7 +298,7 @@ The [Persistence API]([BusinessObjectLight]([[https://](https://kuwaiba.org/docs
 >
   > * If the object is a Business Object Light, only get the following attributes:
   >
-  >  ```Java
+  > ```Java
   > objectLight.getName()
   > objectLight.getClassName()
   > objectLight.getId()
@@ -356,7 +356,7 @@ citiesTable.getRows().add(new HTMLRow([
 }
 ```
 
-8. Add the table to report and return it 
+8. Add the table to report and return it
 
 ```Java
 report.getComponents().add(citiesTable)
@@ -403,8 +403,9 @@ For this example, a title is added to case 1
 def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; ", null, String.format("Cities in Inventory"))
 ```
 
->Note:  
-  >In this case the css style are set as string
+>**Note**
+>
+>In this case the css style are set as string
 
 2. Create a div containing the title
 
@@ -412,13 +413,15 @@ def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; "
 def divTitle = new HTMLDiv("div",title)
 ```
 
->Note:  
-  >It is possible to set css styles to the div,
-  >```Java
-  >divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
-  >```
+> **Note**
+> 
+>It is possible to set css styles to the div,
+>
+>```Java
+>divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
+>```
 
-3. Add div to report
+1. Add div to report
 
 ```Java
 report.getComponents().add(divTitle)
@@ -464,7 +467,7 @@ return report
 For this case, a bar chart is added to case 2 where the number of cities per state is displayed.
 
 1. Add the imports
-   
+
 ```Java
 import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable
 import org.neotropic.kuwaiba.modules.optional.reports.javascript.DataTable.DataType
@@ -481,10 +484,10 @@ def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[],
 3. Define the variables where the number of cities per state is stored
 
 ```Java
-def quindio=0
-def antioquia=0
-def valleCauca=0
-def cundinamarca=0
+def quindio = 0
+def antioquia = 0
+def valleCauca = 0
+def cundinamarca = 0
 ```
 
 4. Implement the logic to check how many cities there are per state
@@ -523,10 +526,10 @@ dataTable.addRow(["Valle del Cauca",valleCauca] as String[])
 def chartsFactory = new GChartsFactory(report)
 ```
 
-7. Generate the column chart 
+1. Generate the bar chart
 
 ```Java
-def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Column Chart Cities Per State", dataTable);
+def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Bar Chart Cities Per State", dataTable);
 ```
 
 8. Add the chart to report
@@ -535,7 +538,7 @@ def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUM
 report.getComponents().add(htmlDivColumnChart)
 ```
 
-9. The code of report is:
+9. The final code is
 
 ```Java
 
@@ -549,14 +552,14 @@ def report = new HTMLReport("Cities in Inventory" , "Neotropic SAS", "1.0")
 report.setEmbeddedStyleSheet(HTMLReport.getDefaultStyleSheet())
 
 def cities = bem.getObjectsOfClassLight("City", null, -1, -1)
-def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
+def citiesTable = new HTMLTable(null, null, ["City", "State"] as String[])
 
 def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["State", "Cities Number"] as String[])
 
-def quindio=0
-def antioquia=0
-def valleCauca=0
-def cundinamarca=0
+def quindio = 0
+def antioquia = 0
+def valleCauca = 0
+def cundinamarca = 0
 
 cities.each { city -> 
     def state = bem.getParent( city.getClassName(), city.getId())
@@ -585,13 +588,13 @@ cities.each { city ->
     ] as HTMLColumn[]))
 }
 
-dataTable.addRow(["Antioquia",antioquia] as String[]) 
-dataTable.addRow(["Quindio",quindio] as String[]) 
-dataTable.addRow(["Cundinamarca",cundinamarca] as String[]) 
-dataTable.addRow(["Valle del Cauca",valleCauca] as String[]) 
+dataTable.addRow(["Antioquia", antioquia] as String[]) 
+dataTable.addRow(["Quindio", quindio] as String[]) 
+dataTable.addRow(["Cundinamarca", cundinamarca] as String[]) 
+dataTable.addRow(["Valle del Cauca", valleCauca] as String[]) 
 
 def chartsFactory = new GChartsFactory(report)
-def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Column chart Cities Per State", dataTable);
+def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Bar chart Cities Per State", dataTable);
 
 def title = new HTMLMessage("color:black; font-weight: normal; font-size: 2em; ", null, String.format("Cities in Inventory"))
 def divTitle = new HTMLDiv("div",title)
@@ -608,6 +611,6 @@ return report
 
 10. The result is
 
-| ![reports by class](images/column_chart.png) |
+| ![reports by class](images/column_chart.png.png) |
 | :--: |
 | ***Figure 19**. Report With Column Chart*|
