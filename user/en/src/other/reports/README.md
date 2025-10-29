@@ -341,7 +341,7 @@ def citiesTable = new HTMLTable(null, null, ["City","State"] as String[])
 
 ```Java
 cities.each { city -> 
-    def counrty = bem.getParent( city.getClassName(), city.getId()))
+    def state = bem.getParent( city.getClassName(), city.getId()))
 ```
 
 7. Add to table the data
@@ -427,7 +427,7 @@ def divTitle = new HTMLDiv("div",title)
 report.getComponents().add(divTitle)
 ```
 
-4. The report must look like this
+1. The report must look like this
 
 ```Java
 
