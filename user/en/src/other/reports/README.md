@@ -243,7 +243,7 @@ Next step is choose an HTML tag to display information, the options are:
   def dataTable = new DataTable([DataType.STRING, DataType.NUMBER ] as DataType[], ["COLUMN1", "COLUMN2"] as String[])
   ```
 
-  >Note:  
+  >**Note**  
   > It is mandatory to cast the content to DataType
   
   To add values to the datatable, the column correspond the name of the column and value is the number:
@@ -287,7 +287,7 @@ The [Persistence API]([BusinessObjectLight]([[https://](https://kuwaiba.org/docs
 | getObjectChildren​( classObject, IdObject, -1)    | Returns the children of given object     | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
 | getObjectsOfClassLight(classToFind, null, -1, -1)    | Returns all objects belong a class      | [BusinessObjectLight](https://kuwaiba.org/docs/dev/javadoc/current/org/neotropic/kuwaiba/core/apis/persistence/business/BusinessObjectLight.html) |
 
-  >Note:  
+  >**Note**  
   >
   > * Business Object refers a object with all attributes meanwhile Business Object Light refers a object with only attributes: class name, object id and nam
   > * If the object is a Business Object, it is possible to get any of its attributes:
@@ -350,8 +350,6 @@ cities.each { city ->
 citiesTable.getRows().add(new HTMLRow([
         new HTMLColumn( city.getName()),
         new HTMLColumn(counrty),
-      
- 
     ] as HTMLColumn[]))
 }
 ```
@@ -414,20 +412,20 @@ def divTitle = new HTMLDiv("div",title)
 ```
 
 > **Note**
-> 
+>
 >It is possible to set css styles to the div,
 >
 >```Java
 >divTitle.setStyle("width: 100vw;display: flex; justify-content: center; align-items: center;padding:4px")
 >```
 
-1. Add div to report
+3. Add div to report
 
 ```Java
 report.getComponents().add(divTitle)
 ```
 
-1. The report must look like this
+4. The report must look like this
 
 ```Java
 
@@ -526,7 +524,7 @@ dataTable.addRow(["Valle del Cauca",valleCauca] as String[])
 def chartsFactory = new GChartsFactory(report)
 ```
 
-1. Generate the bar chart
+7. Generate the bar chart
 
 ```Java
 def htmlDivColumnChart = chartsFactory.createHTMLDivWrapperChart(ChartType.COLUMNCHART, "divColumnChart", "Bar Chart Cities Per State", dataTable);
