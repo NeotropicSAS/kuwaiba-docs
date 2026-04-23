@@ -27,18 +27,28 @@ During the migration process, we will work with the following directories:
 
 ##### Prepare Neo4j database 3.5.5
 
-Debido a incompatibilidades en el proveedor de indices de Neo4j entre las versiones 3.5.5 y 3.5.12, antes de realizar la migración los indices deben ser eliminados y creados nuevamente una vez realice la migración para ello verifique los indices actuales. Inicie neo4j server running the following command: (**$Neo4j_HOME/bin/neo4j start**). This command starts the neo4j server, the server will be accessible at [http://localhost:7474](http://localhost:7474). 
+Due to incompatibilities in the index provider between versions 3.5.5 and 5.x of Neo4j, all existing indexes must be dropped prior to the migration process and recreated afterward in the target version. Before proceeding, start the Neo4j server using the following command:
 
-En la consola de Neo4j ejecute el comando *:schema*, el cual le permitirá visualizar los indices actualmente creados en la base de datos.
+```bash
+$NEO4J_HOME/bin/neo4j start
+```
+
+Once started, the service will be available at: [http://localhost:7474](http://localhost:7474).
+
+In the Neo4j console, execute the command: `:schema` that displays all indexes currently defined in the database, as shown in Figure 1. If no indexes are present, this step can be skipped.
 
 | ![Show Index](images/show-index-v3.png) |
 |:--:|
-| ***Figure 1.** Show Index command* |
+| **Figure 1.** Show Index command. |
 
-Realice una copia de los indices actuales y preceda a eliminarlos ejecutando el comando 
-**DROP INDEX ON :**`node_label`**(**`property`**)**;
+Identify the labels and properties associated with each index, as this information will be required to recreate them later using the appropriate syntax in newer versions (see section [create Index](#create-index)).
 
-Por ejemplo para eliminar el indice de la propiedad name del nodo con label clase ejecute
+Once the existing indexes have been documented, proceed to drop them using the following command:
+
+**DROP INDEX ON :**`<node_label>`**(**`<property>`**)**
+
+For example, to drop the index on the name property for nodes with the classes label, execute:
+
 **DROP INDEX ON :**`classes`**(**`name`**)**
 
 ##### Migrate Database
@@ -46,36 +56,42 @@ Por ejemplo para eliminar el indice de la propiedad name del nodo con label clas
 We start the migration from neo4j-community-3.5.5 to 3.5.12, this due to compatibility issues from version 3.3.5 to 4.0.0.
 
 1. **Backup Current Database Files**  
-   Create a backup of your current database files located in `$Neo4j_HOME/data`.
+   Create a backup of your current database files located in `$Neo4j_HOME/data/databases`.
 
 2. **Install Neo4j Community Version 3.5.12**  
    Download and install [Neo4j Community 3.5.12](https://neo4j.com/download-thanks/?edition=community&release=3.5.12&flavour=unix&_gl=1*1d1w708*_ga*NzMzOTU0MDMwLjE2MzE3MTkwODQ.*_ga_DL38Q8KGQC*MTY2MDE2MTI3MS4yNi4xLjE2NjAxNjE2MDEuMA..&_ga=2.67751121.1383424675.1660148212-733954030.1631719084).
    
-3. **Copy and Replace the Data Folder**  
-   - Take the entire contents of the `data` folder (including the `databases` and `dbms` directories) from `$Neo4j_HOME/data`.  
-   - Copy these contents and paste them into the `$New_Neo4j_HOME/data` folder, replacing all its contents.
+3. **Copy and Replace the Databases Folder**  
+   - Take the content of `databases` folder from `$Neo4j_HOME/data`.  
+   - Copy the content and paste them into the `$New_Neo4j_HOME/data/databases` folder, replacing its contents.
 
 4. **Rename the Database Folder**  
    Rename your database folder to `graph.db` within `$New_Neo4j_HOME/data/databases/` seen in Figure 2.
     
 | ![Manage database dir](images/databases.png) |
 |:--:|
-| ***Figure 2.** Replace and rename database* |
+| ***Figure 2.** Replace and rename database.* |
 
 5. **Prepare the neo4j.conf** 
    In the file `neo4j.conf` into the (**$New_Neo4j_HOME/conf**) uncomment the next lines:
 	* `Set dbms.allow_upgrate=true`
-	* `Set dbms.default_database=graph.db `
+	* `Set dbms.active_database=graph.db`
 
 6. **Start migration** 
-  Start the migration process by running the following command: (**$New_Neo4j_HOME/bin/neo4j console**). This command starts the database migration process and launches the Neo4j server. Once complete, the server will be accessible at [http://localhost:7474](http://localhost:7474).  
+  Start the migration process by running the following command:
+  
+```bash
+$New_Neo4j_HOME/bin/neo4j console
+```
+  
+This command starts the database migration process and launches the Neo4j server. Once complete, the server will be accessible at [http://localhost:7474](http://localhost:7474).  
 
 | ![Migrate process](images/finish-upgrade.png) |
 |:--:|
-| ***Figure 3.** Migration process* |
+| ***Figure 3.** Migration process.* |
 
 7. **Stop the server**
-   Stop the server to continue the migration (Ctrl + C ).
+   Stop the server (Ctrl + C ) to continue the migration.
 
 #### Migration from 3.5.12 to 4.4.17
 
@@ -90,43 +106,43 @@ During the migration process, we will work with the following directories:
 
 
 1. **Backup Current Database Files**  
-   Create a backup of your current database files located in `$Neo4j_HOME/data`.
+   Create a backup of your current database files located in `$Neo4j_HOME/data/databases`.
 
 2. **Install Neo4j Community Version 4.4.17**  
    Download and install [Neo4j Community 4.4.17](https://neo4j.com/download-thanks/?edition=community&release=4.4.17&flavour=unix&_gl=1*1d1w708*_ga*NzMzOTU0MDMwLjE2MzE3MTkwODQ.*_ga_DL38Q8KGQC*MTY2MDE2MTI3MS4yNi4xLjE2NjAxNjE2MDEuMA..&_ga=2.67751121.1383424675.1660148212-733954030.1631719084).
    
 
-3. **Copy and Replace the Data Folder**  
-   - Take the entire contents of the `data` folder (including the `databases` and `dbms` directories) from `$Neo4j_HOME/data`.  
-   - Copy these contents and paste them into the `$New_Neo4j_HOME/data` folder, replacing all its contents.
+3. **Copy and Replace the Database Folder**  
+   - Take the contents of the `databases` folder from `$Neo4j_HOME/data/databases`.  
+   - Copy these contents and paste them into the `$New_Neo4j_HOME/data/databases` folder.
 
 4. **Rename the Database Folder** 
-   Rename your database folder to `neo4j` within `$New_Neo4j_HOME/data/databases/` From this new version onwards we have the concept of multi databases and `graph.db` is not a valid name, the databases have to follow a naming convention and can not contain special characters including dots as seen in Figure 4. 
+   Rename your database folder to desired database name the default is`neo4j` in our case `kuwaiba` within `$New_Neo4j_HOME/data/databases/` From this new version onwards we have the concept of multi databases and `graph.db` is not a valid name, the databases have to follow a naming convention and can not contain special characters including dots as seen in Figure 4. 
 
 | ![Manage Pools](images/database-v4.png) |
 |:--:|
-| ***Figure 4.** New format databases* |
+| ***Figure 4.** New format databases.* |
 
 5. **Prepare the neo4j.conf** 
-   In the file `neo4j.conf` into the (**$New_Neo4j_HOME/conf**) uncomment the next lines:
-	* `Set dbms.allow_upgrate=true`
-	* `Set dbms.default_database=neo4j`
+   In the file `neo4j.conf` into the (**$New_Neo4j_HOME/conf**) uncomment and set the values and the next lines:
+	* `Uncomment and set dbms.allow_upgrate=true`
+   * `Uncomment and set dbms.default_database=kuwaiba` (use the name of migrate database)
 
 6. **Start migration** 
-  Start the migration process by running the following command: (**$New_Neo4j_HOME/bin/neo4j console**). This command starts the database migration process and launches the Neo4j server. Once complete, the server will be accessible at [http://localhost:7474](http://localhost:7474).  
+  Start the migration process by running the following command:
 
-7. **Stop the server** 
-   Stop the server to continue the migration (Ctrl + C ).
- 
-Once complete, run the server use (**$New_Neo4j_HOME/bin/neo4j start**).
+```bash
+$New_Neo4j_HOME/bin/neo4j console
+```
+This command starts the database migration process and launches the Neo4j server. Once complete, the server will be accessible at [http://localhost:7474](http://localhost:7474).
 
 | ![Manage Pools](images/neo4j-server-v4.png) |
 |:--:|
-| ***Figure 5.** Neo4j server version 4.4.17* |
+| ***Figure 5.** Neo4j server version 4.4.17.* |
 
-## Upgrading Database from Neo4j 4.4.17 to 5.26.1
+## Upgrading Database from Neo4j 4.4.17 to 5.26.25
 
-The migration to Neo4j version 5.x.x is **only possible** from version 4.4.x. The migration process of Neo4j from version 4.4.x to 5.26.1 is possible through two methods:
+The migration to Neo4j version 5.x.x is **only possible** from version 4.4.x. The migration process of Neo4j from version 4.4.x to 5.26.25 is possible through two methods:
 
 * **Using Backups command (Neo4j Enterprise Edition)**
 
@@ -136,76 +152,114 @@ The focus will be on the **Backup Dump Command** process available for the commu
 
 ### Backup Dump Migration
 
-> **Note**: Before you start preparing for migration , it is very important verify that you have installed Java 17 because under Neo4j 5.x.x Java 17 is used, when you upgrade to 5.x.x it has a hard requirement on Java 17.
+> **Note**: Before you start preparing for migration , it is very important verify that you have installed Java 17 or 21 because under Neo4j 5.x.x Java 17 or 21 is used, when you upgrade to 5.x.x it has a hard requirement on Java 17 or 21.
 
 During the migration process, we will work with the following directories:
 
 - **`$Neo4j_HOME`**: Refers to the directory of the currently installed Neo4j version (4.4.17 - JAVA 11).
-- **`$New_Neo4j_HOME`**: Refers to the directory of the new Neo4j version to which the system will be upgraded (5.26.1 - JAVA 17).
+- **`$New_Neo4j_HOME`**: Refers to the directory of the new Neo4j version to which the system will be upgraded (5.26.25 - JAVA 17 - 21).
 
 #### Prepare database
 
-Before performing the migration, it is necessary to make changes to the database to ensure compatibility with Neo4j 5.
+Before performing the migration, it is necessary to make changes to the database to ensure compatibility with Neo4j 5.26.x.
 
 ##### Create Index
-Since the index system used in the major versions of Neo4j has been modified in version 5.x.x, it is necessary to create new indexes for those previously removed in [prepare database 3.5.5.](#prepare-neo4j-database-355)
-In Neo4j versions 4.1.x, the indexes are of type BTREE, which has been replaced in version 5.x.x with RANGE, POINT, and TEXT types.
+Since the index system used in the major versions of Neo4j has been modified in version 5.x.x, es necesario crear nuevamente con el formato adecuado los indices previamente elminados en la seccion [prepare database 3.5.5](#prepare-neo4j-database-355).
+
+In Neo4j versions 4.4.x, the indexes are of type BTREE, which has been replaced in version 5.x.x with RANGE, POINT, and TEXT types.
 
 * **Range indexes**: Neo4j’s default index. Supports most types of predicates.
 * **Text indexes**: solves predicates operating on STRING values. Optimized for queries filtering with the STRING operators CONTAINS and ENDS WITH.
 * **Point indexes**: solves predicates on spatial POINT values. Optimized for queries filtering on distance or within bounding boxes.
 * **Token lookup indexes**: only solves node label and relationship type predicates (i.e. they cannot solve any predicates filtering on properties). Two token lookup indexes (one for node labels and one for relationship types) are present when a database is created in Neo4j.
 
-Start the process by checking the current indexes in the database using the Neo4j console, run (**$Neo4j_HOME/bin/neo4j start**) and use the (**SHOW INDEXES**) command. 
-This command will display the existing indexes as seen in the Figure 6. Review this information and create the new indexes according to their respective types.
+To recreate the indexes previously dropped (as described in the section [Prepare database 3.5.5.](#prepare-neo4j-database-355)
+), access the Neo4j console at: [http://localhost:7474](http://localhost:7474).
+
+If the server is not running, start it using:
+
+```bash
+$Neo4j_HOME/bin/neo4j start
+```
+
+If the indexes were not removed earlier, they can still be dropped at this stage without any issues. First, verify the existing indexes in the database by running in the Neo4j console: `SHOW INDEXES` this command will display the current indexes, as shown in Figure 6. Review this information to determine which indexes need to be recreated.
 
 | ![Manage Pools](images/show-index.png) |
 |:--:|
-| ***Figure 6.** SHOW INDEXES Command* |
+| ***Figure 6.** SHOW INDEXES Command.* |
 
-To create indexes in the Neo4j console, use the following command:
-**CREATE `index_type` INDEX `new_index_name` FOR (`n:label`) ON (`n.property`)**
+When creating indexes in this version, you must consider the index type, node label, and property. In most cases, `RANGE indexes` are recommended.
 
-For example, to create a TEXT index to property name and label special nodes:
-**CREATE `TEXT` INDEX `text_index_specialNodes_name` FOR (`n:specialNodes`) ON (`n.name`)**
+The general syntax is:
 
-Once the indexes have been created, verify that they are online, and then proceed to delete obsolete BTREE indexes using the following command in the Neo4j console: **DROP INDEX index_name**
+**CREATE `<index_type>` INDEX `<new_index_name>` FOR (`n:<label>`) ON (`n.<property>`)**
+
+For example, to create a Range index to property name and label classes:
+
+**CREATE `RANGE` INDEX `index_classes_name` FOR (`n:classes`) ON (`n.name`)**
+
+Once the indexes have been created, verify that they are online, and then proceed to delete obsolete BTREE indexes using the following command in the Neo4j console: **DROP INDEX `<index_name>`**
 
 ##### Backup Database
 To ensure data security during the migration process, a backup of the database is performed by generating a `.dump` file using the following command:
 
-**$Neo4j_HOME/bin/neo4j-admin dump --database=**`database_name` **--to=**/`path-to-file/file.dump`
+```bash
+$Neo4j_HOME/bin/neo4j-admin dump \
+   --database=<database_name> \
+   --to=<path-to-file/file.dump>
+```
 
-In this example: **$Neo4j_HOME/bin/neo4j-admin dump --database=**`kuwaiba` **--to=**`/neo4j/migration/kuwaiba.dump`
+In this example:
+
+```bash
+$Neo4j_HOME/bin/neo4j-admin dump \
+   --database=kuwaiba \
+   --to=/neo4j/migration/kuwaiba.dump
+```
 
 #### Install Neo4j 5
-Download the last [Neo4j Server 5.x.x](https://neo4j.com/docs/operations-manual/5/installation/) version, actually current version is [5.26.1](https://neo4j.com/download-thanks/?edition=community&release=5.26.1&flavour=unix).
+Download the last [Neo4j Server 5.x.x](https://neo4j.com/docs/operations-manual/5/installation/) version, actually current version is [5.26.25](https://neo4j.com/download-thanks/?edition=community&release=5.26.25&flavour=unix).
 
 ##### Migrate the Neo4j configuration file
 Starting from version 5.x.x, it is possible to migrate the Neo4j configuration from version 4.4.x. To do so, use the following command:
 
-**`New_Neo4j_HOME/bin/`neo4j-admin server migrate-configuration --from-path=**/`$Neo4j_HOME/conf` **--to-path=**/`$New_Neo4j_HOME/conf/`
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin server migrate-configuration \
+   --from-path=<path-to-old-conf-file> \
+   --to-path=<path-to-new-conf-file> 
+```
 
-> **Note**: To execute the Neo4j 5.x.x version requirement Java 17.
+In this example:
+
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin server migrate-configuration \
+   --from-path=$Neo4j_HOME/conf \
+   --to-path=$New_Neo4j_HOME/conf/ 
+```
 
 | ![Manage Pools](images/migrate-neo4j-4-conf-to-5.png) |
 |:--:|
-| ***Figure 7.** Migrate configuration command* |
+| ***Figure 7.** Migrate configuration command.* |
 
 Once the configuration migration is complete as seen in Figure 7, the default configuration of Neo4j 5 will be saved in `New_Neo4j_HOME/conf/neo4j.conf.old` in case you wish to restore it.
 
 Verify that in `New_Neo4j_HOME/conf` the file `neo4j.conf` has the following configuration or else add it:
-* `Uncomment and set dbms.allow_upgrate=true`
 * `Uncomment and set initial.dbms.default_database=kuwaiba` 
 
 #### Migrate Database
 Once Neo4j Server 5.x.x is installed and configured, we proceed to migrate the database. To do so, we use the following command, which will load and adjust the database to version 5.x.x:
 
-**New_Neo4j_HOME/bin/neo4j-admin database load --from-path=**`/path/to/dump/ file dump_file_name`
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin database load \
+   --from-path=<path-to-dump-file> <dump-file-name>
+```
 
-In this example: 
+In this example:
 
-**New_Neo4j_HOME/bin/neo4j-admin database load --from-path=**`/neo4j/migration/ kuwaiba`
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin database load \
+   --from-path=/neo4j/migration/ kuwaiba
+```
 
 If there is already a database in `New_Neo4j_HOME/data` with the same name as the one you wish to migrate, use the --overwrite-destination=true flag to replace it.
 
@@ -214,34 +268,47 @@ If additional configurations are required for the migration, refer to the option
 
 | ![Manage Pools](images/error-format-database.png) |
 |:--:|
-| ***Figure 8.** Warning migrating database* |
+| ***Figure 8.** Warning migrating database.* |
 
 When migrating the database as seen in Figure 8, a warning will appear indicating that the **storage format** is deprecated. This is because, starting with Neo4j version 5.x.x, the storage format was changed. However, the format change is not possible directly from version 4.4.x, as this update was introduced in later versions.
 
 ##### Chance Store Format
 The storage format describes how information is written to disk. Starting with version 5.x.x, the supported formats include `block`, `aligned`, `standard` and `high_limit`. For the **Community edition of Neo4j**, the recommended format is **aligned**, so we will proceed to change it. Before doing so, you can check the current database format in version 4.4.x using the following command:
- 
-**`$Neo4j_HOME/bin`/neo4j-admin store-info `$Neo4j_HOME/data/databases/`**`data_base_name`
 
-| ![Manage Pools](images/store-format.png) |
-|:--:|
-| ***Figure 9.** Neo4j 4.4.17 store format* |
-
-
-As can be seen in Figure 9, the storage format in version 4.4.17 is `SF4.3.0`, not compatible with 5.xx, we proceed to change the format with:
-
-**`New_Neo4j_HOME/bin/neo4j-admin` database migrate --to-format=**`store_format data_base_name`
+```bash
+$Neo4j_HOME/bin/neo4j-admin store-info <path-to-database/database-name>
+```
 
 In this example:
 
-**`New_Neo4j_HOME/bin/neo4j-admin` database migrate --to-format=**`aligned kuwaiba`
+```bash
+$Neo4j_HOME/bin/neo4j-admin store-info Neo4j_HOME/data/databases/kuwaiba
+```
+
+| ![Manage Pools](images/store-format.png) |
+|:--:|
+| ***Figure 9.** Neo4j 4.4.17 store format.* |
+
+As can be seen in Figure 9, the storage format in version 4.4.17 is `SF4.3.0`, not compatible with 5.x.x, we proceed to change the format with the command:
+
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin database migrate \
+   --to-format=<format> <database-name>
+```
+
+In this example:
+
+```bash
+$New_Neo4j_HOME/bin/neo4j-admin database migrate \
+   --to-format=aligned kuwaiba
+```
 
 | ![Manage Pools](images/migration-done.png) |
 |:--:|
-| ***Figure 10.** Migrate completed* |
+| ***Figure 10.** Migrate completed.* |
 
-As shown in Figure 10, this concludes the migration process from Neo4j 4.4.17 to 5.26.1. To run the server, use the following command: **`$New_Neo4j_HOME/bin/neo4j start`**
+As shown in Figure 10, this concludes the migration process from Neo4j 4.4.17 to 5.26.25. To run the server, use the following command: **`$New_Neo4j_HOME/bin/neo4j start`**
 
 | ![Manage Pools](images/neo4j-server-v5.png) |
 |:--:|
-| ***Figure 11.** Warning migrating database* |
+| ***Figure 11.** Neo4j server with migrated database running.* |
