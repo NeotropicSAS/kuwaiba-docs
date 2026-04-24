@@ -164,7 +164,7 @@ During the migration process, we will work with the following directories:
 Before performing the migration, it is necessary to make changes to the database to ensure compatibility with Neo4j 5.26.x.
 
 ##### Create Index
-Since the index system used in the major versions of Neo4j has been modified in version 5.x.x, es necesario crear nuevamente con el formato adecuado los indices previamente elminados en la seccion [prepare database 3.5.5](#prepare-neo4j-database-355).
+Since the index system used in the major versions of Neo4j has been modified in version 5.x.x, it is necessary to create again with the appropriate format the index previously deleted in the section [prepare database 3.5.5](#prepare-neo4j-database-355).
 
 In Neo4j versions 4.4.x, the indexes are of type BTREE, which has been replaced in version 5.x.x with RANGE, POINT, and TEXT types.
 
